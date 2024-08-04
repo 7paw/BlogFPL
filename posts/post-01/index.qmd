@@ -623,6 +623,8 @@ xG_gt
 
 ## Ranking by Ceiling Point !
 
+
+
 ```{r}
 
 xG_gt <- xG_df %>%
