@@ -1,0 +1,926 @@
+---
+title: "FPL Season 2024/2025, GameWeek-0"
+author: "7 Paws"
+date: "2024-08-04"
+categories: [thoughts]
+image: "image.jpg"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, warning = F, message = F, error=TRUE, cache=FALSE)
+```
+
+```{r}
+library(tidyverse)
+library(DT)
+library(here)
+library(gt)
+library(ggthemes)
+library(ggridges)
+library(gt)
+library(gtExtras)
+theme_set(theme_solarized())
+
+```
+
+```{r}
+url <- "https://fantasy.premierleague.com/api/bootstrap-static/"
+data_official_list <- httr::content(httr::GET(url))
+
+fixtures_list <- httr::content(httr::GET("https://fantasy.premierleague.com/api/fixtures/"))
+#mainDf <- data.table::rbindlist(data_official$elements) %>% tibble()
+#playersTypes <- rbindlist(data_official$element_types) %>% tibble()
+fixtures_df <- data.table::rbindlist(fixtures_list) %>% tibble()
+```
+
+```{r}
+teams <- read_csv(here("posts","post-01","teams.csv"))
+
+players_2023_df_raw <- read_csv(here("posts","post-01","merged_gw.csv")) 
+
+```
+
+```{r}
+players_2023_df <- players_2023_df_raw %>% 
+  relocate(name,team,position,GW, total_points) %>% 
+  group_by(name) %>% 
+  mutate(
+    total_points_season=sum(total_points, na.rm = TRUE)
+  ) %>% 
+  ungroup() %>% 
+  left_join(teams %>% dplyr::select(id, opponent_team_name=short_name), by=c("opponent_team"="id"))
+
+
+```
+
+```{r}
+players_summary_df <- players_2023_df_raw %>% 
+  filter(minutes>0) %>% 
+  mutate(
+    is_played= if_else(minutes>0, 1,0),
+    
+  ) %>% 
+  filter(position != "GK") %>% 
+  #filter(starts==TRUE) %>% 
+  relocate(name,team,position,GW, total_points) %>% 
+  group_by(name,position) %>% 
+  summarize(
+    total_points_season=sum(total_points, na.rm = TRUE),
+    minutes_total=sum(minutes, na.rm = T),
+    xG=sum(expected_goals, na.rm = T),
+    xA=sum(expected_assists, na.rm = T),
+    xGI=sum(expected_goal_involvements, na.rm = T),
+    Goals=sum(goals_scored, na.rm = T),
+    Assists=sum(assists, na.rm = T),
+    GI=sum(goals_scored, na.rm = T)+sum(assists, na.rm = T),
+    starts=sum(starts)
+  ) %>% 
+  ungroup() %>% 
+  arrange(desc(total_points_season)) %>% 
+  slice_max(order_by = total_points_season, n=200) %>% 
+  mutate(
+    xG_per90=xG/minutes_total*90,
+    xA_per90=xA/minutes_total*90,
+    xGI_per90=xGI/minutes_total*90,
+    Goals_per90=Goals/minutes_total*90,
+    Assists_per90=Assists/minutes_total*90,
+    GI_per90=GI/minutes_total*90,
+    total_points_average=total_points_season/minutes_total*90
+  )
+
+```
+
+```{r}
+players_2023_df2 <- players_2023_df %>% 
+  semi_join(players_summary_df, by=c("name")) %>% 
+  arrange(name,team,position,GW) %>% 
+  mutate(
+    name=fct_reorder(name, total_points_season)
+  ) %>% 
+  arrange(desc(name))
+
+
+```
+
+```{r}
+
+ceiling_df <- players_2023_df2 %>% 
+  filter(minutes>0, starts==1) %>% 
+  mutate(
+    is_played= if_else(minutes>0, 1,0),
+    
+  ) %>% 
+  filter(position != "GK") %>% 
+  #filter(starts==TRUE) %>% 
+  relocate(name,team,position,GW, total_points) %>% 
+  group_by(name) %>% 
+  slice_max(order_by = total_points, n= 10) %>% 
+  arrange(desc(total_points_season)) %>% 
+  group_by(name) %>% 
+  summarize(
+    ceiling= mean(total_points)
+  ) %>% 
+  arrange(desc(ceiling)) 
+  
+```
+
+```{r}
+high_df <- players_2023_df2 %>% 
+  filter(minutes>0, starts==1) %>% 
+  mutate(
+    is_played= if_else(minutes>0, 1,0),
+    
+  ) %>% 
+  filter(position != "GK") %>% 
+  #filter(starts==TRUE) %>% 
+  relocate(name,team,position,GW, total_points) %>% 
+  group_by(name) %>% 
+  slice_max(order_by = total_points, n= 20) %>% 
+  arrange(desc(total_points_season)) %>% 
+  group_by(name) %>% 
+  summarize(
+    high= mean(total_points)
+  ) %>% 
+  arrange(desc(high)) 
+  
+```
+
+```{r}
+max_df <- players_2023_df2 %>% 
+  filter(minutes>0, starts==1) %>% 
+  mutate(
+    is_played= if_else(minutes>0, 1,0),
+    
+  ) %>% 
+  filter(position != "GK") %>% 
+  #filter(starts==TRUE) %>% 
+  relocate(name,team,position,GW, total_points) %>% 
+  group_by(name) %>% 
+  slice_max(order_by = total_points, n= 5) %>% 
+  arrange(desc(total_points_season)) %>% 
+  group_by(name) %>% 
+  summarize(
+    max= mean(total_points)
+  ) %>% 
+  arrange(desc(max)) 
+```
+
+```{r}
+max3_df <- players_2023_df2 %>% 
+  filter(minutes>0, starts==1) %>% 
+  mutate(
+    is_played= if_else(minutes>0, 1,0),
+    
+  ) %>% 
+  filter(position != "GK") %>% 
+  #filter(starts==TRUE) %>% 
+  relocate(name,team,position,GW, total_points) %>% 
+  group_by(name) %>% 
+  slice_max(order_by = total_points, n= 3) %>% 
+  arrange(desc(total_points_season)) %>% 
+  group_by(name) %>% 
+  summarize(
+    max= mean(total_points)
+  ) %>% 
+  arrange(desc(max)) 
+```
+
+```{r}
+max_df_opp1 <- players_2023_df2 %>% 
+  filter(minutes>0, starts==1) %>% 
+  mutate(
+    is_played= if_else(minutes>0, 1,0),
+    
+  ) %>% 
+  filter(position != "GK") %>% 
+  #filter(starts==TRUE) %>% 
+  relocate(name,team,position,GW, total_points) %>% 
+  group_by(name) %>% 
+  arrange(desc(total_points)) %>% 
+  slice_head(n= 1) %>% 
+  arrange(desc(total_points_season))  %>% 
+  transmute(name, max1 =if_else(was_home==TRUE,str_to_upper(opponent_team_name),str_to_lower(opponent_team_name)))
+```
+
+```{r}
+max_df_opp2 <- players_2023_df2 %>% 
+  filter(minutes>0, starts==1) %>% 
+  mutate(
+    is_played= if_else(minutes>0, 1,0),
+    
+  ) %>% 
+  filter(position != "GK") %>% 
+  #filter(starts==TRUE) %>% 
+  relocate(name,team,position,GW, total_points) %>% 
+  group_by(name) %>% 
+  arrange(desc(total_points)) %>% 
+  slice_head(n= 2) %>% 
+  slice_tail(n=1) %>% 
+  arrange(desc(total_points_season))  %>% 
+  transmute(name, max2 =if_else(was_home==TRUE,str_to_upper(opponent_team_name),str_to_lower(opponent_team_name)))
+```
+
+```{r}
+max_df_opp3 <- players_2023_df2 %>% 
+  filter(minutes>0, starts==1) %>% 
+  mutate(
+    is_played= if_else(minutes>0, 1,0),
+    
+  ) %>% 
+  filter(position != "GK") %>% 
+  #filter(starts==TRUE) %>% 
+  relocate(name,team,position,GW, total_points) %>% 
+  group_by(name) %>% 
+  arrange(desc(total_points)) %>% 
+  slice_head(n= 3) %>% 
+  slice_tail(n=1) %>% 
+  arrange(desc(total_points_season))  %>% 
+  transmute(name, max3 =if_else(was_home==TRUE,str_to_upper(opponent_team_name),str_to_lower(opponent_team_name)))
+```
+
+```{r}
+max_df_opp4 <- players_2023_df2 %>% 
+  filter(minutes>0, starts==1) %>% 
+  mutate(
+    is_played= if_else(minutes>0, 1,0),
+    
+  ) %>% 
+  filter(position != "GK") %>% 
+  #filter(starts==TRUE) %>% 
+  relocate(name,team,position,GW, total_points) %>% 
+  group_by(name) %>% 
+  arrange(desc(total_points)) %>% 
+  slice_head(n= 4) %>% 
+  slice_tail(n=1) %>% 
+  arrange(desc(total_points_season))  %>% 
+  transmute(name, max4 =if_else(was_home==TRUE,str_to_upper(opponent_team_name),str_to_lower(opponent_team_name)))
+
+```
+
+```{r}
+max_df_opp5 <- players_2023_df2 %>% 
+  filter(minutes>0, starts==1) %>% 
+  mutate(
+    is_played= if_else(minutes>0, 1,0),
+    
+  ) %>% 
+  filter(position != "GK") %>% 
+  #filter(starts==TRUE) %>% 
+  relocate(name,team,position,GW, total_points) %>% 
+  group_by(name) %>% 
+  arrange(desc(total_points)) %>% 
+  slice_head(n= 5) %>% 
+  slice_tail(n=1) %>% 
+  arrange(desc(total_points_season))  %>% 
+  transmute(name, max5 =if_else(was_home==TRUE,str_to_upper(opponent_team_name),str_to_lower(opponent_team_name)))
+```
+
+```{r}
+mean_df <- players_2023_df2 %>% 
+  filter(minutes>0, starts==1) %>% 
+  mutate(
+    is_played= if_else(minutes>0, 1,0),
+    
+  ) %>% 
+  filter(position != "GK") %>% 
+  #filter(starts==TRUE) %>% 
+  relocate(name,team,position,GW, total_points) %>% 
+  group_by(name) %>% 
+  summarize(
+    mean= mean(total_points)
+  ) %>% 
+  arrange(desc(mean)) 
+  
+```
+
+```{r}
+xG_df0 <- players_summary_df %>% 
+  #filter(starts>15) %>% 
+  #slice_max(order_by = total_points_season, n=10) %>% 
+  select(name, xG_per90,Goals_per90, xA_per90, Assists_per90, starts, total_points_season, Goals, Assists, position) %>% 
+  mutate(
+    xG_Delta= (Goals_per90-xG_per90),
+    xA_Delta= (Assists_per90-xA_per90)
+  ) %>% 
+  left_join(mean_df, by = "name") %>% 
+  left_join(high_df, by = "name") %>% 
+  left_join(ceiling_df, by = "name") %>% 
+  left_join(max_df, by = "name") %>% 
+  mutate(
+    across(c(xG_per90,Goals_per90, xA_per90, Assists_per90,xG_Delta,xA_Delta, mean,high, ceiling, max), ~round(.x,2))
+  ) %>% 
+  mutate(
+    across(c(mean,high, ceiling, max), ~round(.x,1))
+  ) %>% 
+  dplyr::mutate(plot_column = max, target_col=mean) %>% 
+  left_join(max_df_opp1, by="name") %>% 
+  left_join(max_df_opp2, by="name") %>% 
+  left_join(max_df_opp3, by="name") %>% 
+  left_join(max_df_opp4, by="name") %>% 
+  left_join(max_df_opp5, by="name") %>% 
+  mutate(across(max1:max5, ~ str_sub(.x,1,3))) 
+
+xG_df <- xG_df0 %>% 
+  select(-position)
+
+```
+
+```{r}
+players_2023_df_density <- players_2023_df %>% 
+  filter(starts==TRUE) %>% 
+  group_by(name) %>% 
+  summarize(total_points_list=list(total_points)) %>% 
+  semi_join(xG_df , by="name")
+
+# players_2023_df_density_gt <- players_2023_df_density %>% 
+#   gt() %>% 
+#   gt_plt_dist(total_points_list, type="boxplot")
+
+#players_2023_df_density_gt
+```
+
+## Ranking by average point of season 2023/2024
+
+```{r}
+
+xG_gt <- xG_df %>%
+  arrange(desc(mean)) %>% 
+  slice(1:15) %>% 
+  left_join(players_2023_df_density, by="name") %>% 
+  # mutate(
+  #   name= case_when(
+  #     name=="Diogo Teixeira da Silva" ~ "Diogo Jota",
+  #     TRUE ~ name
+  #   )
+  # ) %>% 
+  gt() %>% 
+  data_color(
+    columns = 2,
+    colors = scales::col_numeric(
+      palette = c("yellow","green","darkgreen"),
+      #domain=c(0,1.5,4))
+      domain = c(0.3,0.5,1.1),
+      na.color = "yellow")
+  ) %>% 
+  data_color(
+    columns = 7,
+    colors = scales::col_numeric(
+      palette = c("cornsilk","yellow","green"),
+      #domain=c(0,1.5,4))
+      domain = c(0,100,250))
+  ) %>% 
+  data_color(
+    columns = 10,
+    colors = scales::col_numeric(
+      palette = c("cornsilk","cornsilk","green"),
+      #domain=c(0,1.5,4))
+      domain = c(-0.5,0,0.7))
+  ) %>%
+  data_color(
+    columns = 12,
+    colors = scales::col_numeric(
+      palette = c("cornsilk","cornsilk","pink"),
+      #domain=c(0,1.5,4))
+      domain = c(3,6,9))
+  ) %>% 
+  data_color(
+    columns = 15,
+    colors = scales::col_numeric(
+      palette = c("cornsilk","cornsilk","orange"),
+      #domain=c(0,1.5,4))
+      domain = c(7,11,18.7))
+  ) %>% 
+  data_color(
+    columns = 17:22,
+    colors = scales::col_factor(
+      palette = "Pastel1",
+      domain = NULL,
+      na.color = 'gray'
+    ),
+    apply_to = "fill",
+    autocolor_text = TRUE
+  ) %>% 
+  tab_footnote(
+    footnote = md("**`Fpl Infinitesimal`** \n
+                  Delta = Actual Goals - xG, per 90 \n
+                  ceiling* is average of top 5 gws \n
+                  mean* is average poinst for starts gw")
+  ) %>% 
+  tab_options(
+    heading.background.color = "cornsilk",
+    table.background.color="cornsilk"
+    #heading.border.bottom.color = "#eebd00",
+    #heading.border.bottom.width = "5px",
+    #heading.border.lr.color = "#aae100",
+    #heading.border.lr.width = "50px",   #no effect
+  ) %>% 
+  tab_header(
+    title = md("FPL Season 2023/2024, Ranking by average point per start")
+  ) %>%
+  tab_options(column_labels.background.color = "cornsilk",column_labels.font.weight = "bold") %>% 
+  gt_add_divider("starts", style = "dashed", sides = "left") %>% 
+  gt_add_divider("xA_per90", style = "dashed") %>% 
+  gt_add_divider("xA_Delta", style = "dashed") %>% 
+  cols_label(
+    name="",
+    total_points_season="FPL",
+    mean="mean*",
+    high="Tail_20gw",
+    ceiling="Tail_10gw",
+    max="ceiling*",
+    xG_per90="xG",
+    xG_Delta="Delta"
+  ) %>% 
+  gt_plt_dist(total_points_list, type="histogram",fig_dim = c(15, 30), line_color = "purple", fill_color = "pink", bw = 3) %>% 
+  cols_hide(c(Goals_per90, Assists_per90, xA_per90, xA_Delta)) %>% 
+  cols_hide(c(high, ceiling)) %>% 
+  cols_move(columns=c(total_points_season, Goals, Assists), after = name) %>% 
+  cols_move(columns=starts, after = name) %>% 
+  cols_move(columns=total_points_list, after = xG_Delta) %>% 
+  gt_add_divider("Assists", style = "dashed") %>% 
+  gt_add_divider("xG_Delta", style = "dashed") %>%
+  gt_plt_bullet(column = plot_column, target = target_col, width = 45,palette = c("orange", "red3")) %>% 
+  cols_label(
+    plot_column="",
+    total_points_list="fpl point"
+  ) %>% 
+  tab_spanner(label = "xG per 90 mins", columns = c(xG_per90, xG_Delta)) %>% 
+  tab_spanner(label = "All Season", columns = c(starts, total_points_season, Goals, Assists)) %>% 
+  tab_spanner(label = "per Start", columns = c(total_points_list,mean, max,plot_column )) %>% 
+  tab_spanner(label = "Opponents contribute to past ceiling:", columns = (max1:max5 )) %>% 
+  tab_style(
+    style = list(
+      cell_borders(color = "grey", weight = px(3),sides = c("left", "right")),
+       cell_text(
+      weight = "bold",
+    )
+    ),
+    locations = cells_body(columns = xG_per90)
+  ) %>% 
+  tab_style(
+    style = list(
+       cell_text(
+      align="center"
+    )
+    ),
+    locations = cells_body(columns = everything())
+  ) %>% 
+  tab_style(
+    style = list(
+       cell_text(
+      align="left"
+    )
+    ),
+    locations = cells_body(columns = name)
+  )
+
+
+xG_gt
+
+#gt::gtsave(data = xG_gt,filename = here("results","xG_gt.png"))
+```
+
+## Ranking by xG
+
+```{r}
+
+xG_gt <- xG_df %>%
+  arrange(desc(xG_per90)) %>% 
+  slice(1:15) %>% 
+  left_join(players_2023_df_density, by="name") %>% 
+  # mutate(
+  #   name= case_when(
+  #     name=="Diogo Teixeira da Silva" ~ "Diogo Jota",
+  #     TRUE ~ name
+  #   )
+  # ) %>% 
+  gt() %>% 
+  data_color(
+    columns = 2,
+    colors = scales::col_numeric(
+      palette = c("yellow","green","darkgreen"),
+      #domain=c(0,1.5,4))
+      domain = c(0.3,0.5,1.1),
+      na.color = "yellow")
+  ) %>% 
+  data_color(
+    columns = 7,
+    colors = scales::col_numeric(
+      palette = c("cornsilk","yellow","green"),
+      #domain=c(0,1.5,4))
+      domain = c(0,100,250))
+  ) %>% 
+  data_color(
+    columns = 10,
+    colors = scales::col_numeric(
+      palette = c("cornsilk","cornsilk","green"),
+      #domain=c(0,1.5,4))
+      domain = c(-0.5,0,0.7))
+  ) %>%
+  data_color(
+    columns = 12,
+    colors = scales::col_numeric(
+      palette = c("cornsilk","cornsilk","pink"),
+      #domain=c(0,1.5,4))
+      domain = c(3,6,9))
+  ) %>% 
+  data_color(
+    columns = 15,
+    colors = scales::col_numeric(
+      palette = c("cornsilk","cornsilk","orange"),
+      #domain=c(0,1.5,4))
+      domain = c(7,11,18.7))
+  ) %>% 
+  data_color(
+    columns = 17:22,
+    colors = scales::col_factor(
+      palette = "Pastel1",
+      domain = NULL,
+      na.color = 'gray'
+    ),
+    apply_to = "fill",
+    autocolor_text = TRUE
+  ) %>% 
+  tab_footnote(
+    footnote = md("**`Fpl Infinitesimal`** \n
+                  Delta = Actual Goals - xG, per 90 \n
+                  ceiling* is average of top 5 gws \n
+                  mean* is average poinst for starts gw")
+  ) %>% 
+  tab_options(
+    heading.background.color = "cornsilk",
+    table.background.color="cornsilk"
+    #heading.border.bottom.color = "#eebd00",
+    #heading.border.bottom.width = "5px",
+    #heading.border.lr.color = "#aae100",
+    #heading.border.lr.width = "50px",   #no effect
+  ) %>% 
+  tab_header(
+    title = md("FPL Season 2023/2024, Ranking by xG")
+  ) %>%
+  tab_options(column_labels.background.color = "cornsilk",column_labels.font.weight = "bold") %>% 
+  gt_add_divider("starts", style = "dashed", sides = "left") %>% 
+  gt_add_divider("xA_per90", style = "dashed") %>% 
+  gt_add_divider("xA_Delta", style = "dashed") %>% 
+  cols_label(
+    name="",
+    total_points_season="FPL",
+    mean="mean*",
+    high="Tail_20gw",
+    ceiling="Tail_10gw",
+    max="ceiling*",
+    xG_per90="xG",
+    xG_Delta="Delta"
+  ) %>% 
+  gt_plt_dist(total_points_list, type="histogram",fig_dim = c(15, 30), line_color = "purple", fill_color = "pink", bw = 3) %>% 
+  cols_hide(c(Goals_per90, Assists_per90, xA_per90, xA_Delta)) %>% 
+  cols_hide(c(high, ceiling)) %>% 
+  cols_move(columns=c(total_points_season, Goals, Assists), after = name) %>% 
+  cols_move(columns=starts, after = name) %>% 
+  cols_move(columns=total_points_list, after = xG_Delta) %>% 
+  gt_add_divider("Assists", style = "dashed") %>% 
+  gt_add_divider("xG_Delta", style = "dashed") %>%
+  gt_plt_bullet(column = plot_column, target = target_col, width = 45,palette = c("orange", "red3")) %>% 
+  cols_label(
+    plot_column="",
+    total_points_list="fpl point"
+  ) %>% 
+  tab_spanner(label = "xG per 90 mins", columns = c(xG_per90, xG_Delta)) %>% 
+  tab_spanner(label = "All Season", columns = c(starts, total_points_season, Goals, Assists)) %>% 
+  tab_spanner(label = "per Start", columns = c(total_points_list,mean, max,plot_column )) %>% 
+  tab_spanner(label = "Opponents contribute to past ceiling:", columns = (max1:max5 )) %>% 
+  tab_style(
+    style = list(
+      cell_borders(color = "grey", weight = px(3),sides = c("left", "right")),
+       cell_text(
+      weight = "bold",
+    )
+    ),
+    locations = cells_body(columns = xG_per90)
+  ) %>% 
+  tab_style(
+    style = list(
+       cell_text(
+      align="center"
+    )
+    ),
+    locations = cells_body(columns = everything())
+  ) %>% 
+  tab_style(
+    style = list(
+       cell_text(
+      align="left"
+    )
+    ),
+    locations = cells_body(columns = name)
+  )
+
+
+xG_gt
+
+#gt::gtsave(data = xG_gt,filename = here("results","xG_gt.png"))
+```
+
+## Ranking by Ceiling Point !
+
+```{r}
+
+xG_gt <- xG_df %>%
+  arrange(desc(max)) %>% 
+  slice(1:20) %>% 
+  left_join(players_2023_df_density, by="name") %>% 
+  # mutate(
+  #   name= case_when(
+  #     name=="Diogo Teixeira da Silva" ~ "Diogo Jota",
+  #     TRUE ~ name
+  #   )
+  # ) %>% 
+  gt() %>% 
+  data_color(
+    columns = 2,
+    colors = scales::col_numeric(
+      palette = c("yellow","green","darkgreen"),
+      #domain=c(0,1.5,4))
+      domain = c(0.3,0.5,1.1),
+      na.color = "yellow")
+  ) %>% 
+  data_color(
+    columns = 7,
+    colors = scales::col_numeric(
+      palette = c("cornsilk","yellow","green"),
+      #domain=c(0,1.5,4))
+      domain = c(0,100,250))
+  ) %>% 
+  data_color(
+    columns = 10,
+    colors = scales::col_numeric(
+      palette = c("cornsilk","cornsilk","green"),
+      #domain=c(0,1.5,4))
+      domain = c(-0.5,0,0.7))
+  ) %>%
+  data_color(
+    columns = 12,
+    colors = scales::col_numeric(
+      palette = c("cornsilk","cornsilk","pink"),
+      #domain=c(0,1.5,4))
+      domain = c(3,6,9))
+  ) %>% 
+  data_color(
+    columns = 15,
+    colors = scales::col_numeric(
+      palette = c("cornsilk","cornsilk","orange"),
+      #domain=c(0,1.5,4))
+      domain = c(7,11,18.7))
+  ) %>% 
+  data_color(
+    columns = 17:22,
+    colors = scales::col_factor(
+      palette = "Pastel1",
+      domain = NULL,
+      na.color = 'gray'
+    ),
+    apply_to = "fill",
+    autocolor_text = TRUE
+  ) %>% 
+  tab_footnote(
+    footnote = md("**`Fpl Infinitesimal`** \n
+                  Delta = Actual Goals - xG, per 90 \n
+                  ceiling* is average of top 5 gws \n
+                  mean* is average poinst for starts gw")
+  ) %>% 
+  tab_options(
+    heading.background.color = "cornsilk",
+    table.background.color="cornsilk"
+    #heading.border.bottom.color = "#eebd00",
+    #heading.border.bottom.width = "5px",
+    #heading.border.lr.color = "#aae100",
+    #heading.border.lr.width = "50px",   #no effect
+  ) %>% 
+  tab_header(
+    title = md("FPL Season 2023/2024, Ranking by Ceiling")
+  ) %>%
+  tab_options(column_labels.background.color = "cornsilk",column_labels.font.weight = "bold") %>% 
+  gt_add_divider("starts", style = "dashed", sides = "left") %>% 
+  gt_add_divider("xA_per90", style = "dashed") %>% 
+  gt_add_divider("xA_Delta", style = "dashed") %>% 
+  cols_label(
+    name="",
+    total_points_season="FPL",
+    mean="mean*",
+    high="Tail_20gw",
+    ceiling="Tail_10gw",
+    max="ceiling*",
+    xG_per90="xG",
+    xG_Delta="Delta"
+  ) %>% 
+  gt_plt_dist(total_points_list, type="histogram",fig_dim = c(15, 30), line_color = "purple", fill_color = "pink", bw = 3) %>% 
+  cols_hide(c(Goals_per90, Assists_per90, xA_per90, xA_Delta)) %>% 
+  cols_hide(c(high, ceiling)) %>% 
+  cols_move(columns=c(total_points_season, Goals, Assists), after = name) %>% 
+  cols_move(columns=starts, after = name) %>% 
+  cols_move(columns=total_points_list, after = xG_Delta) %>% 
+  gt_add_divider("Assists", style = "dashed") %>% 
+  gt_add_divider("xG_Delta", style = "dashed") %>%
+  gt_plt_bullet(column = plot_column, target = target_col, width = 45,palette = c("orange", "red3")) %>% 
+  cols_label(
+    plot_column="",
+    total_points_list="fpl point"
+  ) %>% 
+  tab_spanner(label = "xG per 90 mins", columns = c(xG_per90, xG_Delta)) %>% 
+  tab_spanner(label = "All Season", columns = c(starts, total_points_season, Goals, Assists)) %>% 
+  tab_spanner(label = "per Start", columns = c(total_points_list,mean, max,plot_column )) %>% 
+  tab_spanner(label = "Opponents contribute to past ceiling:", columns = (max1:max5 )) %>% 
+  tab_style(
+    style = list(
+      cell_borders(color = "grey", weight = px(3),sides = c("left", "right")),
+       cell_text(
+      weight = "bold",
+    )
+    ),
+    locations = cells_body(columns = xG_per90)
+  ) %>% 
+  tab_style(
+    style = list(
+       cell_text(
+      align="center"
+    )
+    ),
+    locations = cells_body(columns = everything())
+  ) %>% 
+  tab_style(
+    style = list(
+       cell_text(
+      align="left"
+    )
+    ),
+    locations = cells_body(columns = name)
+  )
+
+
+xG_gt
+
+#gt::gtsave(data = xG_gt,filename = here("results","xG_gt.png"))
+```
+
+## Ranking by xG Delta !
+
+```{r}
+
+xG_gt <- xG_df %>%
+  arrange(desc(xG_Delta)) %>% 
+  slice(1:20) %>% 
+  left_join(players_2023_df_density, by="name") %>% 
+  # mutate(
+  #   name= case_when(
+  #     name=="Diogo Teixeira da Silva" ~ "Diogo Jota",
+  #     TRUE ~ name
+  #   )
+  # ) %>% 
+  gt() %>% 
+  data_color(
+    columns = 2,
+    colors = scales::col_numeric(
+      palette = c("yellow","green","darkgreen"),
+      #domain=c(0,1.5,4))
+      domain = c(0.3,0.5,1.1),
+      na.color = "yellow")
+  ) %>% 
+  data_color(
+    columns = 7,
+    colors = scales::col_numeric(
+      palette = c("cornsilk","yellow","green"),
+      #domain=c(0,1.5,4))
+      domain = c(0,100,250))
+  ) %>% 
+  data_color(
+    columns = 10,
+    colors = scales::col_numeric(
+      palette = c("cornsilk","cornsilk","green"),
+      #domain=c(0,1.5,4))
+      domain = c(-0.5,0,0.7))
+  ) %>%
+  data_color(
+    columns = 12,
+    colors = scales::col_numeric(
+      palette = c("cornsilk","cornsilk","pink"),
+      #domain=c(0,1.5,4))
+      domain = c(3,6,9))
+  ) %>% 
+  data_color(
+    columns = 15,
+    colors = scales::col_numeric(
+      palette = c("cornsilk","cornsilk","orange"),
+      #domain=c(0,1.5,4))
+      domain = c(7,11,18.7))
+  ) %>% 
+  data_color(
+    columns = 17:22,
+    colors = scales::col_factor(
+      palette = "Pastel1",
+      domain = NULL,
+      na.color = 'gray'
+    ),
+    apply_to = "fill",
+    autocolor_text = TRUE
+  ) %>% 
+  tab_footnote(
+    footnote = md("**`Fpl Infinitesimal`** \n
+                  Delta = Actual Goals - xG, per 90 \n
+                  ceiling* is average of top 5 gws \n
+                  mean* is average poinst for starts gw")
+  ) %>% 
+  tab_options(
+    heading.background.color = "cornsilk",
+    table.background.color="cornsilk"
+    #heading.border.bottom.color = "#eebd00",
+    #heading.border.bottom.width = "5px",
+    #heading.border.lr.color = "#aae100",
+    #heading.border.lr.width = "50px",   #no effect
+  ) %>% 
+  tab_header(
+    title = md("FPL Season 2023/2024, Ranking by Ceiling")
+  ) %>%
+  tab_options(column_labels.background.color = "cornsilk",column_labels.font.weight = "bold") %>% 
+  gt_add_divider("starts", style = "dashed", sides = "left") %>% 
+  gt_add_divider("xA_per90", style = "dashed") %>% 
+  gt_add_divider("xA_Delta", style = "dashed") %>% 
+  cols_label(
+    name="",
+    total_points_season="FPL",
+    mean="mean*",
+    high="Tail_20gw",
+    ceiling="Tail_10gw",
+    max="ceiling*",
+    xG_per90="xG",
+    xG_Delta="Delta"
+  ) %>% 
+  gt_plt_dist(total_points_list, type="histogram",fig_dim = c(15, 30), line_color = "purple", fill_color = "pink", bw = 3) %>% 
+  cols_hide(c(Goals_per90, Assists_per90, xA_per90, xA_Delta)) %>% 
+  cols_hide(c(high, ceiling)) %>% 
+  cols_move(columns=c(total_points_season, Goals, Assists), after = name) %>% 
+  cols_move(columns=starts, after = name) %>% 
+  cols_move(columns=total_points_list, after = xG_Delta) %>% 
+  gt_add_divider("Assists", style = "dashed") %>% 
+  gt_add_divider("xG_Delta", style = "dashed") %>%
+  gt_plt_bullet(column = plot_column, target = target_col, width = 45,palette = c("orange", "red3")) %>% 
+  cols_label(
+    plot_column="",
+    total_points_list="fpl point"
+  ) %>% 
+  tab_spanner(label = "xG per 90 mins", columns = c(xG_per90, xG_Delta)) %>% 
+  tab_spanner(label = "All Season", columns = c(starts, total_points_season, Goals, Assists)) %>% 
+  tab_spanner(label = "per Start", columns = c(total_points_list,mean, max,plot_column )) %>% 
+  tab_spanner(label = "Opponents contribute to past ceiling:", columns = (max1:max5 )) %>% 
+  tab_style(
+    style = list(
+      cell_borders(color = "grey", weight = px(3),sides = c("left", "right")),
+       cell_text(
+      weight = "bold",
+    )
+    ),
+    locations = cells_body(columns = xG_per90)
+  ) %>% 
+  tab_style(
+    style = list(
+       cell_text(
+      align="center"
+    )
+    ),
+    locations = cells_body(columns = everything())
+  ) %>% 
+  tab_style(
+    style = list(
+       cell_text(
+      align="left"
+    )
+    ),
+    locations = cells_body(columns = name)
+  )
+
+
+xG_gt
+
+#gt::gtsave(data = xG_gt,filename = here("results","xG_gt.png"))
+```
+
+## Play yourself ?
+
+```{r}
+options(
+  DT.options = list(
+    pageLength = 20, 
+    #language = list(search = 'Filter:'),
+    dom='ft',
+    #buttons=c('copy', 'csv', 'excel', 'print', 'pdf'),
+    Buttons=c('copy', 'excel', 'pdf'),
+    autoWidth = FALSE
+  )
+)
+```
+
+```{r eval=TRUE}
+xG_df2 <- xG_df0 %>% 
+  relocate(position, .after = name)
+  
+datatable(xG_df2,extensions = 'Buttons')
+```
