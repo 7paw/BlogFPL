@@ -4,14 +4,10 @@ author: "7 Paws"
 date: "2024-08-04"
 categories: [thoughts]
 image: "image.jpg"
+format: 
+  html:
+    page-layout: full
 ---
-<style type="text/css">
-.main-container {
-  max-width: 1800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-</style>
 
 
 ```{r setup, include=FALSE}
@@ -129,7 +125,7 @@ ceiling_df <- players_2023_df2 %>%
     ceiling= mean(total_points)
   ) %>% 
   arrange(desc(ceiling)) 
-  
+
 ```
 
 ```{r}
@@ -150,7 +146,7 @@ high_df <- players_2023_df2 %>%
     high= mean(total_points)
   ) %>% 
   arrange(desc(high)) 
-  
+
 ```
 
 ```{r}
@@ -298,7 +294,7 @@ mean_df <- players_2023_df2 %>%
     mean= mean(total_points)
   ) %>% 
   arrange(desc(mean)) 
-  
+
 ```
 
 ```{r}
@@ -459,25 +455,25 @@ xG_gt <- xG_df %>%
   tab_style(
     style = list(
       cell_borders(color = "grey", weight = px(3),sides = c("left", "right")),
-       cell_text(
-      weight = "bold",
-    )
+      cell_text(
+        weight = "bold",
+      )
     ),
     locations = cells_body(columns = xG_per90)
   ) %>% 
   tab_style(
     style = list(
-       cell_text(
-      align="center"
-    )
+      cell_text(
+        align="center"
+      )
     ),
     locations = cells_body(columns = everything())
   ) %>% 
   tab_style(
     style = list(
-       cell_text(
-      align="left"
-    )
+      cell_text(
+        align="left"
+      )
     ),
     locations = cells_body(columns = name)
   )
@@ -600,25 +596,25 @@ xG_gt <- xG_df %>%
   tab_style(
     style = list(
       cell_borders(color = "grey", weight = px(3),sides = c("left", "right")),
-       cell_text(
-      weight = "bold",
-    )
+      cell_text(
+        weight = "bold",
+      )
     ),
     locations = cells_body(columns = xG_per90)
   ) %>% 
   tab_style(
     style = list(
-       cell_text(
-      align="center"
-    )
+      cell_text(
+        align="center"
+      )
     ),
     locations = cells_body(columns = everything())
   ) %>% 
   tab_style(
     style = list(
-       cell_text(
-      align="left"
-    )
+      cell_text(
+        align="left"
+      )
     ),
     locations = cells_body(columns = name)
   )
@@ -743,25 +739,25 @@ xG_gt <- xG_df %>%
   tab_style(
     style = list(
       cell_borders(color = "grey", weight = px(3),sides = c("left", "right")),
-       cell_text(
-      weight = "bold",
-    )
+      cell_text(
+        weight = "bold",
+      )
     ),
     locations = cells_body(columns = xG_per90)
   ) %>% 
   tab_style(
     style = list(
-       cell_text(
-      align="center"
-    )
+      cell_text(
+        align="center"
+      )
     ),
     locations = cells_body(columns = everything())
   ) %>% 
   tab_style(
     style = list(
-       cell_text(
-      align="left"
-    )
+      cell_text(
+        align="left"
+      )
     ),
     locations = cells_body(columns = name)
   )
@@ -884,25 +880,25 @@ xG_gt <- xG_df %>%
   tab_style(
     style = list(
       cell_borders(color = "grey", weight = px(3),sides = c("left", "right")),
-       cell_text(
-      weight = "bold",
-    )
+      cell_text(
+        weight = "bold",
+      )
     ),
     locations = cells_body(columns = xG_per90)
   ) %>% 
   tab_style(
     style = list(
-       cell_text(
-      align="center"
-    )
+      cell_text(
+        align="center"
+      )
     ),
     locations = cells_body(columns = everything())
   ) %>% 
   tab_style(
     style = list(
-       cell_text(
-      align="left"
-    )
+      cell_text(
+        align="left"
+      )
     ),
     locations = cells_body(columns = name)
   )
@@ -915,22 +911,26 @@ xG_gt
 
 ## Play yourself ?
 
-```{r}
-options(
-  DT.options = list(
-    pageLength = 20, 
-    #language = list(search = 'Filter:'),
-    dom='ft',
-    #buttons=c('copy', 'csv', 'excel', 'print', 'pdf'),
-    Buttons=c('copy', 'excel', 'pdf'),
-    autoWidth = FALSE
-  )
-)
-```
 
 ```{r eval=TRUE}
 xG_df2 <- xG_df0 %>% 
-  relocate(position, .after = name)
-  
-datatable(xG_df2,extensions = 'Buttons')
+  transmute(
+    name, position,xG_per90,xA_per90,xG_Delta,xA_Delta,
+    mean_perStart=mean, mean_max20=high, mean_max10=ceiling, mean_max5= max,
+    starts, total_points_season, Goals, Assists,
+  )
+
+
+datatable(xG_df2,filter = 'top', extensions = "Buttons", 
+          options = list(
+            paging = TRUE,
+            scrollX=TRUE, 
+            searching = TRUE,
+            ordering = TRUE,
+            dom = 'Bfrtip',
+            buttons = c('copy', 'csv', 'excel', 'pdf'),
+            pageLength=10, 
+            lengthMenu=c(3,5,10) 
+          )
+)
 ```
