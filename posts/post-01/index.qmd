@@ -9,7 +9,6 @@ format:
     page-layout: full
 ---
 
-
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, error=TRUE, cache=FALSE)
 ```
@@ -627,8 +626,6 @@ xG_gt
 
 ## Ranking by Ceiling Point !
 
-
-
 ```{r}
 
 xG_gt <- xG_df %>%
@@ -911,7 +908,6 @@ xG_gt
 
 ## Play yourself ?
 
-
 ```{r eval=TRUE}
 xG_df2 <- xG_df0 %>% 
   transmute(
@@ -921,7 +917,8 @@ xG_df2 <- xG_df0 %>%
   )
 
 
-datatable(xG_df2,filter = 'top',options = list(
+datatable(xG_df2,filter = 'top',extensions = "FixedColumns",rownames = FALSE,
+          options = list(
             paging = TRUE,
             scrollX=TRUE, 
             searching = TRUE,
@@ -930,11 +927,11 @@ datatable(xG_df2,filter = 'top',options = list(
             #buttons = c('copy', 'csv', 'excel', 'pdf'),
             buttons = c('pdf'),
             pageLength=10, 
-            lengthMenu=c(3,5,10) 
+            lengthMenu=c(3,5,10) ,
+            fixedColumns = list(leftColumns = 1)
           )
           )
 ```
-
 
 ```{r eval=FALSE}
 datatable(xG_df2,filter = 'top', extensions = "Buttons", 
@@ -950,5 +947,3 @@ datatable(xG_df2,filter = 'top', extensions = "Buttons",
           )
 )
 ```
-
-
