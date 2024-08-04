@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="7 Paws">
+<meta name="dcterms.date" content="2024-08-04">
+
+<title>BlogFPL - Tets</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">BlogFPL</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/" rel="" target=""><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com" rel="" target=""><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-page">
+      <h1 class="title">Tets</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">summary</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>7 Paws </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">August 4, 2024</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+
+
+
+
+<section id="section-1-fixed-income-investments" class="level1">
+<h1>Section 1: Fixed Income Investments</h1>
+<section id="hfis-1-overview-of-the-types-and-features-of-fixed-income-securities" class="level2">
+<h2 class="anchored" data-anchor-id="hfis-1-overview-of-the-types-and-features-of-fixed-income-securities">HFIS-1: Overview of the Types and Features of Fixed Income Securities</h2>
+<ul>
+<li><strong>Types of Issuers</strong>: Domestic corporations, municipal governments, and federal agencies.</li>
+<li><strong>Bond Features</strong>: Collateralized vs.&nbsp;unsecured, public vs.&nbsp;private placements.</li>
+<li><strong>Maturity</strong>: Importance for yield and volatility.</li>
+</ul>
+</section>
+<section id="hfis-2-risks-associated-with-investing-in-fixed-income-securities" class="level2">
+<h2 class="anchored" data-anchor-id="hfis-2-risks-associated-with-investing-in-fixed-income-securities">HFIS-2: Risks Associated with Investing in Fixed Income Securities</h2>
+<ul>
+<li><strong>Interest Rate Risk</strong>: Sensitivity to rate changes.</li>
+<li><strong>Reinvestment Risk</strong>: Risk of reinvesting at lower rates.</li>
+<li><strong>Credit Risk</strong>: Default and downgrade risks.</li>
+<li><strong>Liquidity and Inflation Risks</strong>: Challenges of selling and erosion of value.</li>
+</ul>
+</section>
+<section id="hfis-7-u.s.-treasury-securities" class="level2">
+<h2 class="anchored" data-anchor-id="hfis-7-u.s.-treasury-securities">HFIS-7: U.S. Treasury Securities</h2>
+<ul>
+<li><strong>Types</strong>: Treasury bills, notes, bonds, and TIPS.</li>
+<li><strong>Attributes</strong>: Liquidity, tax advantages, risk-free benchmark.</li>
+</ul>
+</section>
+<section id="hfis-10-corporate-bonds" class="level2">
+<h2 class="anchored" data-anchor-id="hfis-10-corporate-bonds">HFIS-10: Corporate Bonds</h2>
+<ul>
+<li><strong>Valuation</strong>: Credit ratings, yield spreads.</li>
+<li><strong>Types</strong>: Callable bonds, sinking funds.</li>
+</ul>
+</section>
+<section id="hfis-11-leveraged-loans" class="level2">
+<h2 class="anchored" data-anchor-id="hfis-11-leveraged-loans">HFIS-11: Leveraged Loans</h2>
+<ul>
+<li><strong>Features</strong>: High-yield, seniority in capital structure.</li>
+</ul>
+</section>
+<section id="hfis-15-inflation-linked-bonds" class="level2">
+<h2 class="anchored" data-anchor-id="hfis-15-inflation-linked-bonds">HFIS-15: Inflation-Linked Bonds</h2>
+<ul>
+<li><strong>Purpose</strong>: Protection against inflation, principal adjustment.</li>
+</ul>
+</section>
+<section id="hfis-21-overview-of-mortgages-and-the-mortgage-market" class="level2">
+<h2 class="anchored" data-anchor-id="hfis-21-overview-of-mortgages-and-the-mortgage-market">HFIS-21: Overview of Mortgages and the Mortgage Market</h2>
+<ul>
+<li><strong>Types</strong>: Residential and commercial mortgages.</li>
+<li><strong>Market Dynamics</strong>: Economic factors affecting mortgage performance.</li>
+</ul>
+</section>
+<section id="hfis-25-nonagency-rmbs" class="level2">
+<h2 class="anchored" data-anchor-id="hfis-25-nonagency-rmbs">HFIS-25: Nonagency RMBS</h2>
+<ul>
+<li><strong>Risks and Rewards</strong>: Higher yields, complex structures.</li>
+</ul>
+</section>
+<section id="hfis-60-financing-positions-in-the-bond-market" class="level2">
+<h2 class="anchored" data-anchor-id="hfis-60-financing-positions-in-the-bond-market">HFIS-60: Financing Positions in the Bond Market</h2>
+<ul>
+<li><strong>Instruments</strong>: Repos, dollar rolls, securities lending.</li>
+</ul>
+</section>
+</section>
+<section id="section-2-credit-investment-management" class="level1">
+<h1>Section 2: Credit Investment Management</h1>
+<section id="hcrm-1-fundamentals-of-credit-risk" class="level2">
+<h2 class="anchored" data-anchor-id="hcrm-1-fundamentals-of-credit-risk">HCRM-1: Fundamentals of Credit Risk</h2>
+<ul>
+<li><strong>Sources</strong>: Default risk, credit spreads.</li>
+<li><strong>Mitigation</strong>: Collateral, covenants.</li>
+</ul>
+</section>
+<section id="hcrm-4-measurement-of-credit-risk" class="level2">
+<h2 class="anchored" data-anchor-id="hcrm-4-measurement-of-credit-risk">HCRM-4: Measurement of Credit Risk</h2>
+<ul>
+<li><strong>Models</strong>: Probability of default (PD), loss given default (LGD), exposure at default (EAD).</li>
+</ul>
+</section>
+<section id="hcrm-5-dynamic-credit-risk-exposure" class="level2">
+<h2 class="anchored" data-anchor-id="hcrm-5-dynamic-credit-risk-exposure">HCRM-5: Dynamic Credit Risk Exposure</h2>
+<ul>
+<li><strong>Management</strong>: Monitoring and adjusting for changes in credit conditions.</li>
+</ul>
+</section>
+<section id="hcrm-13-credit-portfolio-management" class="level2">
+<h2 class="anchored" data-anchor-id="hcrm-13-credit-portfolio-management">HCRM-13: Credit Portfolio Management</h2>
+<ul>
+<li><strong>Diversification</strong>: Reducing risk through varied credit exposures.</li>
+</ul>
+</section>
+<section id="hcrm-20-credit-derivatives" class="level2">
+<h2 class="anchored" data-anchor-id="hcrm-20-credit-derivatives">HCRM-20: Credit Derivatives</h2>
+<ul>
+<li><strong>Instruments</strong>: Credit default swaps (CDS), synthetic CDOs.</li>
+</ul>
+</section>
+</section>
+<section id="section-3-equity-and-alternative-investments" class="level1">
+<h1>Section 3: Equity and Alternative Investments</h1>
+<section id="hoas-1-what-is-an-alternative-asset" class="level2">
+<h2 class="anchored" data-anchor-id="hoas-1-what-is-an-alternative-asset">HOAS-1: What is an Alternative Asset?</h2>
+<ul>
+<li><strong>Types</strong>: Real estate, private equity, commodities.</li>
+</ul>
+</section>
+<section id="hoas-3-introduction-to-hedge-funds" class="level2">
+<h2 class="anchored" data-anchor-id="hoas-3-introduction-to-hedge-funds">HOAS-3: Introduction to Hedge Funds</h2>
+<ul>
+<li><strong>Strategies</strong>: Long/short equity, global macro, arbitrage.</li>
+</ul>
+</section>
+<section id="hoas-6-risk-management-in-hedge-funds" class="level2">
+<h2 class="anchored" data-anchor-id="hoas-6-risk-management-in-hedge-funds">HOAS-6: Risk Management in Hedge Funds</h2>
+<ul>
+<li><strong>Return Distributions</strong>: Non-normal, fat tails.</li>
+</ul>
+</section>
+<section id="hoas-7-additional-hedge-funds-risks" class="level2">
+<h2 class="anchored" data-anchor-id="hoas-7-additional-hedge-funds-risks">HOAS-7: Additional Hedge Funds Risks</h2>
+<ul>
+<li><strong>Leverage</strong>: Amplifying returns and risks.</li>
+</ul>
+</section>
+<section id="hoas-12-introduction-to-commodities" class="level2">
+<h2 class="anchored" data-anchor-id="hoas-12-introduction-to-commodities">HOAS-12: Introduction to Commodities</h2>
+<ul>
+<li><strong>Market Dynamics</strong>: Supply and demand, geopolitical factors.</li>
+</ul>
+</section>
+<section id="hoas-16-introduction-to-venture-capital" class="level2">
+<h2 class="anchored" data-anchor-id="hoas-16-introduction-to-venture-capital">HOAS-16: Introduction to Venture Capital</h2>
+<ul>
+<li><strong>Stages</strong>: Seed, early-stage, late-stage investments.</li>
+</ul>
+</section>
+<section id="hoas-17-introduction-to-leveraged-buyouts-lbos" class="level2">
+<h2 class="anchored" data-anchor-id="hoas-17-introduction-to-leveraged-buyouts-lbos">HOAS-17: Introduction to Leveraged Buyouts (LBOs)</h2>
+<ul>
+<li><strong>Structure</strong>: Use of debt to acquire companies, value creation through improvements.</li>
+</ul>
+</section>
+<section id="hoas-20-the-economics-of-private-equity" class="level2">
+<h2 class="anchored" data-anchor-id="hoas-20-the-economics-of-private-equity">HOAS-20: The Economics of Private Equity</h2>
+<ul>
+<li><strong>Valuation</strong>: Methods and performance measures.</li>
+</ul>
+</section>
+<section id="hoas-24-collateralized-debt-obligations-cdos" class="level2">
+<h2 class="anchored" data-anchor-id="hoas-24-collateralized-debt-obligations-cdos">HOAS-24: Collateralized Debt Obligations (CDOs)</h2>
+<ul>
+<li><strong>Structure</strong>: Tranching, risk distribution.</li>
+</ul>
+</section>
+</section>
+<section id="section-4-investment-policy-and-regulatory-framework" class="level1">
+<h1>Section 4: Investment Policy and Regulatory Framework</h1>
+<section id="mip-1-the-portfolio-management-process-and-the-ips" class="level2">
+<h2 class="anchored" data-anchor-id="mip-1-the-portfolio-management-process-and-the-ips">MIP-1: The Portfolio Management Process and the IPS</h2>
+<ul>
+<li><strong>Steps</strong>: Planning, execution, feedback.</li>
+<li><strong>Components</strong>: Objectives, risk tolerance, constraints.</li>
+</ul>
+</section>
+<section id="mip-3-managing-institutional-investors-portfolios" class="level2">
+<h2 class="anchored" data-anchor-id="mip-3-managing-institutional-investors-portfolios">MIP-3: Managing Institutional Investors’ Portfolios</h2>
+<ul>
+<li><strong>Types</strong>: Pension funds, endowments, insurance companies.</li>
+<li><strong>Fiduciary Duties</strong>: Legal and ethical responsibilities.</li>
+</ul>
+</section>
+<section id="qfi-pm-133-19-esg-criteria" class="level2">
+<h2 class="anchored" data-anchor-id="qfi-pm-133-19-esg-criteria">QFI-PM-133-19: ESG Criteria</h2>
+<ul>
+<li><strong>Importance</strong>: Environmental, social, and governance factors in investment decisions.</li>
+</ul>
+</section>
+<section id="qfip-160-f23-principles-for-responsible-investment" class="level2">
+<h2 class="anchored" data-anchor-id="qfip-160-f23-principles-for-responsible-investment">QFIP-160-F23: Principles for Responsible Investment</h2>
+<ul>
+<li><strong>Guidelines</strong>: Sustainable and ethical investing practices.</li>
+</ul>
+</section>
+</section>
+<section id="section-5-investment-portfolio-management-and-asset-allocation" class="level1">
+<h1>Section 5: Investment Portfolio Management and Asset Allocation</h1>
+<section id="mip-5-asset-allocation" class="level2">
+<h2 class="anchored" data-anchor-id="mip-5-asset-allocation">MIP-5: Asset Allocation</h2>
+<ul>
+<li><strong>Strategic vs.&nbsp;Tactical</strong>: Long-term targets vs.&nbsp;short-term adjustments.</li>
+<li><strong>Efficient Frontier</strong>: Optimal risk-return trade-offs.</li>
+</ul>
+</section>
+<section id="mip-6-fixed-income-portfolio-management" class="level2">
+<h2 class="anchored" data-anchor-id="mip-6-fixed-income-portfolio-management">MIP-6: Fixed Income Portfolio Management</h2>
+<ul>
+<li><strong>Strategies</strong>: Duration management, credit analysis.</li>
+</ul>
+</section>
+<section id="qfip-162-f23-hidden-dangers-of-passive-investing" class="level2">
+<h2 class="anchored" data-anchor-id="qfip-162-f23-hidden-dangers-of-passive-investing">QFIP-162-F23: Hidden Dangers of Passive Investing</h2>
+<ul>
+<li><strong>Risks</strong>: Over-reliance on indices, market inefficiencies.</li>
+</ul>
+</section>
+<section id="qfi-pm-155-21-efficient-factor-investing" class="level2">
+<h2 class="anchored" data-anchor-id="qfi-pm-155-21-efficient-factor-investing">QFI-PM-155-21: Efficient Factor Investing</h2>
+<ul>
+<li><strong>Factors</strong>: Size, value, momentum, quality.</li>
+</ul>
+</section>
+</section>
+<section id="section-6-asset-liability-management-alm" class="level1">
+<h1>Section 6: Asset Liability Management (ALM)</h1>
+<section id="fis-3-basics-of-interest-rate-risk-management" class="level2">
+<h2 class="anchored" data-anchor-id="fis-3-basics-of-interest-rate-risk-management">FIS-3: Basics of Interest Rate Risk Management</h2>
+<ul>
+<li><strong>Techniques</strong>: Duration, convexity, value at risk.</li>
+</ul>
+</section>
+<section id="fis-4-refinements-in-interest-rate-risk-management" class="level2">
+<h2 class="anchored" data-anchor-id="fis-4-refinements-in-interest-rate-risk-management">FIS-4: Refinements in Interest Rate Risk Management</h2>
+<ul>
+<li><strong>Advanced Methods</strong>: Key rate durations, hedging strategies.</li>
+</ul>
+</section>
+<section id="qfi-pm-158-23-duration-dv01-and-yield-curve-transformations" class="level2">
+<h2 class="anchored" data-anchor-id="qfi-pm-158-23-duration-dv01-and-yield-curve-transformations">QFI-PM-158-23: Duration, DV01, and Yield Curve Transformations</h2>
+<ul>
+<li><strong>Metrics</strong>: Managing interest rate exposures.</li>
+</ul>
+</section>
+<section id="qfi-pm-139-19-alm-techniques-and-practices" class="level2">
+<h2 class="anchored" data-anchor-id="qfi-pm-139-19-alm-techniques-and-practices">QFI-PM-139-19: ALM Techniques and Practices</h2>
+<ul>
+<li><strong>Strategies</strong>: Cash flow matching, immunization.</li>
+</ul>
+</section>
+<section id="qfi-pm-141-19-liability-driven-investment" class="level2">
+<h2 class="anchored" data-anchor-id="qfi-pm-141-19-liability-driven-investment">QFI-PM-141-19: Liability Driven Investment</h2>
+<ul>
+<li><strong>Focus</strong>: Aligning asset strategies with liability profiles.</li>
+</ul>
+</section>
+<section id="qfi-pm-142-19-strategic-asset-allocation-with-uncertainty" class="level2">
+<h2 class="anchored" data-anchor-id="qfi-pm-142-19-strategic-asset-allocation-with-uncertainty">QFI-PM-142-19: Strategic Asset Allocation with Uncertainty</h2>
+<ul>
+<li><strong>Models</strong>: Addressing uncertain future liabilities.</li>
+</ul>
+</section>
+<section id="qfi-pm-151-20-role-of-asset-managers-in-alm" class="level2">
+<h2 class="anchored" data-anchor-id="qfi-pm-151-20-role-of-asset-managers-in-alm">QFI-PM-151-20: Role of Asset Managers in ALM</h2>
+<ul>
+<li><strong>Execution</strong>: Implementing ALM strategies, managing risks.</li>
+</ul>
+</section>
+</section>
+<section id="section-7-performance-measurement-and-attribution" class="level1">
+<h1>Section 7: Performance Measurement and Attribution</h1>
+<section id="mip-12-evaluating-portfolio-performance" class="level2">
+<h2 class="anchored" data-anchor-id="mip-12-evaluating-portfolio-performance">MIP-12: Evaluating Portfolio Performance</h2>
+<ul>
+<li><strong>Components</strong>: Measurement, attribution, appraisal.</li>
+</ul>
+</section>
+<section id="qfi-pm-145-19-determinants-of-portfolio-performance" class="level2">
+<h2 class="anchored" data-anchor-id="qfi-pm-145-19-determinants-of-portfolio-performance">QFI-PM-145-19: Determinants of Portfolio Performance</h2>
+<ul>
+<li><strong>Analysis</strong>: Identifying sources of return, evaluating strategies.</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

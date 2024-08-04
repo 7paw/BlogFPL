@@ -49,10 +49,297 @@
     "text": "Play yourself ?"
   },
   {
+    "objectID": "posts/post-02/index.html",
+    "href": "posts/post-02/index.html",
+    "title": "Tets",
+    "section": "",
+    "text": "Types of Issuers: Domestic corporations, municipal governments, and federal agencies.\nBond Features: Collateralized vs. unsecured, public vs. private placements.\nMaturity: Importance for yield and volatility.\n\n\n\n\n\nInterest Rate Risk: Sensitivity to rate changes.\nReinvestment Risk: Risk of reinvesting at lower rates.\nCredit Risk: Default and downgrade risks.\nLiquidity and Inflation Risks: Challenges of selling and erosion of value.\n\n\n\n\n\nTypes: Treasury bills, notes, bonds, and TIPS.\nAttributes: Liquidity, tax advantages, risk-free benchmark.\n\n\n\n\n\nValuation: Credit ratings, yield spreads.\nTypes: Callable bonds, sinking funds.\n\n\n\n\n\nFeatures: High-yield, seniority in capital structure.\n\n\n\n\n\nPurpose: Protection against inflation, principal adjustment.\n\n\n\n\n\nTypes: Residential and commercial mortgages.\nMarket Dynamics: Economic factors affecting mortgage performance.\n\n\n\n\n\nRisks and Rewards: Higher yields, complex structures.\n\n\n\n\n\nInstruments: Repos, dollar rolls, securities lending."
+  },
+  {
+    "objectID": "posts/post-02/index.html#hfis-1-overview-of-the-types-and-features-of-fixed-income-securities",
+    "href": "posts/post-02/index.html#hfis-1-overview-of-the-types-and-features-of-fixed-income-securities",
+    "title": "Tets",
+    "section": "",
+    "text": "Types of Issuers: Domestic corporations, municipal governments, and federal agencies.\nBond Features: Collateralized vs. unsecured, public vs. private placements.\nMaturity: Importance for yield and volatility."
+  },
+  {
+    "objectID": "posts/post-02/index.html#hfis-2-risks-associated-with-investing-in-fixed-income-securities",
+    "href": "posts/post-02/index.html#hfis-2-risks-associated-with-investing-in-fixed-income-securities",
+    "title": "Tets",
+    "section": "",
+    "text": "Interest Rate Risk: Sensitivity to rate changes.\nReinvestment Risk: Risk of reinvesting at lower rates.\nCredit Risk: Default and downgrade risks.\nLiquidity and Inflation Risks: Challenges of selling and erosion of value."
+  },
+  {
+    "objectID": "posts/post-02/index.html#hfis-7-u.s.-treasury-securities",
+    "href": "posts/post-02/index.html#hfis-7-u.s.-treasury-securities",
+    "title": "Tets",
+    "section": "",
+    "text": "Types: Treasury bills, notes, bonds, and TIPS.\nAttributes: Liquidity, tax advantages, risk-free benchmark."
+  },
+  {
+    "objectID": "posts/post-02/index.html#hfis-10-corporate-bonds",
+    "href": "posts/post-02/index.html#hfis-10-corporate-bonds",
+    "title": "Tets",
+    "section": "",
+    "text": "Valuation: Credit ratings, yield spreads.\nTypes: Callable bonds, sinking funds."
+  },
+  {
+    "objectID": "posts/post-02/index.html#hfis-11-leveraged-loans",
+    "href": "posts/post-02/index.html#hfis-11-leveraged-loans",
+    "title": "Tets",
+    "section": "",
+    "text": "Features: High-yield, seniority in capital structure."
+  },
+  {
+    "objectID": "posts/post-02/index.html#hfis-15-inflation-linked-bonds",
+    "href": "posts/post-02/index.html#hfis-15-inflation-linked-bonds",
+    "title": "Tets",
+    "section": "",
+    "text": "Purpose: Protection against inflation, principal adjustment."
+  },
+  {
+    "objectID": "posts/post-02/index.html#hfis-21-overview-of-mortgages-and-the-mortgage-market",
+    "href": "posts/post-02/index.html#hfis-21-overview-of-mortgages-and-the-mortgage-market",
+    "title": "Tets",
+    "section": "",
+    "text": "Types: Residential and commercial mortgages.\nMarket Dynamics: Economic factors affecting mortgage performance."
+  },
+  {
+    "objectID": "posts/post-02/index.html#hfis-25-nonagency-rmbs",
+    "href": "posts/post-02/index.html#hfis-25-nonagency-rmbs",
+    "title": "Tets",
+    "section": "",
+    "text": "Risks and Rewards: Higher yields, complex structures."
+  },
+  {
+    "objectID": "posts/post-02/index.html#hfis-60-financing-positions-in-the-bond-market",
+    "href": "posts/post-02/index.html#hfis-60-financing-positions-in-the-bond-market",
+    "title": "Tets",
+    "section": "",
+    "text": "Instruments: Repos, dollar rolls, securities lending."
+  },
+  {
+    "objectID": "posts/post-02/index.html#hcrm-1-fundamentals-of-credit-risk",
+    "href": "posts/post-02/index.html#hcrm-1-fundamentals-of-credit-risk",
+    "title": "Tets",
+    "section": "HCRM-1: Fundamentals of Credit Risk",
+    "text": "HCRM-1: Fundamentals of Credit Risk\n\nSources: Default risk, credit spreads.\nMitigation: Collateral, covenants."
+  },
+  {
+    "objectID": "posts/post-02/index.html#hcrm-4-measurement-of-credit-risk",
+    "href": "posts/post-02/index.html#hcrm-4-measurement-of-credit-risk",
+    "title": "Tets",
+    "section": "HCRM-4: Measurement of Credit Risk",
+    "text": "HCRM-4: Measurement of Credit Risk\n\nModels: Probability of default (PD), loss given default (LGD), exposure at default (EAD)."
+  },
+  {
+    "objectID": "posts/post-02/index.html#hcrm-5-dynamic-credit-risk-exposure",
+    "href": "posts/post-02/index.html#hcrm-5-dynamic-credit-risk-exposure",
+    "title": "Tets",
+    "section": "HCRM-5: Dynamic Credit Risk Exposure",
+    "text": "HCRM-5: Dynamic Credit Risk Exposure\n\nManagement: Monitoring and adjusting for changes in credit conditions."
+  },
+  {
+    "objectID": "posts/post-02/index.html#hcrm-13-credit-portfolio-management",
+    "href": "posts/post-02/index.html#hcrm-13-credit-portfolio-management",
+    "title": "Tets",
+    "section": "HCRM-13: Credit Portfolio Management",
+    "text": "HCRM-13: Credit Portfolio Management\n\nDiversification: Reducing risk through varied credit exposures."
+  },
+  {
+    "objectID": "posts/post-02/index.html#hcrm-20-credit-derivatives",
+    "href": "posts/post-02/index.html#hcrm-20-credit-derivatives",
+    "title": "Tets",
+    "section": "HCRM-20: Credit Derivatives",
+    "text": "HCRM-20: Credit Derivatives\n\nInstruments: Credit default swaps (CDS), synthetic CDOs."
+  },
+  {
+    "objectID": "posts/post-02/index.html#hoas-1-what-is-an-alternative-asset",
+    "href": "posts/post-02/index.html#hoas-1-what-is-an-alternative-asset",
+    "title": "Tets",
+    "section": "HOAS-1: What is an Alternative Asset?",
+    "text": "HOAS-1: What is an Alternative Asset?\n\nTypes: Real estate, private equity, commodities."
+  },
+  {
+    "objectID": "posts/post-02/index.html#hoas-3-introduction-to-hedge-funds",
+    "href": "posts/post-02/index.html#hoas-3-introduction-to-hedge-funds",
+    "title": "Tets",
+    "section": "HOAS-3: Introduction to Hedge Funds",
+    "text": "HOAS-3: Introduction to Hedge Funds\n\nStrategies: Long/short equity, global macro, arbitrage."
+  },
+  {
+    "objectID": "posts/post-02/index.html#hoas-6-risk-management-in-hedge-funds",
+    "href": "posts/post-02/index.html#hoas-6-risk-management-in-hedge-funds",
+    "title": "Tets",
+    "section": "HOAS-6: Risk Management in Hedge Funds",
+    "text": "HOAS-6: Risk Management in Hedge Funds\n\nReturn Distributions: Non-normal, fat tails."
+  },
+  {
+    "objectID": "posts/post-02/index.html#hoas-7-additional-hedge-funds-risks",
+    "href": "posts/post-02/index.html#hoas-7-additional-hedge-funds-risks",
+    "title": "Tets",
+    "section": "HOAS-7: Additional Hedge Funds Risks",
+    "text": "HOAS-7: Additional Hedge Funds Risks\n\nLeverage: Amplifying returns and risks."
+  },
+  {
+    "objectID": "posts/post-02/index.html#hoas-12-introduction-to-commodities",
+    "href": "posts/post-02/index.html#hoas-12-introduction-to-commodities",
+    "title": "Tets",
+    "section": "HOAS-12: Introduction to Commodities",
+    "text": "HOAS-12: Introduction to Commodities\n\nMarket Dynamics: Supply and demand, geopolitical factors."
+  },
+  {
+    "objectID": "posts/post-02/index.html#hoas-16-introduction-to-venture-capital",
+    "href": "posts/post-02/index.html#hoas-16-introduction-to-venture-capital",
+    "title": "Tets",
+    "section": "HOAS-16: Introduction to Venture Capital",
+    "text": "HOAS-16: Introduction to Venture Capital\n\nStages: Seed, early-stage, late-stage investments."
+  },
+  {
+    "objectID": "posts/post-02/index.html#hoas-17-introduction-to-leveraged-buyouts-lbos",
+    "href": "posts/post-02/index.html#hoas-17-introduction-to-leveraged-buyouts-lbos",
+    "title": "Tets",
+    "section": "HOAS-17: Introduction to Leveraged Buyouts (LBOs)",
+    "text": "HOAS-17: Introduction to Leveraged Buyouts (LBOs)\n\nStructure: Use of debt to acquire companies, value creation through improvements."
+  },
+  {
+    "objectID": "posts/post-02/index.html#hoas-20-the-economics-of-private-equity",
+    "href": "posts/post-02/index.html#hoas-20-the-economics-of-private-equity",
+    "title": "Tets",
+    "section": "HOAS-20: The Economics of Private Equity",
+    "text": "HOAS-20: The Economics of Private Equity\n\nValuation: Methods and performance measures."
+  },
+  {
+    "objectID": "posts/post-02/index.html#hoas-24-collateralized-debt-obligations-cdos",
+    "href": "posts/post-02/index.html#hoas-24-collateralized-debt-obligations-cdos",
+    "title": "Tets",
+    "section": "HOAS-24: Collateralized Debt Obligations (CDOs)",
+    "text": "HOAS-24: Collateralized Debt Obligations (CDOs)\n\nStructure: Tranching, risk distribution."
+  },
+  {
+    "objectID": "posts/post-02/index.html#mip-1-the-portfolio-management-process-and-the-ips",
+    "href": "posts/post-02/index.html#mip-1-the-portfolio-management-process-and-the-ips",
+    "title": "Tets",
+    "section": "MIP-1: The Portfolio Management Process and the IPS",
+    "text": "MIP-1: The Portfolio Management Process and the IPS\n\nSteps: Planning, execution, feedback.\nComponents: Objectives, risk tolerance, constraints."
+  },
+  {
+    "objectID": "posts/post-02/index.html#mip-3-managing-institutional-investors-portfolios",
+    "href": "posts/post-02/index.html#mip-3-managing-institutional-investors-portfolios",
+    "title": "Tets",
+    "section": "MIP-3: Managing Institutional Investors’ Portfolios",
+    "text": "MIP-3: Managing Institutional Investors’ Portfolios\n\nTypes: Pension funds, endowments, insurance companies.\nFiduciary Duties: Legal and ethical responsibilities."
+  },
+  {
+    "objectID": "posts/post-02/index.html#qfi-pm-133-19-esg-criteria",
+    "href": "posts/post-02/index.html#qfi-pm-133-19-esg-criteria",
+    "title": "Tets",
+    "section": "QFI-PM-133-19: ESG Criteria",
+    "text": "QFI-PM-133-19: ESG Criteria\n\nImportance: Environmental, social, and governance factors in investment decisions."
+  },
+  {
+    "objectID": "posts/post-02/index.html#qfip-160-f23-principles-for-responsible-investment",
+    "href": "posts/post-02/index.html#qfip-160-f23-principles-for-responsible-investment",
+    "title": "Tets",
+    "section": "QFIP-160-F23: Principles for Responsible Investment",
+    "text": "QFIP-160-F23: Principles for Responsible Investment\n\nGuidelines: Sustainable and ethical investing practices."
+  },
+  {
+    "objectID": "posts/post-02/index.html#mip-5-asset-allocation",
+    "href": "posts/post-02/index.html#mip-5-asset-allocation",
+    "title": "Tets",
+    "section": "MIP-5: Asset Allocation",
+    "text": "MIP-5: Asset Allocation\n\nStrategic vs. Tactical: Long-term targets vs. short-term adjustments.\nEfficient Frontier: Optimal risk-return trade-offs."
+  },
+  {
+    "objectID": "posts/post-02/index.html#mip-6-fixed-income-portfolio-management",
+    "href": "posts/post-02/index.html#mip-6-fixed-income-portfolio-management",
+    "title": "Tets",
+    "section": "MIP-6: Fixed Income Portfolio Management",
+    "text": "MIP-6: Fixed Income Portfolio Management\n\nStrategies: Duration management, credit analysis."
+  },
+  {
+    "objectID": "posts/post-02/index.html#qfip-162-f23-hidden-dangers-of-passive-investing",
+    "href": "posts/post-02/index.html#qfip-162-f23-hidden-dangers-of-passive-investing",
+    "title": "Tets",
+    "section": "QFIP-162-F23: Hidden Dangers of Passive Investing",
+    "text": "QFIP-162-F23: Hidden Dangers of Passive Investing\n\nRisks: Over-reliance on indices, market inefficiencies."
+  },
+  {
+    "objectID": "posts/post-02/index.html#qfi-pm-155-21-efficient-factor-investing",
+    "href": "posts/post-02/index.html#qfi-pm-155-21-efficient-factor-investing",
+    "title": "Tets",
+    "section": "QFI-PM-155-21: Efficient Factor Investing",
+    "text": "QFI-PM-155-21: Efficient Factor Investing\n\nFactors: Size, value, momentum, quality."
+  },
+  {
+    "objectID": "posts/post-02/index.html#fis-3-basics-of-interest-rate-risk-management",
+    "href": "posts/post-02/index.html#fis-3-basics-of-interest-rate-risk-management",
+    "title": "Tets",
+    "section": "FIS-3: Basics of Interest Rate Risk Management",
+    "text": "FIS-3: Basics of Interest Rate Risk Management\n\nTechniques: Duration, convexity, value at risk."
+  },
+  {
+    "objectID": "posts/post-02/index.html#fis-4-refinements-in-interest-rate-risk-management",
+    "href": "posts/post-02/index.html#fis-4-refinements-in-interest-rate-risk-management",
+    "title": "Tets",
+    "section": "FIS-4: Refinements in Interest Rate Risk Management",
+    "text": "FIS-4: Refinements in Interest Rate Risk Management\n\nAdvanced Methods: Key rate durations, hedging strategies."
+  },
+  {
+    "objectID": "posts/post-02/index.html#qfi-pm-158-23-duration-dv01-and-yield-curve-transformations",
+    "href": "posts/post-02/index.html#qfi-pm-158-23-duration-dv01-and-yield-curve-transformations",
+    "title": "Tets",
+    "section": "QFI-PM-158-23: Duration, DV01, and Yield Curve Transformations",
+    "text": "QFI-PM-158-23: Duration, DV01, and Yield Curve Transformations\n\nMetrics: Managing interest rate exposures."
+  },
+  {
+    "objectID": "posts/post-02/index.html#qfi-pm-139-19-alm-techniques-and-practices",
+    "href": "posts/post-02/index.html#qfi-pm-139-19-alm-techniques-and-practices",
+    "title": "Tets",
+    "section": "QFI-PM-139-19: ALM Techniques and Practices",
+    "text": "QFI-PM-139-19: ALM Techniques and Practices\n\nStrategies: Cash flow matching, immunization."
+  },
+  {
+    "objectID": "posts/post-02/index.html#qfi-pm-141-19-liability-driven-investment",
+    "href": "posts/post-02/index.html#qfi-pm-141-19-liability-driven-investment",
+    "title": "Tets",
+    "section": "QFI-PM-141-19: Liability Driven Investment",
+    "text": "QFI-PM-141-19: Liability Driven Investment\n\nFocus: Aligning asset strategies with liability profiles."
+  },
+  {
+    "objectID": "posts/post-02/index.html#qfi-pm-142-19-strategic-asset-allocation-with-uncertainty",
+    "href": "posts/post-02/index.html#qfi-pm-142-19-strategic-asset-allocation-with-uncertainty",
+    "title": "Tets",
+    "section": "QFI-PM-142-19: Strategic Asset Allocation with Uncertainty",
+    "text": "QFI-PM-142-19: Strategic Asset Allocation with Uncertainty\n\nModels: Addressing uncertain future liabilities."
+  },
+  {
+    "objectID": "posts/post-02/index.html#qfi-pm-151-20-role-of-asset-managers-in-alm",
+    "href": "posts/post-02/index.html#qfi-pm-151-20-role-of-asset-managers-in-alm",
+    "title": "Tets",
+    "section": "QFI-PM-151-20: Role of Asset Managers in ALM",
+    "text": "QFI-PM-151-20: Role of Asset Managers in ALM\n\nExecution: Implementing ALM strategies, managing risks."
+  },
+  {
+    "objectID": "posts/post-02/index.html#mip-12-evaluating-portfolio-performance",
+    "href": "posts/post-02/index.html#mip-12-evaluating-portfolio-performance",
+    "title": "Tets",
+    "section": "MIP-12: Evaluating Portfolio Performance",
+    "text": "MIP-12: Evaluating Portfolio Performance\n\nComponents: Measurement, attribution, appraisal."
+  },
+  {
+    "objectID": "posts/post-02/index.html#qfi-pm-145-19-determinants-of-portfolio-performance",
+    "href": "posts/post-02/index.html#qfi-pm-145-19-determinants-of-portfolio-performance",
+    "title": "Tets",
+    "section": "QFI-PM-145-19: Determinants of Portfolio Performance",
+    "text": "QFI-PM-145-19: Determinants of Portfolio Performance\n\nAnalysis: Identifying sources of return, evaluating strategies."
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "BlogFPL",
     "section": "",
-    "text": "FPL Season 2024/2025, GameWeek-0\n\n\n\n\n\n\n\nthoughts\n\n\n\n\n\n\n\n\n\n\n\nAug 4, 2024\n\n\n7 Paws\n\n\n\n\n\n\nNo matching items"
+    "text": "Tets\n\n\n\n\n\n\n\nsummary\n\n\n\n\n\n\n\n\n\n\n\nAug 4, 2024\n\n\n7 Paws\n\n\n\n\n\n\n  \n\n\n\n\nFPL Season 2024/2025, GameWeek-0\n\n\n\n\n\n\n\nthoughts\n\n\n\n\n\n\n\n\n\n\n\nAug 4, 2024\n\n\n7 Paws\n\n\n\n\n\n\nNo matching items"
   }
 ]

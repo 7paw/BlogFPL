@@ -1,0 +1,160 @@
+---
+title: "Tets"
+author: "7 Paws"
+date: "2024-08-04"
+categories: [summary]
+format: 
+  html:
+    page-layout: full
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, error=TRUE, cache=FALSE)
+```
+
+
+# Section 1: Fixed Income Investments
+
+## HFIS-1: Overview of the Types and Features of Fixed Income Securities
+- **Types of Issuers**: Domestic corporations, municipal governments, and federal agencies.
+- **Bond Features**: Collateralized vs. unsecured, public vs. private placements.
+- **Maturity**: Importance for yield and volatility.
+
+## HFIS-2: Risks Associated with Investing in Fixed Income Securities
+- **Interest Rate Risk**: Sensitivity to rate changes.
+- **Reinvestment Risk**: Risk of reinvesting at lower rates.
+- **Credit Risk**: Default and downgrade risks.
+- **Liquidity and Inflation Risks**: Challenges of selling and erosion of value.
+
+## HFIS-7: U.S. Treasury Securities
+- **Types**: Treasury bills, notes, bonds, and TIPS.
+- **Attributes**: Liquidity, tax advantages, risk-free benchmark.
+
+## HFIS-10: Corporate Bonds
+- **Valuation**: Credit ratings, yield spreads.
+- **Types**: Callable bonds, sinking funds.
+
+## HFIS-11: Leveraged Loans
+- **Features**: High-yield, seniority in capital structure.
+
+## HFIS-15: Inflation-Linked Bonds
+- **Purpose**: Protection against inflation, principal adjustment.
+
+## HFIS-21: Overview of Mortgages and the Mortgage Market
+- **Types**: Residential and commercial mortgages.
+- **Market Dynamics**: Economic factors affecting mortgage performance.
+
+## HFIS-25: Nonagency RMBS
+- **Risks and Rewards**: Higher yields, complex structures.
+
+## HFIS-60: Financing Positions in the Bond Market
+- **Instruments**: Repos, dollar rolls, securities lending.
+
+# Section 2: Credit Investment Management
+
+## HCRM-1: Fundamentals of Credit Risk
+- **Sources**: Default risk, credit spreads.
+- **Mitigation**: Collateral, covenants.
+
+## HCRM-4: Measurement of Credit Risk
+- **Models**: Probability of default (PD), loss given default (LGD), exposure at default (EAD).
+
+## HCRM-5: Dynamic Credit Risk Exposure
+- **Management**: Monitoring and adjusting for changes in credit conditions.
+
+## HCRM-13: Credit Portfolio Management
+- **Diversification**: Reducing risk through varied credit exposures.
+
+## HCRM-20: Credit Derivatives
+- **Instruments**: Credit default swaps (CDS), synthetic CDOs.
+
+# Section 3: Equity and Alternative Investments
+
+## HOAS-1: What is an Alternative Asset?
+- **Types**: Real estate, private equity, commodities.
+
+## HOAS-3: Introduction to Hedge Funds
+- **Strategies**: Long/short equity, global macro, arbitrage.
+
+## HOAS-6: Risk Management in Hedge Funds
+- **Return Distributions**: Non-normal, fat tails.
+
+## HOAS-7: Additional Hedge Funds Risks
+- **Leverage**: Amplifying returns and risks.
+
+## HOAS-12: Introduction to Commodities
+- **Market Dynamics**: Supply and demand, geopolitical factors.
+
+## HOAS-16: Introduction to Venture Capital
+- **Stages**: Seed, early-stage, late-stage investments.
+
+## HOAS-17: Introduction to Leveraged Buyouts (LBOs)
+- **Structure**: Use of debt to acquire companies, value creation through improvements.
+
+## HOAS-20: The Economics of Private Equity
+- **Valuation**: Methods and performance measures.
+
+## HOAS-24: Collateralized Debt Obligations (CDOs)
+- **Structure**: Tranching, risk distribution.
+
+# Section 4: Investment Policy and Regulatory Framework
+
+## MIP-1: The Portfolio Management Process and the IPS
+- **Steps**: Planning, execution, feedback.
+- **Components**: Objectives, risk tolerance, constraints.
+
+## MIP-3: Managing Institutional Investors’ Portfolios
+- **Types**: Pension funds, endowments, insurance companies.
+- **Fiduciary Duties**: Legal and ethical responsibilities.
+
+## QFI-PM-133-19: ESG Criteria
+- **Importance**: Environmental, social, and governance factors in investment decisions.
+
+## QFIP-160-F23: Principles for Responsible Investment
+- **Guidelines**: Sustainable and ethical investing practices.
+
+# Section 5: Investment Portfolio Management and Asset Allocation
+
+## MIP-5: Asset Allocation
+- **Strategic vs. Tactical**: Long-term targets vs. short-term adjustments.
+- **Efficient Frontier**: Optimal risk-return trade-offs.
+
+## MIP-6: Fixed Income Portfolio Management
+- **Strategies**: Duration management, credit analysis.
+
+## QFIP-162-F23: Hidden Dangers of Passive Investing
+- **Risks**: Over-reliance on indices, market inefficiencies.
+
+## QFI-PM-155-21: Efficient Factor Investing
+- **Factors**: Size, value, momentum, quality.
+
+# Section 6: Asset Liability Management (ALM)
+
+## FIS-3: Basics of Interest Rate Risk Management
+- **Techniques**: Duration, convexity, value at risk.
+
+## FIS-4: Refinements in Interest Rate Risk Management
+- **Advanced Methods**: Key rate durations, hedging strategies.
+
+## QFI-PM-158-23: Duration, DV01, and Yield Curve Transformations
+- **Metrics**: Managing interest rate exposures.
+
+## QFI-PM-139-19: ALM Techniques and Practices
+- **Strategies**: Cash flow matching, immunization.
+
+## QFI-PM-141-19: Liability Driven Investment
+- **Focus**: Aligning asset strategies with liability profiles.
+
+## QFI-PM-142-19: Strategic Asset Allocation with Uncertainty
+- **Models**: Addressing uncertain future liabilities.
+
+## QFI-PM-151-20: Role of Asset Managers in ALM
+- **Execution**: Implementing ALM strategies, managing risks.
+
+# Section 7: Performance Measurement and Attribution
+
+## MIP-12: Evaluating Portfolio Performance
+- **Components**: Measurement, attribution, appraisal.
+
+## QFI-PM-145-19: Determinants of Portfolio Performance
+- **Analysis**: Identifying sources of return, evaluating strategies.
