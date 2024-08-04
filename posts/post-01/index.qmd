@@ -921,6 +921,20 @@ xG_df2 <- xG_df0 %>%
   )
 
 
+datatable(xG_df2,filter = 'top',options = list(
+            paging = TRUE,
+            scrollX=TRUE, 
+            searching = TRUE,
+            ordering = TRUE,
+            dom = 'Bfrtip',
+            #buttons = c('copy', 'csv', 'excel', 'pdf'),
+            pageLength=10, 
+            lengthMenu=c(3,5,10) 
+          ))
+```
+
+
+```{r eval=FALSE}
 datatable(xG_df2,filter = 'top', extensions = "Buttons", 
           options = list(
             paging = TRUE,
@@ -934,3 +948,5 @@ datatable(xG_df2,filter = 'top', extensions = "Buttons",
           )
 )
 ```
+
+
