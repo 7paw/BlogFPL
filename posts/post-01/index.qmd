@@ -915,9 +915,9 @@ xG_gt
 ```{r eval=TRUE}
 xG_df2 <- xG_df0 %>% 
   transmute(
-    name, position,xG_per90,xA_per90,xG_Delta,xA_Delta,
+    name, position,starts,xG_per90,xA_per90,xG_Delta,xA_Delta,
     mean_perStart=mean, mean_max20=high, mean_max10=ceiling, mean_max5= max,
-    starts, total_points_season, Goals, Assists,
+    total_points_season, Goals, Assists,
   )
 
 
@@ -928,9 +928,11 @@ datatable(xG_df2,filter = 'top',options = list(
             ordering = TRUE,
             dom = 'Bfrtip',
             #buttons = c('copy', 'csv', 'excel', 'pdf'),
+            buttons = c('pdf'),
             pageLength=10, 
             lengthMenu=c(3,5,10) 
-          ))
+          )
+          )
 ```
 
 
