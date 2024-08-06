@@ -9,7 +9,7 @@
 <meta name="author" content="7 Paws">
 <meta name="dcterms.date" content="2024-08-04">
 
-<title>BlogFPL - Tets</title>
+<title>BlogFPL - DataTable</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -62,6 +62,22 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+<script src="../../site_libs/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+<link href="../../site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet">
+<script src="../../site_libs/datatables-binding-0.28/datatables.js"></script>
+<script src="../../site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<link href="../../site_libs/dt-core-1.13.4/css/jquery.dataTables.min.css" rel="stylesheet">
+<link href="../../site_libs/dt-core-1.13.4/css/jquery.dataTables.extra.css" rel="stylesheet">
+<script src="../../site_libs/dt-core-1.13.4/js/jquery.dataTables.min.js"></script>
+<link href="../../site_libs/dt-ext-fixedcolumns-1.13.4/css/fixedColumns.dataTables.min.css" rel="stylesheet">
+<script src="../../site_libs/dt-ext-fixedcolumns-1.13.4/js/dataTables.fixedColumns.min.js"></script>
+<link href="../../site_libs/nouislider-7.0.10/jquery.nouislider.min.css" rel="stylesheet">
+<script src="../../site_libs/nouislider-7.0.10/jquery.nouislider.min.js"></script>
+<link href="../../site_libs/selectize-0.12.0/selectize.bootstrap3.css" rel="stylesheet">
+<script src="../../site_libs/selectize-0.12.0/selectize.min.js"></script>
+<link href="../../site_libs/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet">
+<script src="../../site_libs/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -108,9 +124,9 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-page">
-      <h1 class="title">Tets</h1>
+      <h1 class="title">Performance</h1>
                                 <div class="quarto-categories">
-                <div class="quarto-category">summary</div>
+                <div class="quarto-category">tools</div>
               </div>
                   </div>
   </div>
@@ -146,280 +162,17 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<section id="section-1-fixed-income-investments" class="level1">
-<h1>Section 1: Fixed Income Investments</h1>
-<section id="hfis-1-overview-of-the-types-and-features-of-fixed-income-securities" class="level2">
-<h2 class="anchored" data-anchor-id="hfis-1-overview-of-the-types-and-features-of-fixed-income-securities">HFIS-1: Overview of the Types and Features of Fixed Income Securities</h2>
-<ul>
-<li><strong>Types of Issuers</strong>: Domestic corporations, municipal governments, and federal agencies.</li>
-<li><strong>Bond Features</strong>: Collateralized vs.&nbsp;unsecured, public vs.&nbsp;private placements.</li>
-<li><strong>Maturity</strong>: Importance for yield and volatility.</li>
-</ul>
-</section>
-<section id="hfis-2-risks-associated-with-investing-in-fixed-income-securities" class="level2">
-<h2 class="anchored" data-anchor-id="hfis-2-risks-associated-with-investing-in-fixed-income-securities">HFIS-2: Risks Associated with Investing in Fixed Income Securities</h2>
-<ul>
-<li><strong>Interest Rate Risk</strong>: Sensitivity to rate changes.</li>
-<li><strong>Reinvestment Risk</strong>: Risk of reinvesting at lower rates.</li>
-<li><strong>Credit Risk</strong>: Default and downgrade risks.</li>
-<li><strong>Liquidity and Inflation Risks</strong>: Challenges of selling and erosion of value.</li>
-</ul>
-</section>
-<section id="hfis-7-u.s.-treasury-securities" class="level2">
-<h2 class="anchored" data-anchor-id="hfis-7-u.s.-treasury-securities">HFIS-7: U.S. Treasury Securities</h2>
-<ul>
-<li><strong>Types</strong>: Treasury bills, notes, bonds, and TIPS.</li>
-<li><strong>Attributes</strong>: Liquidity, tax advantages, risk-free benchmark.</li>
-</ul>
-</section>
-<section id="hfis-10-corporate-bonds" class="level2">
-<h2 class="anchored" data-anchor-id="hfis-10-corporate-bonds">HFIS-10: Corporate Bonds</h2>
-<ul>
-<li><strong>Valuation</strong>: Credit ratings, yield spreads.</li>
-<li><strong>Types</strong>: Callable bonds, sinking funds.</li>
-</ul>
-</section>
-<section id="hfis-11-leveraged-loans" class="level2">
-<h2 class="anchored" data-anchor-id="hfis-11-leveraged-loans">HFIS-11: Leveraged Loans</h2>
-<ul>
-<li><strong>Features</strong>: High-yield, seniority in capital structure.</li>
-</ul>
-</section>
-<section id="hfis-15-inflation-linked-bonds" class="level2">
-<h2 class="anchored" data-anchor-id="hfis-15-inflation-linked-bonds">HFIS-15: Inflation-Linked Bonds</h2>
-<ul>
-<li><strong>Purpose</strong>: Protection against inflation, principal adjustment.</li>
-</ul>
-</section>
-<section id="hfis-21-overview-of-mortgages-and-the-mortgage-market" class="level2">
-<h2 class="anchored" data-anchor-id="hfis-21-overview-of-mortgages-and-the-mortgage-market">HFIS-21: Overview of Mortgages and the Mortgage Market</h2>
-<ul>
-<li><strong>Types</strong>: Residential and commercial mortgages.</li>
-<li><strong>Market Dynamics</strong>: Economic factors affecting mortgage performance.</li>
-</ul>
-</section>
-<section id="hfis-25-nonagency-rmbs" class="level2">
-<h2 class="anchored" data-anchor-id="hfis-25-nonagency-rmbs">HFIS-25: Nonagency RMBS</h2>
-<ul>
-<li><strong>Risks and Rewards</strong>: Higher yields, complex structures.</li>
-</ul>
-</section>
-<section id="hfis-60-financing-positions-in-the-bond-market" class="level2">
-<h2 class="anchored" data-anchor-id="hfis-60-financing-positions-in-the-bond-market">HFIS-60: Financing Positions in the Bond Market</h2>
-<ul>
-<li><strong>Instruments</strong>: Repos, dollar rolls, securities lending.</li>
-</ul>
-</section>
-</section>
-<section id="section-2-credit-investment-management" class="level1">
-<h1>Section 2: Credit Investment Management</h1>
-<section id="hcrm-1-fundamentals-of-credit-risk" class="level2">
-<h2 class="anchored" data-anchor-id="hcrm-1-fundamentals-of-credit-risk">HCRM-1: Fundamentals of Credit Risk</h2>
-<ul>
-<li><strong>Sources</strong>: Default risk, credit spreads.</li>
-<li><strong>Mitigation</strong>: Collateral, covenants.</li>
-</ul>
-</section>
-<section id="hcrm-4-measurement-of-credit-risk" class="level2">
-<h2 class="anchored" data-anchor-id="hcrm-4-measurement-of-credit-risk">HCRM-4: Measurement of Credit Risk</h2>
-<ul>
-<li><strong>Models</strong>: Probability of default (PD), loss given default (LGD), exposure at default (EAD).</li>
-</ul>
-</section>
-<section id="hcrm-5-dynamic-credit-risk-exposure" class="level2">
-<h2 class="anchored" data-anchor-id="hcrm-5-dynamic-credit-risk-exposure">HCRM-5: Dynamic Credit Risk Exposure</h2>
-<ul>
-<li><strong>Management</strong>: Monitoring and adjusting for changes in credit conditions.</li>
-</ul>
-</section>
-<section id="hcrm-13-credit-portfolio-management" class="level2">
-<h2 class="anchored" data-anchor-id="hcrm-13-credit-portfolio-management">HCRM-13: Credit Portfolio Management</h2>
-<ul>
-<li><strong>Diversification</strong>: Reducing risk through varied credit exposures.</li>
-</ul>
-</section>
-<section id="hcrm-20-credit-derivatives" class="level2">
-<h2 class="anchored" data-anchor-id="hcrm-20-credit-derivatives">HCRM-20: Credit Derivatives</h2>
-<ul>
-<li><strong>Instruments</strong>: Credit default swaps (CDS), synthetic CDOs.</li>
-</ul>
-</section>
-</section>
-<section id="section-3-equity-and-alternative-investments" class="level1">
-<h1>Section 3: Equity and Alternative Investments</h1>
-<section id="hoas-1-what-is-an-alternative-asset" class="level2">
-<h2 class="anchored" data-anchor-id="hoas-1-what-is-an-alternative-asset">HOAS-1: What is an Alternative Asset?</h2>
-<ul>
-<li><strong>Types</strong>: Real estate, private equity, commodities.</li>
-</ul>
-</section>
-<section id="hoas-3-introduction-to-hedge-funds" class="level2">
-<h2 class="anchored" data-anchor-id="hoas-3-introduction-to-hedge-funds">HOAS-3: Introduction to Hedge Funds</h2>
-<ul>
-<li><strong>Strategies</strong>: Long/short equity, global macro, arbitrage.</li>
-</ul>
-</section>
-<section id="hoas-6-risk-management-in-hedge-funds" class="level2">
-<h2 class="anchored" data-anchor-id="hoas-6-risk-management-in-hedge-funds">HOAS-6: Risk Management in Hedge Funds</h2>
-<ul>
-<li><strong>Return Distributions</strong>: Non-normal, fat tails.</li>
-</ul>
-</section>
-<section id="hoas-7-additional-hedge-funds-risks" class="level2">
-<h2 class="anchored" data-anchor-id="hoas-7-additional-hedge-funds-risks">HOAS-7: Additional Hedge Funds Risks</h2>
-<ul>
-<li><strong>Leverage</strong>: Amplifying returns and risks.</li>
-</ul>
-</section>
-<section id="hoas-12-introduction-to-commodities" class="level2">
-<h2 class="anchored" data-anchor-id="hoas-12-introduction-to-commodities">HOAS-12: Introduction to Commodities</h2>
-<ul>
-<li><strong>Market Dynamics</strong>: Supply and demand, geopolitical factors.</li>
-</ul>
-</section>
-<section id="hoas-16-introduction-to-venture-capital" class="level2">
-<h2 class="anchored" data-anchor-id="hoas-16-introduction-to-venture-capital">HOAS-16: Introduction to Venture Capital</h2>
-<ul>
-<li><strong>Stages</strong>: Seed, early-stage, late-stage investments.</li>
-</ul>
-</section>
-<section id="hoas-17-introduction-to-leveraged-buyouts-lbos" class="level2">
-<h2 class="anchored" data-anchor-id="hoas-17-introduction-to-leveraged-buyouts-lbos">HOAS-17: Introduction to Leveraged Buyouts (LBOs)</h2>
-<ul>
-<li><strong>Structure</strong>: Use of debt to acquire companies, value creation through improvements.</li>
-</ul>
-</section>
-<section id="hoas-20-the-economics-of-private-equity" class="level2">
-<h2 class="anchored" data-anchor-id="hoas-20-the-economics-of-private-equity">HOAS-20: The Economics of Private Equity</h2>
-<ul>
-<li><strong>Valuation</strong>: Methods and performance measures.</li>
-</ul>
-</section>
-<section id="hoas-24-collateralized-debt-obligations-cdos" class="level2">
-<h2 class="anchored" data-anchor-id="hoas-24-collateralized-debt-obligations-cdos">HOAS-24: Collateralized Debt Obligations (CDOs)</h2>
-<ul>
-<li><strong>Structure</strong>: Tranching, risk distribution.</li>
-</ul>
-</section>
-</section>
-<section id="section-4-investment-policy-and-regulatory-framework" class="level1">
-<h1>Section 4: Investment Policy and Regulatory Framework</h1>
-<section id="mip-1-the-portfolio-management-process-and-the-ips" class="level2">
-<h2 class="anchored" data-anchor-id="mip-1-the-portfolio-management-process-and-the-ips">MIP-1: The Portfolio Management Process and the IPS</h2>
-<ul>
-<li><strong>Steps</strong>: Planning, execution, feedback.</li>
-<li><strong>Components</strong>: Objectives, risk tolerance, constraints.</li>
-</ul>
-</section>
-<section id="mip-3-managing-institutional-investors-portfolios" class="level2">
-<h2 class="anchored" data-anchor-id="mip-3-managing-institutional-investors-portfolios">MIP-3: Managing Institutional Investors’ Portfolios</h2>
-<ul>
-<li><strong>Types</strong>: Pension funds, endowments, insurance companies.</li>
-<li><strong>Fiduciary Duties</strong>: Legal and ethical responsibilities.</li>
-</ul>
-</section>
-<section id="qfi-pm-133-19-esg-criteria" class="level2">
-<h2 class="anchored" data-anchor-id="qfi-pm-133-19-esg-criteria">QFI-PM-133-19: ESG Criteria</h2>
-<ul>
-<li><strong>Importance</strong>: Environmental, social, and governance factors in investment decisions.</li>
-</ul>
-</section>
-<section id="qfip-160-f23-principles-for-responsible-investment" class="level2">
-<h2 class="anchored" data-anchor-id="qfip-160-f23-principles-for-responsible-investment">QFIP-160-F23: Principles for Responsible Investment</h2>
-<ul>
-<li><strong>Guidelines</strong>: Sustainable and ethical investing practices.</li>
-</ul>
-</section>
-</section>
-<section id="section-5-investment-portfolio-management-and-asset-allocation" class="level1">
-<h1>Section 5: Investment Portfolio Management and Asset Allocation</h1>
-<section id="mip-5-asset-allocation" class="level2">
-<h2 class="anchored" data-anchor-id="mip-5-asset-allocation">MIP-5: Asset Allocation</h2>
-<ul>
-<li><strong>Strategic vs.&nbsp;Tactical</strong>: Long-term targets vs.&nbsp;short-term adjustments.</li>
-<li><strong>Efficient Frontier</strong>: Optimal risk-return trade-offs.</li>
-</ul>
-</section>
-<section id="mip-6-fixed-income-portfolio-management" class="level2">
-<h2 class="anchored" data-anchor-id="mip-6-fixed-income-portfolio-management">MIP-6: Fixed Income Portfolio Management</h2>
-<ul>
-<li><strong>Strategies</strong>: Duration management, credit analysis.</li>
-</ul>
-</section>
-<section id="qfip-162-f23-hidden-dangers-of-passive-investing" class="level2">
-<h2 class="anchored" data-anchor-id="qfip-162-f23-hidden-dangers-of-passive-investing">QFIP-162-F23: Hidden Dangers of Passive Investing</h2>
-<ul>
-<li><strong>Risks</strong>: Over-reliance on indices, market inefficiencies.</li>
-</ul>
-</section>
-<section id="qfi-pm-155-21-efficient-factor-investing" class="level2">
-<h2 class="anchored" data-anchor-id="qfi-pm-155-21-efficient-factor-investing">QFI-PM-155-21: Efficient Factor Investing</h2>
-<ul>
-<li><strong>Factors</strong>: Size, value, momentum, quality.</li>
-</ul>
-</section>
-</section>
-<section id="section-6-asset-liability-management-alm" class="level1">
-<h1>Section 6: Asset Liability Management (ALM)</h1>
-<section id="fis-3-basics-of-interest-rate-risk-management" class="level2">
-<h2 class="anchored" data-anchor-id="fis-3-basics-of-interest-rate-risk-management">FIS-3: Basics of Interest Rate Risk Management</h2>
-<ul>
-<li><strong>Techniques</strong>: Duration, convexity, value at risk.</li>
-</ul>
-</section>
-<section id="fis-4-refinements-in-interest-rate-risk-management" class="level2">
-<h2 class="anchored" data-anchor-id="fis-4-refinements-in-interest-rate-risk-management">FIS-4: Refinements in Interest Rate Risk Management</h2>
-<ul>
-<li><strong>Advanced Methods</strong>: Key rate durations, hedging strategies.</li>
-</ul>
-</section>
-<section id="qfi-pm-158-23-duration-dv01-and-yield-curve-transformations" class="level2">
-<h2 class="anchored" data-anchor-id="qfi-pm-158-23-duration-dv01-and-yield-curve-transformations">QFI-PM-158-23: Duration, DV01, and Yield Curve Transformations</h2>
-<ul>
-<li><strong>Metrics</strong>: Managing interest rate exposures.</li>
-</ul>
-</section>
-<section id="qfi-pm-139-19-alm-techniques-and-practices" class="level2">
-<h2 class="anchored" data-anchor-id="qfi-pm-139-19-alm-techniques-and-practices">QFI-PM-139-19: ALM Techniques and Practices</h2>
-<ul>
-<li><strong>Strategies</strong>: Cash flow matching, immunization.</li>
-</ul>
-</section>
-<section id="qfi-pm-141-19-liability-driven-investment" class="level2">
-<h2 class="anchored" data-anchor-id="qfi-pm-141-19-liability-driven-investment">QFI-PM-141-19: Liability Driven Investment</h2>
-<ul>
-<li><strong>Focus</strong>: Aligning asset strategies with liability profiles.</li>
-</ul>
-</section>
-<section id="qfi-pm-142-19-strategic-asset-allocation-with-uncertainty" class="level2">
-<h2 class="anchored" data-anchor-id="qfi-pm-142-19-strategic-asset-allocation-with-uncertainty">QFI-PM-142-19: Strategic Asset Allocation with Uncertainty</h2>
-<ul>
-<li><strong>Models</strong>: Addressing uncertain future liabilities.</li>
-</ul>
-</section>
-<section id="qfi-pm-151-20-role-of-asset-managers-in-alm" class="level2">
-<h2 class="anchored" data-anchor-id="qfi-pm-151-20-role-of-asset-managers-in-alm">QFI-PM-151-20: Role of Asset Managers in ALM</h2>
-<ul>
-<li><strong>Execution</strong>: Implementing ALM strategies, managing risks.</li>
-</ul>
-</section>
-</section>
-<section id="section-7-performance-measurement-and-attribution" class="level1">
-<h1>Section 7: Performance Measurement and Attribution</h1>
-<section id="mip-12-evaluating-portfolio-performance" class="level2">
-<h2 class="anchored" data-anchor-id="mip-12-evaluating-portfolio-performance">MIP-12: Evaluating Portfolio Performance</h2>
-<ul>
-<li><strong>Components</strong>: Measurement, attribution, appraisal.</li>
-</ul>
-</section>
-<section id="qfi-pm-145-19-determinants-of-portfolio-performance" class="level2">
-<h2 class="anchored" data-anchor-id="qfi-pm-145-19-determinants-of-portfolio-performance">QFI-PM-145-19: Determinants of Portfolio Performance</h2>
-<ul>
-<li><strong>Analysis</strong>: Identifying sources of return, evaluating strategies.</li>
-</ul>
+<section id="datatable" class="level2">
+<h2 class="anchored" data-anchor-id="datatable">DataTable</h2>
+<div class="cell">
+<div class="cell-output-display">
+
+<div class="datatables html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-2a618ac233cc1f67ab25" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-2a618ac233cc1f67ab25">{"x":{"filter":"top","vertical":false,"filterHTML":"<tr>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"character\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"7\" data-max=\"38\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"0\" data-max=\"1.04\" data-scale=\"2\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"0\" data-max=\"0.51\" data-scale=\"2\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"-0.24\" data-max=\"0.38\" data-scale=\"2\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"-0.13\" data-max=\"0.43\" data-scale=\"2\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"1.8\" data-max=\"8.6\" data-scale=\"1\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"2.2\" data-max=\"10.3\" data-scale=\"1\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"2.5\" data-max=\"15\" data-scale=\"1\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"2.5\" data-max=\"18.6\" data-scale=\"1\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"62\" data-max=\"244\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"0\" data-max=\"27\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n  <td data-type=\"number\" style=\"vertical-align: top;\">\n    <div class=\"form-group has-feedback\" style=\"margin-bottom: auto;\">\n      <input type=\"search\" placeholder=\"All\" class=\"form-control\" style=\"width: 100%;\"/>\n      <span class=\"glyphicon glyphicon-remove-circle form-control-feedback\"><\/span>\n    <\/div>\n    <div style=\"display: none;position: absolute;width: 200px;opacity: 1\">\n      <div data-min=\"0\" data-max=\"18\"><\/div>\n      <span style=\"float: left;\"><\/span>\n      <span style=\"float: right;\"><\/span>\n    <\/div>\n  <\/td>\n<\/tr>","extensions":["FixedColumns"],"data":[["Cole Palmer","Phil Foden","Ollie Watkins","Bukayo Saka","Erling Haaland","Son Heung-min","Mohamed Salah","Martin Ødegaard","Anthony Gordon","Benjamin White","Jarrod Bowen","Kai Havertz","Dominic Solanke","Alexander Isak","Bruno Borges Fernandes","Declan Rice","Jean-Philippe Mateta","William Saliba","Rodrigo Hernandez","Julián Álvarez","Bruno Guimarães Rodriguez Moura","Pascal Groß","Gabriel dos Santos Magalhães","Douglas Luiz Soares de Paulo","Leon Bailey","Carlton Morris","James Ward-Prowse","Luis Díaz","Morgan Gibbs-White","Moussa Diaby","Nicolas Jackson","Bernardo Veiga de Carvalho e Silva","Leandro Trossard","Mohammed Kudus","Eberechi Eze","Pedro Porro","Matheus Santos Carneiro Da Cunha","Darwin Núñez Ribeiro","Alejandro Garnacho","Brennan Johnson","Chris Wood","Yoane Wissa","Dejan Kulusevski","Conor Gallagher","Andreas Hoelgebaum Pereira","Bryan Mbeumo","Hwang Hee-chan","Michael Olise","Dwight McNeil","Jarrad Branthwaite","Fabian Schär","Joško Gvardiol","Kyle Walker","Raheem Sterling","Richarlison de Andrade","Trent Alexander-Arnold","Joachim Andersen","Anthony Elanga","John McGinn","Tyrick Mitchell","Gabriel Martinelli Silva","James Maddison","James Tarkowski","Virgil van Dijk","Abdoulaye Doucouré","Tomáš Souček","Manuel Akanji","Rasmus Højlund","Diogo Dalot Teixeira","Kieran Trippier","Diogo Teixeira da Silva","Sean Longstaff","Alexis Mac Allister","Callum Hudson-Odoi","Jordan Ayew","Gustavo Hamer","Marcus Rashford","Antoine Semenyo","Cristian Romero","Cody Gakpo","Timothy Castagne","Antonee Robinson","João Pedro Junqueira de Jesus","Oleksandr Zinchenko","Alex Iwobi","Marcos Senesi","Alfie Doughty","Dominic Calvert-Lewin","Ross Barkley","Vitalii Mykolenko","Justin Kluivert","Lucas Tolentino Coelho de Lima","Dominik Szoboszlai","Nathan Aké","Pablo Sarabia","Jérémy Doku","Kevin De Bruyne","Mathias Jensen","Scott McTominay","Thiago Emiliano da Silva","Dan Burn","Rodrigo Muniz Carvalho","Simon Adingra","Harvey Elliott","Mario Lemina","Elijah Adebayo","Harry Wilson","Mykhailo Mudryk","Willian Borges da Silva","Vitaly Janelt","Bobby De Cordova-Reid","Jack Harrison","Ezri Konsa Ngoyo","João Palhinha Gonçalves","Ryan Christie","Lewis Dunk","Marcus Tavernier","Rúben Gato Alves Dias","James Garner","Pape Matar Sarr","Pedro Lomba Neto","Gabriel Fernando de Jesus","Lucas Digne","Pau Torres","Vladimír Coufal","Zeki Amdouni","Chiedozie Ogbene","Illia Zabarnyi","Moisés Caicedo Corozo","Nathan Collins","Cameron Archer","Emerson Palmieri dos Santos","Jacob Bruun Larsen","Jacob Murphy","Max Kilman","Toti António Gomes","Wilson Odobert","Micky van de Ven","Adam Smith","Danny Welbeck","Destiny Udogie","Odsonne Edouard","Josh Brownhill","Michail Antonio","Tahith Chong","Enzo Fernández","Ethan Pinnock","James McAtee","Kobbie Mainoo","Lewis Cook","Miguel Almirón Rejala","Rayan Aït-Nouri","Youri Tielemans","Andrew Robertson","Ashley Young","Joe Gomez","Kurt Zouma","Neal Maupay","Noni Madueke","João Victor Gomes da Silva","Lyle Foster","Mads Roerslev Rasmussen","Christian Nørgaard","Kaoru Mitoma","Malo Gusto","Sander Berge","Sergio Reguilón","Harry Maguire","Idrissa Gueye","Keane Lewis-Potter","Vini de Souza Costa","Raúl Jiménez","Axel Disasi","Eddie Nketiah","Takehiro Tomiyasu","Tom Cairney","Callum Wilson","Craig Dawson","Dara O'Shea","Evan Ferguson","Kristoffer Ajer","Jakub Kiwior","Nicolás Domínguez","Taiwo Awoniyi","Amadou Onana","Calvin Bassey","Jeffrey Schlupp","Marc Guéhi","Oliver McBurnie","Tosin Adarabioyo","Danilo dos Santos de Oliveira","Josh Cullen","Levi Colwill","Harvey Barnes","Jefferson Lerma Solís","Matty Cash","Jayden Bogle","Nélson Cabral Semedo","Ben Brereton","Chris Richards","Edson Álvarez Velázquez","Victor Lindelöf"],["MID","MID","FWD","MID","FWD","MID","MID","MID","MID","DEF","MID","MID","FWD","FWD","MID","MID","FWD","DEF","MID","FWD","MID","MID","DEF","MID","MID","FWD","MID","MID","MID","MID","FWD","MID","MID","MID","MID","DEF","FWD","FWD","MID","MID","FWD","FWD","MID","MID","MID","MID","MID","MID","MID","DEF","DEF","DEF","DEF","MID","MID","DEF","DEF","MID","MID","DEF","MID","MID","DEF","DEF","MID","MID","DEF","FWD","DEF","DEF","MID","MID","MID","MID","MID","MID","MID","FWD","DEF","FWD","DEF","DEF","FWD","DEF","MID","DEF","DEF","FWD","MID","DEF","MID","MID","MID","DEF","MID","MID","MID","MID","MID","DEF","DEF","FWD","MID","MID","MID","FWD","MID","MID","MID","MID","MID","MID","DEF","MID","MID","DEF","MID","DEF","MID","MID","MID","FWD","DEF","DEF","DEF","FWD","FWD","DEF","MID","DEF","FWD","DEF","MID","MID","DEF","DEF","MID","DEF","DEF","FWD","DEF","FWD","MID","FWD","MID","MID","DEF","MID","MID","MID","MID","DEF","MID","DEF","DEF","DEF","DEF","FWD","MID","MID","FWD","DEF","MID","MID","DEF","MID","DEF","DEF","MID","MID","MID","FWD","DEF","FWD","DEF","MID","FWD","DEF","DEF","FWD","DEF","DEF","MID","FWD","MID","DEF","MID","DEF","FWD","DEF","MID","MID","DEF","MID","MID","DEF","DEF","DEF","MID","DEF","MID","DEF"],[29,33,37,35,29,34,28,35,34,35,34,30,37,27,35,37,25,38,34,31,37,34,34,35,22,32,34,32,35,25,31,29,18,27,24,35,29,22,30,26,20,29,31,37,34,22,25,14,33,35,35,26,30,22,18,25,38,25,35,37,24,26,38,36,32,34,28,25,35,26,14,30,31,20,30,34,26,25,33,17,29,37,19,20,27,26,34,26,30,28,26,31,25,24,20,18,15,27,18,28,32,18,25,11,34,16,16,18,24,37,17,25,35,31,35,33,25,28,34,27,18,17,27,27,36,27,20,37,33,29,21,35,16,14,38,31,25,27,25,21,28,17,23,21,20,26,28,20,24,32,23,29,17,18,27,17,32,14,13,32,22,22,30,15,19,34,18,18,24,15,29,18,29,10,10,14,9,25,32,15,21,11,19,12,23,25,17,23,15,18,20,23,20,7,27,23,32,36,14,23,28,14],[0.6,0.32,0.47,0.47,1.04,0.35,0.74,0.22,0.31,0.04,0.36,0.42,0.53,0.8100000000000001,0.28,0.1,0.43,0.04,0.12,0.44,0.14,0.19,0.13,0.2,0.27,0.36,0.19,0.41,0.19,0.31,0.58,0.12,0.46,0.18,0.4,0.09,0.35,0.72,0.29,0.4,0.59,0.38,0.16,0.12,0.16,0.45,0.32,0.38,0.1,0.05,0.07000000000000001,0.12,0.01,0.29,0.58,0.12,0.05,0.23,0.15,0.04,0.28,0.28,0.07000000000000001,0.08,0.3,0.21,0.06,0.29,0.05,0.03,0.41,0.22,0.12,0.13,0.14,0.09,0.28,0.2,0.1,0.5,0.04,0.02,0.53,0.03,0.2,0.08,0.04,0.53,0.13,0.05,0.27,0.18,0.16,0.11,0.29,0.15,0.18,0.03,0.29,0.03,0.11,0.5,0.17,0.18,0.14,0.35,0.19,0.27,0.22,0.05,0.29,0.15,0.08,0.11,0.08,0.1,0.16,0.05,0.08,0.14,0.19,0.38,0.04,0.04,0.01,0.26,0.2,0.03,0.01,0.05,0.26,0.05,0.34,0.17,0.05,0.05,0.12,0.02,0,0.27,0.09,0.37,0.07000000000000001,0.29,0.12,0.23,0.07000000000000001,0.15,0.04,0.01,0.21,0.12,0.07000000000000001,0.1,0.03,0.05,0.06,0.44,0.22,0.06,0.21,0.05,0.13,0.21,0.05,0.06,0.06,0.11,0.06,0.4,0.02,0.35,0.08,0.39,0.14,0.06,0.82,0.06,0.02,0.3,0.06,0.07000000000000001,0.08,0.42,0.1,0.01,0.11,0.03,0.49,0.04,0.09,0.03,0.06,0.43,0.1,0.19,0.08,0.03,0.45,0.03,0.05,0.05],[0.28,0.22,0.11,0.34,0.08,0.24,0.27,0.3,0.17,0.11,0.15,0.13,0.06,0.11,0.3,0.14,0.05,0.02,0.19,0.21,0.17,0.26,0.02,0.15,0.31,0.05,0.19,0.16,0.19,0.18,0.1,0.28,0.16,0.13,0.25,0.18,0.11,0.19,0.1,0.17,0.05,0.07000000000000001,0.21,0.1,0.2,0.26,0.12,0.35,0.25,0.04,0.04,0.08,0.1,0.2,0.09,0.24,0.05,0.15,0.15,0.07000000000000001,0.23,0.26,0.07000000000000001,0.03,0.05,0.04,0.06,0.04,0.07000000000000001,0.28,0.14,0.09,0.17,0.1,0.09,0.14,0.11,0.09,0.05,0.15,0.07000000000000001,0.1,0.21,0.14,0.16,0.09,0.17,0.07000000000000001,0.09,0.04,0.08,0.17,0.22,0.05,0.26,0.33,0.51,0.2,0.02,0.02,0.04,0.05,0.13,0.32,0.04,0.03,0.15,0.18,0.21,0.1,0.07000000000000001,0.12,0.03,0.03,0.17,0.07000000000000001,0.18,0.07000000000000001,0.11,0.09,0.22,0.2,0.13,0.03,0.09,0.06,0.16,0.01,0.06,0.03,0.07000000000000001,0.06,0.1,0.25,0.03,0.02,0.14,0.01,0.06,0.08,0.09,0.05,0.08,0.07000000000000001,0.06,0.15,0.03,0.11,0.06,0.09,0.11,0.07000000000000001,0.11,0.23,0.06,0.05,0,0.13,0.18,0.06,0.06,0.06,0.09,0.22,0.17,0.05,0.17,0.05,0.04,0.1,0.02,0.06,0.05,0.04,0.05,0.16,0.05,0.02,0.03,0.05,0.13,0.06,0.07000000000000001,0.08,0.06,0.01,0.09,0.04,0.14,0.02,0.05,0.1,0.03,0.22,0.07000000000000001,0.1,0.04,0.05,0.09,0.01,0.03,0.03],[0.16,0.28,0.06,0.02,-0.09,0.17,-0.1,0.01,0.03,0.08,0.12,0.02,-0.02,0.03,0.01,0.1,0.2,0.01,0.12,-0.07000000000000001,0.06,-0.07000000000000001,-0.04,0.07000000000000001,0.16,-0.02,0.02,-0.14,-0.05,-0.06,-0.13,0.09,0.2,0.11,0.08,0,0.09,-0.23,-0.04,-0.21,0.11,0.05,0.1,0.03,-0.05,-0.03,0.19,0.33,-0.01,0.04,0.05,0.03,-0.01,0.07000000000000001,0.09,0.01,0.01,-0.04,0.03,0.02,-0.02,-0.11,-0.04,-0.02,-0.06,0.01,0.01,0.13,0.01,0.01,0.38,-0.02,0.05,0.26,0,0.03,-0.01,0.14,0.06,-0.06,-0.01,-0.02,-0.13,0.02,-0.01,0.08,0.02,-0.24,0.04,0.02,0.06,-0.04,-0.03,-0.02,-0.08,0.02,0.12,0.09,0.05,0.08,-0.04,0.01,0.07000000000000001,0.02,-0.02,0.29,0.03,0.01,-0.05,-0.02,0.09,-0.03,-0.05,0.02,-0.08,-0,-0.04,-0.05,-0.05,-0.01,-0.07000000000000001,-0.14,0,0.04,-0.01,-0.03,-0.02,-0,0.02,-0.02,-0.06,-0.02,0.1,0.06,0.01,-0.02,0.01,0.09,-0,-0,-0.02,0.04,0.09,0.03,0.06,-0.11,-0,0,0.1,-0.01,-0.07000000000000001,-0.04,0.04,0.06,-0.03,-0.05,0.03,-0.06,0.21,0.01,0.03,-0,-0.06,-0.03,-0.05,-0.03,-0.06,0,0.13,-0.22,0.01,0.11,-0.01,0.03,0.02,-0,0,-0.02,0.07000000000000001,0.1,0.04,0.02,0.04,0.1,-0.01,0.02,0.02,-0.03,-0.06,0.07000000000000001,0.01,0.06,-0.01,0.14,-0.06,-0.1,0.02,-0.03,0.04,0.02,-0.01,0.02],[0.17,0.03,0.39,0.03,0.21,0.07000000000000001,0.16,0.02,0.33,0.04,0.03,0.21,0.02,0.05,-0.04,0.11,0.23,0,0.12,0.16,0.08,0.06,0.01,0,0.17,0.14,0.02,0.08,0.15,0.28,0.1,0.03,-0.05,0.2,-0.03,0.05,0.15,0.29,0.15,0.3,0,0.08,-0.11,0.13,0.11,0.06,0.01,0.07000000000000001,0,-0.01,0.05,-0,0.06,0.17,0.16,-0.04,0.02,0.18,0,0.02,-0.01,0.2,-0.04,0.03,0.05,0.03,-0.06,0.04,0.02,0.12,0.41,0.01,0,-0,0.16,0.07000000000000001,0.01,0.08,-0.05,0.13,0.03,0.06,-0.07000000000000001,-0.03,-0.08,0.11,0.14,0.06,0.08,-0,-0.03,0.04,-0.05,0.08,0.1,0.24,0.23,-0.04,0.03,0.01,0.03,0.06,-0.09,0.29,-0.01,0.04,0.25,0.11,-0.07000000000000001,0.02,0.12,-0,-0,0,-0.01,-0.04,-0.01,-0.07000000000000001,-0.05,0.04,0.43,0.23,0.02,-0.03,0.11,-0.01,0.02,-0.01,0.03,0,0.08,0.06,-0.1,0.35,-0.03,0.11,0.03,-0.01,0.06,0.14,0.02,-0.05,-0,0.04,0.03,-0.03,-0.03,0.09,-0.02,0,-0.06,0.05,0.22,-0.13,-0.02,0.05,-0,0.06,0.08,0.01,0.08,0.03,-0.05,0.21,0.13,0.01,0.19,0.17,-0.04,0.02,0.02,-0.06,-0.05,0.29,0.03,0.21,0.04,0.02,0.1,0.02,-0.08,0.23,0.05,0.18,-0.06,-0.01,0.04,0,0.07000000000000001,-0.02,0.05,0.07000000000000001,0.02,0.13,-0.03,-0.02,0.06,0.01,-0.01,0.04,0.01,0.04],[8.199999999999999,6.7,6.2,6.5,7.3,6.2,7,5.3,5,5.1,5.3,5.5,4.7,6.1,4.7,4.4,5.6,4.3,4.7,4.6,4.1,4.5,4.3,4.2,5,4,4.2,4,4,4.8,4.3,4.8,5.3,4.6,5.4,3.9,4.6,4.6,4.2,3.6,5.7,3.9,4,3.5,3.6,5.6,4.5,8.6,3.7,3.5,3.5,4.7,3.9,4.9,5.4,4.8,3.2,4,3.4,3.2,3.7,4.4,3.1,3.2,3.6,3.3,3.9,3.9,3.1,4.2,6.2,3.4,3.5,4.8,3.5,3,3.9,3.8,3.2,3.8,3.5,2.8,3.6,4.8,3.6,3.8,2.9,3.3,3.3,3.6,3.4,3.2,3.6,3.9,3.7,4.7,5.5,3.5,3.2,3.4,2.9,5,3.4,4.6,2.8,4.6,3.8,4.1,3.6,2.5,3.6,3.5,2.6,2.9,2.4,2.7,3.2,3.1,2.5,2.9,4.7,3.9,2.7,3.1,2.4,2.7,3.6,2.3,2.5,2.8,3.4,2.3,3.8,4.8,2.2,2.4,3.1,3,3.1,2.8,2.8,3.7,2.4,3.5,3,2.9,2.7,3.1,3.2,2.4,3,2.5,3.4,3.7,2.7,3.8,2.3,4.4,4.5,2.3,3.3,2.9,2.4,3.8,3.6,2.1,3.8,3.9,2.7,3.7,2.3,3.7,2.4,4.6,5.3,3.2,4.7,2.8,2.2,3.3,2.8,5.1,3.2,4.1,2.3,2.5,2.6,2.8,3.5,3.6,2.9,2.7,3.1,3.3,2.3,2.5,1.8,1.8,4.4,2.6,2.1,4.1],[10.3,9,9.1,8.800000000000001,7.5,9.1,8.5,7.1,7.5,7.7,5.6,7.6,4.9,6.3,5.9,6.3,6,7,6.4,4.7,4.6,4.8,5.8,5,5.4,4.2,4.4,4.5,4.4,5,5.2,5.2,5.3,5.4,6,5.4,5,4.6,4.4,4,5.7,4.2,4.9,4.3,3.9,6.1,5.2,8.6,4,3.9,4.2,5.9,4.4,5.1,5.4,5.2,5,4,4.3,5.2,3.8,5,3.7,4.4,4.4,3.9,4.7,4,3.3,5,6.2,3.7,4.3,4.8,3.8,3.5,3.9,4.4,4.1,3.8,3.7,4.7,3.6,4.8,3.9,5,4.2,3.5,3.6,3.8,4,3.9,3.6,3.9,3.7,4.7,5.5,3.7,3.2,4,3.5,5,3.6,4.6,3.4,4.6,3.8,4.1,4,2.7,3.6,3.6,3,3.5,2.9,3.7,3.4,3.8,2.9,3.5,4.7,3.9,3.3,3.4,4,3.4,3.6,2.8,3.1,3.2,3.4,3,3.8,4.8,2.4,3.1,3.3,3.5,3.9,2.9,3.6,3.7,2.7,3.5,3,3.3,2.9,3.1,3.5,2.8,3,3.1,3.4,3.7,3.5,3.8,3,4.4,4.5,2.9,3.4,2.9,3,3.8,3.6,2.6,3.8,3.9,3.1,3.7,2.5,3.7,3.1,4.6,5.3,3.2,4.7,3,2.7,3.3,2.8,5.1,3.2,4.1,2.4,3.2,2.6,3,3.5,3.6,2.9,2.9,3.1,3.3,2.6,2.9,2.9,2.3,4.4,2.6,2.2,4.1],[15,13.4,12.6,11.2,13.3,10.9,12.1,11.3,9.6,8.6,10.5,11,9.1,10.7,10.3,9.1,10.5,8.1,9.199999999999999,7.4,9.199999999999999,9,7.6,9.699999999999999,8,7.1,8.300000000000001,7.2,8.300000000000001,8.6,8,9.800000000000001,7.1,8.199999999999999,9.800000000000001,7.8,7.5,6.5,8.300000000000001,6.5,6,7.8,7.8,7.6,5.3,9.300000000000001,8.1,11.1,7.2,7.7,8.9,9.1,7.9,8.5,7.9,9,7.6,6.8,7.1,7.9,5,7.8,7.4,7.4,5.7,6.3,6.8,4,7.4,9.5,8.199999999999999,6.1,6.7,5.3,6.4,6.1,5.6,4.4,7.8,4.2,6.6,6.4,3.6,7.6,3.9,8,6.6,3.5,3.6,7.2,5.2,6.5,6.1,7.1,5.3,7.1,5.8,5,3.4,7.4,4.9,5,3.6,5,3.4,4.6,4.5,5.6,5.3,2.7,4.1,5,4.6,5.6,4,5,3.4,3.8,3.9,4.6,6.4,4.6,4.5,4.1,6,3.4,3.8,4.4,4.6,4.9,3.6,4.4,4.8,5.1,3.7,3.8,3.3,6.4,6.1,3.2,4.8,4.5,2.7,4.3,3.4,3.3,4.6,3.5,5.2,2.8,3.5,4.6,4.1,4.8,6.1,4.7,4.2,4.6,5.5,2.9,3.4,5.1,3,4.5,6.6,2.6,6.2,5.9,3.9,3.7,2.5,5.3,4.3,4.6,5.3,3.6,4.7,4.6,4.5,4.4,5.2,5.1,3.8,4.4,2.7,4.7,2.9,4.9,5.2,5.7,3.1,3.7,4.7,3.3,2.6,4.9,4.3,3.4,5.4,4.3,2.8,4.1],[18.6,17.2,16,11.7,16,16.4,14.8,12.8,12,12.7,12.2,13.8,11.6,13.6,13.4,11,13.2,9.199999999999999,10.6,10.2,12.8,10.6,10.2,12,11.2,8.6,9.800000000000001,8.6,8.6,11.2,12.2,12.2,9.800000000000001,11.2,12.4,9.300000000000001,10.7,7.9,12.2,7.8,12.6,10,12.2,9.800000000000001,10,12.8,9,14.2,8.699999999999999,9.800000000000001,9.6,12.8,9.199999999999999,9.5,10.5,11,10,8,9,8.6,7,9.199999999999999,9,8.5,9,8.6,8,9.300000000000001,8.300000000000001,11.7,11.8,9.6,9.4,11,7.8,7.4,7.2,9.199999999999999,8.6,7.4,6.6,6.8,8.199999999999999,8.800000000000001,9.199999999999999,11.6,8.199999999999999,7.6,7.8,8.6,7.8,8.199999999999999,9,8.4,7.2,11.8,9,7.3,4.9,9,8,10.6,9.199999999999999,7.4,9,8.5,8.4,7.1,8.6,5.6,6.3,8.199999999999999,7.5,8.199999999999999,4,8.6,6.1,6.3,3.9,6.2,7.4,7.1,6.8,7,6.5,3.4,6.9,6.5,4.6,7.1,8.199999999999999,8,8.4,8.199999999999999,7.2,6.8,6.8,8.9,6.6,5.8,8.6,8.6,2.7,7.6,6.8,7,8,6.2,5.2,5,6.5,8.4,6.8,9.4,6.4,6.7,8.4,6.7,7,5.3,6.8,6.8,5,7,8.699999999999999,2.6,9,7,6.1,5.1,2.5,10,7.6,5,7.5,5.2,7,7.7,6.5,4.4,6.8,7.3,5,6,4.6,6.8,4.6,7.2,7.3,7.3,6,7.2,7.3,3.7,4.6,8,6.8,5.6,9.4,4.3,4.1,8.6],[244,230,228,226,217,213,211,186,183,182,182,180,175,172,166,165,165,164,159,158,153,153,149,148,148,146,146,142,142,142,142,141,138,137,136,136,135,132,131,131,131,131,130,129,127,127,125,125,124,124,123,123,123,123,122,122,121,119,119,119,118,117,117,117,116,116,112,112,111,111,110,110,109,109,109,108,108,107,107,106,105,104,104,104,102,102,101,101,101,101,100,100,99,99,99,98,98,98,98,98,97,97,97,96,95,94,94,94,94,93,92,92,91,91,90,89,89,88,87,86,86,85,85,85,85,85,84,84,84,84,82,82,82,82,82,82,82,81,80,79,79,79,78,78,78,77,77,77,77,77,77,77,77,76,76,76,76,76,76,75,75,75,74,74,74,74,74,73,73,73,73,72,71,71,70,70,69,69,69,69,68,67,67,67,66,66,66,66,66,66,65,65,65,64,64,64,63,63,62,62,62,62],[22,19,19,16,27,17,18,8,11,4,16,13,19,21,10,7,16,2,8,11,7,4,3,9,10,11,7,8,5,6,14,6,12,8,11,3,12,11,7,5,14,12,8,5,3,9,12,10,3,3,4,4,0,8,11,3,2,5,6,2,6,4,1,2,7,7,2,10,2,1,10,6,5,8,4,4,7,8,5,8,1,0,9,1,5,4,2,7,5,2,7,4,3,2,4,3,4,3,7,3,2,9,6,3,4,10,4,5,4,1,6,3,1,4,0,3,3,0,1,3,2,4,1,2,0,5,4,1,1,1,4,1,6,3,2,1,3,3,0,5,2,7,4,6,4,3,2,3,3,0,3,2,2,3,0,0,3,6,5,2,5,1,2,3,0,1,0,2,4,3,1,7,2,5,2,1,9,1,3,6,2,1,2,6,2,1,2,0,6,2,2,2,1,5,1,2,3,0,6,1,1,1],[13,8,18,12,8,10,12,11,16,5,6,10,3,4,9,9,7,1,10,11,9,11,1,5,11,6,7,7,12,11,6,9,2,9,5,8,7,11,7,12,1,4,3,8,9,7,3,6,8,1,3,2,5,8,4,5,3,9,5,3,5,11,1,2,3,2,0,2,3,10,7,3,5,2,7,7,3,4,0,5,3,6,3,2,2,5,10,3,5,1,1,6,4,3,7,10,10,4,1,1,2,2,1,9,1,1,7,5,3,4,3,3,1,1,5,1,4,0,2,3,11,7,4,0,7,1,4,0,3,1,3,4,0,8,0,4,4,0,3,4,3,0,2,2,2,3,0,4,1,3,1,3,6,2,1,2,0,3,3,2,3,2,1,7,6,2,6,4,0,2,1,0,0,4,1,6,1,1,4,1,1,3,2,3,0,0,2,1,3,0,2,4,1,3,1,2,3,2,1,1,1,1]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>name<\/th>\n      <th>position<\/th>\n      <th>starts<\/th>\n      <th>xG_per90<\/th>\n      <th>xA_per90<\/th>\n      <th>xG_Delta<\/th>\n      <th>xA_Delta<\/th>\n      <th>mean_perStart<\/th>\n      <th>mean_max20<\/th>\n      <th>mean_max10<\/th>\n      <th>mean_max5<\/th>\n      <th>total_points_season<\/th>\n      <th>Goals<\/th>\n      <th>Assists<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"paging":true,"scrollX":true,"searching":true,"ordering":true,"dom":"Bfrtip","buttons":["pdf"],"pageLength":10,"lengthMenu":[3,5,10],"fixedColumns":{"leftColumns":1},"columnDefs":[{"className":"dt-right","targets":[2,3,4,5,6,7,8,9,10,11,12,13]}],"order":[],"autoWidth":false,"orderClasses":false,"orderCellsTop":true}},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

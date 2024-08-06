@@ -9,337 +9,43 @@
   {
     "objectID": "posts/post-01/index.html",
     "href": "posts/post-01/index.html",
-    "title": "FPL Season 2024/2025, GameWeek-0",
+    "title": "FPL Point, Average and Ceiling Ranking",
     "section": "",
-    "text": "FPL Season 2023/2024, Ranking by average point per start\n    \n    \n    \n      \n      \n        All Season\n      \n      \n        xG per 90 mins\n      \n      \n        per Start\n      \n      \n        Opponents contribute to past ceiling:\n      \n    \n    \n      starts\n      FPL\n      Goals\n      Assists\n      xG\n      Delta\n      fpl point\n      mean*\n      ceiling*\n      \n      max1\n      max2\n      max3\n      max4\n      max5\n    \n  \n  \n    Michael Olise\n14\n125\n10\n6\n0.38\n0.33\n          \n8.6\n14.2\n          \nSHU\nMUN\nBRE\nWHU\nwol\n    Cole Palmer\n29\n244\n22\n13\n0.60\n0.16\n          \n8.2\n18.6\n          \nEVE\nMUN\nlut\nBUR\nSHU\n    Erling Haaland\n29\n217\n27\n8\n1.04\n-0.09\n          \n7.3\n16.0\n          \nWOL\nFUL\nmun\nche\nbur\n    Mohamed Salah\n28\n211\n18\n12\n0.74\n-0.10\n          \n7.0\n14.8\n          \nEVE\nBRE\nNEW\nbha\ncry\n    Phil Foden\n33\n230\n19\n8\n0.32\n0.28\n          \n6.7\n17.2\n          \nbre\nAVL\nbha\nMUN\nWHU\n    Bukayo Saka\n35\n226\n16\n12\n0.47\n0.02\n          \n6.5\n11.7\n          \nwhu\nbur\nTOT\ntot\nNFO\n    Ollie Watkins\n37\n228\n19\n18\n0.47\n0.06\n          \n6.2\n16.0\n          \nBHA\nshu\nful\nlut\nBRE\n    Son Heung-min\n34\n213\n17\n10\n0.35\n0.17\n          \n6.2\n16.4\n          \nbur\nNEW\navl\nars\nFUL\n    Diogo Teixeira da Silva\n14\n110\n10\n7\n0.41\n0.38\n          \n6.2\n11.8\n          \nbou\nBOU\nful\nBRE\nCHE\n    Alexander Isak\n27\n172\n21\n4\n0.81\n0.03\n          \n6.1\n13.6\n          \nWHU\nbre\nAVL\nwhu\nSHU\n    Chris Wood\n20\n131\n14\n1\n0.59\n0.11\n          \n5.7\n12.6\n          \nnew\nLUT\nbur\nBOU\nlut\n    Jean-Philippe Mateta\n25\n165\n16\n7\n0.43\n0.20\n          \n5.6\n13.2\n          \nAVL\nWHU\nNEW\nmci\nnfo\n    Bryan Mbeumo\n22\n127\n9\n7\n0.45\n-0.03\n          \n5.6\n12.8\n          \nful\nBUR\nche\nbou\nlut\n    Kai Havertz\n30\n180\n13\n10\n0.42\n0.02\n          \n5.5\n13.8\n          \nNEW\nshu\nbha\nCHE\ntot\n    Kevin De Bruyne\n15\n98\n4\n10\n0.18\n0.12\n          \n5.5\n9.0\n          \ncry\nnfo\nbha\nBUR\nliv\n  \n  \n  \n    \n       Fpl Infinitesimal\n              Delta = Actual Goals - xG, per 90 \n\n              ceiling* is average of top 5 gws \n\n              mean* is average poinst for starts gw"
+    "text": "FPL Season 2023/2024, Ranking by average point per start\n    \n    \n    \n      \n      \n        All Season\n      \n      \n        xG per 90 mins\n      \n      \n        per Start\n      \n      \n        Opponents contribute to past ceiling:\n      \n    \n    \n      starts\n      FPL\n      Goals\n      Assists\n      xG\n      Delta\n      fpl point\n      mean*\n      ceiling*\n      \n      max1\n      max2\n      max3\n      max4\n      max5\n    \n  \n  \n    Michael Olise\n14\n125\n10\n6\n0.38\n0.33\n          \n8.6\n14.2\n          \nSHU\nMUN\nBRE\nWHU\nwol\n    Cole Palmer\n29\n244\n22\n13\n0.60\n0.16\n          \n8.2\n18.6\n          \nEVE\nMUN\nlut\nBUR\nSHU\n    Erling Haaland\n29\n217\n27\n8\n1.04\n-0.09\n          \n7.3\n16.0\n          \nWOL\nFUL\nmun\nche\nbur\n    Mohamed Salah\n28\n211\n18\n12\n0.74\n-0.10\n          \n7.0\n14.8\n          \nEVE\nBRE\nNEW\nbha\ncry\n    Phil Foden\n33\n230\n19\n8\n0.32\n0.28\n          \n6.7\n17.2\n          \nbre\nAVL\nbha\nMUN\nWHU\n    Bukayo Saka\n35\n226\n16\n12\n0.47\n0.02\n          \n6.5\n11.7\n          \nwhu\nbur\nTOT\ntot\nNFO\n    Ollie Watkins\n37\n228\n19\n18\n0.47\n0.06\n          \n6.2\n16.0\n          \nBHA\nshu\nful\nlut\nBRE\n    Son Heung-min\n34\n213\n17\n10\n0.35\n0.17\n          \n6.2\n16.4\n          \nbur\nNEW\navl\nars\nFUL\n    Diogo Jota\n14\n110\n10\n7\n0.41\n0.38\n          \n6.2\n11.8\n          \nbou\nBOU\nful\nBRE\nCHE\n    Alexander Isak\n27\n172\n21\n4\n0.81\n0.03\n          \n6.1\n13.6\n          \nWHU\nbre\nAVL\nwhu\nSHU\n    Chris Wood\n20\n131\n14\n1\n0.59\n0.11\n          \n5.7\n12.6\n          \nnew\nLUT\nbur\nBOU\nlut\n    Jean-Philippe Mateta\n25\n165\n16\n7\n0.43\n0.20\n          \n5.6\n13.2\n          \nAVL\nWHU\nNEW\nmci\nnfo\n    Bryan Mbeumo\n22\n127\n9\n7\n0.45\n-0.03\n          \n5.6\n12.8\n          \nful\nBUR\nche\nbou\nlut\n    Kai Havertz\n30\n180\n13\n10\n0.42\n0.02\n          \n5.5\n13.8\n          \nNEW\nshu\nbha\nCHE\ntot\n    Kevin De Bruyne\n15\n98\n4\n10\n0.18\n0.12\n          \n5.5\n9.0\n          \ncry\nnfo\nbha\nBUR\nliv\n    Eberechi Eze\n24\n136\n11\n5\n0.40\n0.08\n          \n5.4\n12.4\n          \nAVL\nSHU\nWHU\nliv\nBRE\n    Richarlison de Andrade\n18\n122\n11\n4\n0.58\n0.09\n          \n5.4\n10.5\n          \nNEW\neve\nnfo\nEVE\nBOU\n    Martin Ødegaard\n35\n186\n8\n11\n0.22\n0.01\n          \n5.3\n12.8\n          \nbou\nbur\ncry\nLUT\nCHE\n    Jarrod Bowen\n34\n182\n16\n6\n0.36\n0.12\n          \n5.3\n12.2\n          \nBRE\nLIV\nbha\nnew\nbou\n    Leandro Trossard\n18\n138\n12\n2\n0.46\n0.20\n          \n5.3\n9.8\n          \nBUR\nbur\nmun\nCRY\nwhu\n    Takehiro Tomiyasu\n10\n70\n2\n1\n0.14\n0.02\n          \n5.3\n7.5\n          \nWOL\nEVE\nbre\nCHE\nBOU\n    Benjamin White\n35\n182\n4\n5\n0.04\n0.08\n          \n5.1\n12.7\n          \nCHE\nbou\nshu\nBRE\nMCI\n    Jakub Kiwior\n11\n67\n1\n3\n0.07\n0.02\n          \n5.1\n7.3\n          \nshu\nbur\nNEW\nSHU\nwhu\n    Anthony Gordon\n34\n183\n11\n16\n0.31\n0.03\n          \n5.0\n12.0\n          \nTOT\nCHE\nLIV\nMUN\nSHU\n    Leon Bailey\n22\n148\n10\n11\n0.27\n0.16\n          \n5.0\n11.2\n          \nEVE\nBOU\nNFO\nMCI\nBUR\n    Rodrigo Muniz Carvalho\n18\n97\n9\n2\n0.50\n0.01\n          \n5.0\n10.6\n          \nBOU\nTOT\nBHA\nbur\nAVL\n    Raheem Sterling\n22\n123\n8\n8\n0.29\n0.07\n          \n4.9\n9.5\n          \nLUT\nbur\nBOU\nmci\nMCI\n    Moussa Diaby\n25\n142\n6\n11\n0.31\n-0.06\n          \n4.8\n11.2\n          \nWOL\nLUT\nbur\nBOU\nBHA\n    Bernardo Veiga de Carvalho e Silva\n29\n141\n6\n9\n0.12\n0.09\n          \n4.8\n12.2\n          \nBOU\nwhu\neve\nful\nWHU\n    Trent Alexander-Arnold\n25\n122\n3\n5\n0.12\n0.01\n          \n4.8\n11.0\n          \nFUL\nAVL\nshu\nMUN\nful\n  \n  \n  \n    \n       Fpl Infinitesimal\n              Delta = Actual Goals - xG, per 90 \n\n              ceiling* is average of top 5 gws \n\n              mean* is average poinst for starts gw"
   },
   {
     "objectID": "posts/post-01/index.html#ranking-by-average-point-of-season-20232024",
     "href": "posts/post-01/index.html#ranking-by-average-point-of-season-20232024",
-    "title": "FPL Season 2024/2025, GameWeek-0",
+    "title": "FPL Point, Average and Ceiling Ranking",
     "section": "",
-    "text": "FPL Season 2023/2024, Ranking by average point per start\n    \n    \n    \n      \n      \n        All Season\n      \n      \n        xG per 90 mins\n      \n      \n        per Start\n      \n      \n        Opponents contribute to past ceiling:\n      \n    \n    \n      starts\n      FPL\n      Goals\n      Assists\n      xG\n      Delta\n      fpl point\n      mean*\n      ceiling*\n      \n      max1\n      max2\n      max3\n      max4\n      max5\n    \n  \n  \n    Michael Olise\n14\n125\n10\n6\n0.38\n0.33\n          \n8.6\n14.2\n          \nSHU\nMUN\nBRE\nWHU\nwol\n    Cole Palmer\n29\n244\n22\n13\n0.60\n0.16\n          \n8.2\n18.6\n          \nEVE\nMUN\nlut\nBUR\nSHU\n    Erling Haaland\n29\n217\n27\n8\n1.04\n-0.09\n          \n7.3\n16.0\n          \nWOL\nFUL\nmun\nche\nbur\n    Mohamed Salah\n28\n211\n18\n12\n0.74\n-0.10\n          \n7.0\n14.8\n          \nEVE\nBRE\nNEW\nbha\ncry\n    Phil Foden\n33\n230\n19\n8\n0.32\n0.28\n          \n6.7\n17.2\n          \nbre\nAVL\nbha\nMUN\nWHU\n    Bukayo Saka\n35\n226\n16\n12\n0.47\n0.02\n          \n6.5\n11.7\n          \nwhu\nbur\nTOT\ntot\nNFO\n    Ollie Watkins\n37\n228\n19\n18\n0.47\n0.06\n          \n6.2\n16.0\n          \nBHA\nshu\nful\nlut\nBRE\n    Son Heung-min\n34\n213\n17\n10\n0.35\n0.17\n          \n6.2\n16.4\n          \nbur\nNEW\navl\nars\nFUL\n    Diogo Teixeira da Silva\n14\n110\n10\n7\n0.41\n0.38\n          \n6.2\n11.8\n          \nbou\nBOU\nful\nBRE\nCHE\n    Alexander Isak\n27\n172\n21\n4\n0.81\n0.03\n          \n6.1\n13.6\n          \nWHU\nbre\nAVL\nwhu\nSHU\n    Chris Wood\n20\n131\n14\n1\n0.59\n0.11\n          \n5.7\n12.6\n          \nnew\nLUT\nbur\nBOU\nlut\n    Jean-Philippe Mateta\n25\n165\n16\n7\n0.43\n0.20\n          \n5.6\n13.2\n          \nAVL\nWHU\nNEW\nmci\nnfo\n    Bryan Mbeumo\n22\n127\n9\n7\n0.45\n-0.03\n          \n5.6\n12.8\n          \nful\nBUR\nche\nbou\nlut\n    Kai Havertz\n30\n180\n13\n10\n0.42\n0.02\n          \n5.5\n13.8\n          \nNEW\nshu\nbha\nCHE\ntot\n    Kevin De Bruyne\n15\n98\n4\n10\n0.18\n0.12\n          \n5.5\n9.0\n          \ncry\nnfo\nbha\nBUR\nliv\n  \n  \n  \n    \n       Fpl Infinitesimal\n              Delta = Actual Goals - xG, per 90 \n\n              ceiling* is average of top 5 gws \n\n              mean* is average poinst for starts gw"
+    "text": "FPL Season 2023/2024, Ranking by average point per start\n    \n    \n    \n      \n      \n        All Season\n      \n      \n        xG per 90 mins\n      \n      \n        per Start\n      \n      \n        Opponents contribute to past ceiling:\n      \n    \n    \n      starts\n      FPL\n      Goals\n      Assists\n      xG\n      Delta\n      fpl point\n      mean*\n      ceiling*\n      \n      max1\n      max2\n      max3\n      max4\n      max5\n    \n  \n  \n    Michael Olise\n14\n125\n10\n6\n0.38\n0.33\n          \n8.6\n14.2\n          \nSHU\nMUN\nBRE\nWHU\nwol\n    Cole Palmer\n29\n244\n22\n13\n0.60\n0.16\n          \n8.2\n18.6\n          \nEVE\nMUN\nlut\nBUR\nSHU\n    Erling Haaland\n29\n217\n27\n8\n1.04\n-0.09\n          \n7.3\n16.0\n          \nWOL\nFUL\nmun\nche\nbur\n    Mohamed Salah\n28\n211\n18\n12\n0.74\n-0.10\n          \n7.0\n14.8\n          \nEVE\nBRE\nNEW\nbha\ncry\n    Phil Foden\n33\n230\n19\n8\n0.32\n0.28\n          \n6.7\n17.2\n          \nbre\nAVL\nbha\nMUN\nWHU\n    Bukayo Saka\n35\n226\n16\n12\n0.47\n0.02\n          \n6.5\n11.7\n          \nwhu\nbur\nTOT\ntot\nNFO\n    Ollie Watkins\n37\n228\n19\n18\n0.47\n0.06\n          \n6.2\n16.0\n          \nBHA\nshu\nful\nlut\nBRE\n    Son Heung-min\n34\n213\n17\n10\n0.35\n0.17\n          \n6.2\n16.4\n          \nbur\nNEW\navl\nars\nFUL\n    Diogo Jota\n14\n110\n10\n7\n0.41\n0.38\n          \n6.2\n11.8\n          \nbou\nBOU\nful\nBRE\nCHE\n    Alexander Isak\n27\n172\n21\n4\n0.81\n0.03\n          \n6.1\n13.6\n          \nWHU\nbre\nAVL\nwhu\nSHU\n    Chris Wood\n20\n131\n14\n1\n0.59\n0.11\n          \n5.7\n12.6\n          \nnew\nLUT\nbur\nBOU\nlut\n    Jean-Philippe Mateta\n25\n165\n16\n7\n0.43\n0.20\n          \n5.6\n13.2\n          \nAVL\nWHU\nNEW\nmci\nnfo\n    Bryan Mbeumo\n22\n127\n9\n7\n0.45\n-0.03\n          \n5.6\n12.8\n          \nful\nBUR\nche\nbou\nlut\n    Kai Havertz\n30\n180\n13\n10\n0.42\n0.02\n          \n5.5\n13.8\n          \nNEW\nshu\nbha\nCHE\ntot\n    Kevin De Bruyne\n15\n98\n4\n10\n0.18\n0.12\n          \n5.5\n9.0\n          \ncry\nnfo\nbha\nBUR\nliv\n    Eberechi Eze\n24\n136\n11\n5\n0.40\n0.08\n          \n5.4\n12.4\n          \nAVL\nSHU\nWHU\nliv\nBRE\n    Richarlison de Andrade\n18\n122\n11\n4\n0.58\n0.09\n          \n5.4\n10.5\n          \nNEW\neve\nnfo\nEVE\nBOU\n    Martin Ødegaard\n35\n186\n8\n11\n0.22\n0.01\n          \n5.3\n12.8\n          \nbou\nbur\ncry\nLUT\nCHE\n    Jarrod Bowen\n34\n182\n16\n6\n0.36\n0.12\n          \n5.3\n12.2\n          \nBRE\nLIV\nbha\nnew\nbou\n    Leandro Trossard\n18\n138\n12\n2\n0.46\n0.20\n          \n5.3\n9.8\n          \nBUR\nbur\nmun\nCRY\nwhu\n    Takehiro Tomiyasu\n10\n70\n2\n1\n0.14\n0.02\n          \n5.3\n7.5\n          \nWOL\nEVE\nbre\nCHE\nBOU\n    Benjamin White\n35\n182\n4\n5\n0.04\n0.08\n          \n5.1\n12.7\n          \nCHE\nbou\nshu\nBRE\nMCI\n    Jakub Kiwior\n11\n67\n1\n3\n0.07\n0.02\n          \n5.1\n7.3\n          \nshu\nbur\nNEW\nSHU\nwhu\n    Anthony Gordon\n34\n183\n11\n16\n0.31\n0.03\n          \n5.0\n12.0\n          \nTOT\nCHE\nLIV\nMUN\nSHU\n    Leon Bailey\n22\n148\n10\n11\n0.27\n0.16\n          \n5.0\n11.2\n          \nEVE\nBOU\nNFO\nMCI\nBUR\n    Rodrigo Muniz Carvalho\n18\n97\n9\n2\n0.50\n0.01\n          \n5.0\n10.6\n          \nBOU\nTOT\nBHA\nbur\nAVL\n    Raheem Sterling\n22\n123\n8\n8\n0.29\n0.07\n          \n4.9\n9.5\n          \nLUT\nbur\nBOU\nmci\nMCI\n    Moussa Diaby\n25\n142\n6\n11\n0.31\n-0.06\n          \n4.8\n11.2\n          \nWOL\nLUT\nbur\nBOU\nBHA\n    Bernardo Veiga de Carvalho e Silva\n29\n141\n6\n9\n0.12\n0.09\n          \n4.8\n12.2\n          \nBOU\nwhu\neve\nful\nWHU\n    Trent Alexander-Arnold\n25\n122\n3\n5\n0.12\n0.01\n          \n4.8\n11.0\n          \nFUL\nAVL\nshu\nMUN\nful\n  \n  \n  \n    \n       Fpl Infinitesimal\n              Delta = Actual Goals - xG, per 90 \n\n              ceiling* is average of top 5 gws \n\n              mean* is average poinst for starts gw"
   },
   {
-    "objectID": "posts/post-01/index.html#ranking-by-xg",
-    "href": "posts/post-01/index.html#ranking-by-xg",
-    "title": "FPL Season 2024/2025, GameWeek-0",
-    "section": "Ranking by xG",
-    "text": "Ranking by xG\n\n\n\n\n\n\n  \n    \n      FPL Season 2023/2024, Ranking by xG\n    \n    \n    \n      \n      \n        All Season\n      \n      \n        xG per 90 mins\n      \n      \n        per Start\n      \n      \n        Opponents contribute to past ceiling:\n      \n    \n    \n      starts\n      FPL\n      Goals\n      Assists\n      xG\n      Delta\n      fpl point\n      mean*\n      ceiling*\n      \n      max1\n      max2\n      max3\n      max4\n      max5\n    \n  \n  \n    Erling Haaland\n29\n217\n27\n8\n1.04\n-0.09\n          \n7.3\n16.0\n          \nWOL\nFUL\nmun\nche\nbur\n    Callum Wilson\n9\n69\n9\n1\n0.82\n0.00\n          \n4.7\n7.0\n          \nwol\nshu\nCRY\nBRE\nbur\n    Alexander Isak\n27\n172\n21\n4\n0.81\n0.03\n          \n6.1\n13.6\n          \nWHU\nbre\nAVL\nwhu\nSHU\n    Mohamed Salah\n28\n211\n18\n12\n0.74\n-0.10\n          \n7.0\n14.8\n          \nEVE\nBRE\nNEW\nbha\ncry\n    Darwin Núñez Ribeiro\n22\n132\n11\n11\n0.72\n-0.23\n          \n4.6\n7.9\n          \nbou\nNFO\nAVL\nbur\nWHU\n    Cole Palmer\n29\n244\n22\n13\n0.60\n0.16\n          \n8.2\n18.6\n          \nEVE\nMUN\nlut\nBUR\nSHU\n    Chris Wood\n20\n131\n14\n1\n0.59\n0.11\n          \n5.7\n12.6\n          \nnew\nLUT\nbur\nBOU\nlut\n    Nicolas Jackson\n31\n142\n14\n6\n0.58\n-0.13\n          \n4.3\n12.2\n          \ntot\nWHU\nEVE\nNEW\nLUT\n    Richarlison de Andrade\n18\n122\n11\n4\n0.58\n0.09\n          \n5.4\n10.5\n          \nNEW\neve\nnfo\nEVE\nBOU\n    Dominic Solanke\n37\n175\n19\n3\n0.53\n-0.02\n          \n4.7\n11.6\n          \nnfo\nNEW\nnew\nwhu\nLUT\n    João Pedro Junqueira de Jesus\n19\n104\n9\n3\n0.53\n-0.13\n          \n3.6\n8.2\n          \nTOT\nCRY\nLUT\nAVL\nCHE\n    Dominic Calvert-Lewin\n26\n101\n7\n3\n0.53\n-0.24\n          \n3.3\n7.6\n          \nwhu\nBUR\nlut\nLUT\nLIV\n    Cody Gakpo\n17\n106\n8\n5\n0.50\n-0.06\n          \n3.8\n7.4\n          \nTOT\ntot\nwol\nLUT\navl\n    Rodrigo Muniz Carvalho\n18\n97\n9\n2\n0.50\n0.01\n          \n5.0\n10.6\n          \nBOU\nTOT\nBHA\nbur\nAVL\n    Oliver McBurnie\n15\n66\n6\n3\n0.49\n-0.06\n          \n3.5\n7.3\n          \nFUL\nLUT\nCHE\nMUN\nEVE\n  \n  \n  \n    \n       Fpl Infinitesimal\n              Delta = Actual Goals - xG, per 90 \n\n              ceiling* is average of top 5 gws \n\n              mean* is average poinst for starts gw"
+    "objectID": "posts/post-01/index.html#ceiling-and-average-fpl-point-per-starting",
+    "href": "posts/post-01/index.html#ceiling-and-average-fpl-point-per-starting",
+    "title": "FPL Point, Average and Ceiling Ranking",
+    "section": "Ceiling and Average FPL point, per starting",
+    "text": "Ceiling and Average FPL point, per starting"
   },
   {
-    "objectID": "posts/post-01/index.html#ranking-by-ceiling-point",
-    "href": "posts/post-01/index.html#ranking-by-ceiling-point",
-    "title": "FPL Season 2024/2025, GameWeek-0",
-    "section": "Ranking by Ceiling Point !",
-    "text": "Ranking by Ceiling Point !\n\n\n\n\n\n\n  \n    \n      FPL Season 2023/2024, Ranking by Ceiling\n    \n    \n    \n      \n      \n        All Season\n      \n      \n        xG per 90 mins\n      \n      \n        per Start\n      \n      \n        Opponents contribute to past ceiling:\n      \n    \n    \n      starts\n      FPL\n      Goals\n      Assists\n      xG\n      Delta\n      fpl point\n      mean*\n      ceiling*\n      \n      max1\n      max2\n      max3\n      max4\n      max5\n    \n  \n  \n    Cole Palmer\n29\n244\n22\n13\n0.60\n0.16\n          \n8.2\n18.6\n          \nEVE\nMUN\nlut\nBUR\nSHU\n    Phil Foden\n33\n230\n19\n8\n0.32\n0.28\n          \n6.7\n17.2\n          \nbre\nAVL\nbha\nMUN\nWHU\n    Son Heung-min\n34\n213\n17\n10\n0.35\n0.17\n          \n6.2\n16.4\n          \nbur\nNEW\navl\nars\nFUL\n    Ollie Watkins\n37\n228\n19\n18\n0.47\n0.06\n          \n6.2\n16.0\n          \nBHA\nshu\nful\nlut\nBRE\n    Erling Haaland\n29\n217\n27\n8\n1.04\n-0.09\n          \n7.3\n16.0\n          \nWOL\nFUL\nmun\nche\nbur\n    Mohamed Salah\n28\n211\n18\n12\n0.74\n-0.10\n          \n7.0\n14.8\n          \nEVE\nBRE\nNEW\nbha\ncry\n    Michael Olise\n14\n125\n10\n6\n0.38\n0.33\n          \n8.6\n14.2\n          \nSHU\nMUN\nBRE\nWHU\nwol\n    Kai Havertz\n30\n180\n13\n10\n0.42\n0.02\n          \n5.5\n13.8\n          \nNEW\nshu\nbha\nCHE\ntot\n    Alexander Isak\n27\n172\n21\n4\n0.81\n0.03\n          \n6.1\n13.6\n          \nWHU\nbre\nAVL\nwhu\nSHU\n    Bruno Borges Fernandes\n35\n166\n10\n9\n0.28\n0.01\n          \n4.7\n13.4\n          \nSHU\nbou\nNFO\nful\nEVE\n    Jean-Philippe Mateta\n25\n165\n16\n7\n0.43\n0.20\n          \n5.6\n13.2\n          \nAVL\nWHU\nNEW\nmci\nnfo\n    Martin Ødegaard\n35\n186\n8\n11\n0.22\n0.01\n          \n5.3\n12.8\n          \nbou\nbur\ncry\nLUT\nCHE\n    Bruno Guimarães Rodriguez Moura\n37\n153\n7\n9\n0.14\n0.06\n          \n4.1\n12.8\n          \nbre\nnfo\nshu\nful\nbur\n    Bryan Mbeumo\n22\n127\n9\n7\n0.45\n-0.03\n          \n5.6\n12.8\n          \nful\nBUR\nche\nbou\nlut\n    Joško Gvardiol\n26\n123\n4\n2\n0.12\n0.03\n          \n4.7\n12.8\n          \nful\nnfo\nLUT\nARS\nNFO\n    Benjamin White\n35\n182\n4\n5\n0.04\n0.08\n          \n5.1\n12.7\n          \nCHE\nbou\nshu\nBRE\nMCI\n    Chris Wood\n20\n131\n14\n1\n0.59\n0.11\n          \n5.7\n12.6\n          \nnew\nLUT\nbur\nBOU\nlut\n    Eberechi Eze\n24\n136\n11\n5\n0.40\n0.08\n          \n5.4\n12.4\n          \nAVL\nSHU\nWHU\nliv\nBRE\n    Jarrod Bowen\n34\n182\n16\n6\n0.36\n0.12\n          \n5.3\n12.2\n          \nBRE\nLIV\nbha\nnew\nbou\n    Nicolas Jackson\n31\n142\n14\n6\n0.58\n-0.13\n          \n4.3\n12.2\n          \ntot\nWHU\nEVE\nNEW\nLUT\n  \n  \n  \n    \n       Fpl Infinitesimal\n              Delta = Actual Goals - xG, per 90 \n\n              ceiling* is average of top 5 gws \n\n              mean* is average poinst for starts gw"
+    "objectID": "posts/post-01/index.html#xg-per-90",
+    "href": "posts/post-01/index.html#xg-per-90",
+    "title": "FPL Point, Average and Ceiling Ranking",
+    "section": "xG per 90",
+    "text": "xG per 90"
   },
   {
-    "objectID": "posts/post-01/index.html#ranking-by-xg-delta",
-    "href": "posts/post-01/index.html#ranking-by-xg-delta",
-    "title": "FPL Season 2024/2025, GameWeek-0",
-    "section": "Ranking by xG Delta !",
-    "text": "Ranking by xG Delta !\n\n\n\n\n\n\n  \n    \n      FPL Season 2023/2024, Ranking by Ceiling\n    \n    \n    \n      \n      \n        All Season\n      \n      \n        xG per 90 mins\n      \n      \n        per Start\n      \n      \n        Opponents contribute to past ceiling:\n      \n    \n    \n      starts\n      FPL\n      Goals\n      Assists\n      xG\n      Delta\n      fpl point\n      mean*\n      ceiling*\n      \n      max1\n      max2\n      max3\n      max4\n      max5\n    \n  \n  \n    Diogo Teixeira da Silva\n14\n110\n10\n7\n0.41\n0.38\n          \n6.2\n11.8\n          \nbou\nBOU\nful\nBRE\nCHE\n    Michael Olise\n14\n125\n10\n6\n0.38\n0.33\n          \n8.6\n14.2\n          \nSHU\nMUN\nBRE\nWHU\nwol\n    Elijah Adebayo\n16\n94\n10\n1\n0.35\n0.29\n          \n4.6\n8.5\n          \nBHA\nEVE\nMCI\nARS\nCHE\n    Phil Foden\n33\n230\n19\n8\n0.32\n0.28\n          \n6.7\n17.2\n          \nbre\nAVL\nbha\nMUN\nWHU\n    Callum Hudson-Odoi\n20\n109\n8\n2\n0.13\n0.26\n          \n4.8\n11.0\n          \nshu\nWHU\nBUR\nbou\nNEW\n    Noni Madueke\n13\n76\n5\n3\n0.22\n0.21\n          \n4.5\n7.0\n          \nWHU\navl\nshu\nlut\nEVE\n    Jean-Philippe Mateta\n25\n165\n16\n7\n0.43\n0.20\n          \n5.6\n13.2\n          \nAVL\nWHU\nNEW\nmci\nnfo\n    Leandro Trossard\n18\n138\n12\n2\n0.46\n0.20\n          \n5.3\n9.8\n          \nBUR\nbur\nmun\nCRY\nwhu\n    Hwang Hee-chan\n25\n125\n12\n3\n0.32\n0.19\n          \n4.5\n9.0\n          \nbre\nAVL\nBUR\nMCI\nNEW\n    Son Heung-min\n34\n213\n17\n10\n0.35\n0.17\n          \n6.2\n16.4\n          \nbur\nNEW\navl\nars\nFUL\n    Cole Palmer\n29\n244\n22\n13\n0.60\n0.16\n          \n8.2\n18.6\n          \nEVE\nMUN\nlut\nBUR\nSHU\n    Leon Bailey\n22\n148\n10\n11\n0.27\n0.16\n          \n5.0\n11.2\n          \nEVE\nBOU\nNFO\nMCI\nBUR\n    Antoine Semenyo\n25\n107\n8\n4\n0.20\n0.14\n          \n3.8\n9.2\n          \nLUT\nBUR\nwol\nnew\nbur\n    Harvey Barnes\n7\n64\n5\n3\n0.43\n0.14\n          \n3.3\n3.7\n          \nbre\nEVE\nBRE\nTOT\nBOU\n    Rasmus Højlund\n25\n112\n10\n2\n0.29\n0.13\n          \n3.9\n9.3\n          \nlut\nTOT\nwol\nWHU\nAVL\n    Idrissa Gueye\n24\n73\n4\n0\n0.06\n0.13\n          \n2.7\n6.1\n          \nNFO\nBRE\nars\nnfo\nCRY\n    Jarrod Bowen\n34\n182\n16\n6\n0.36\n0.12\n          \n5.3\n12.2\n          \nBRE\nLIV\nbha\nnew\nbou\n    Rodrigo Hernandez\n34\n159\n8\n10\n0.12\n0.12\n          \n4.7\n10.6\n          \nbur\nAVL\nshu\nSHU\nBUR\n    Kevin De Bruyne\n15\n98\n4\n10\n0.18\n0.12\n          \n5.5\n9.0\n          \ncry\nnfo\nbha\nBUR\nliv\n    Mohammed Kudus\n27\n137\n8\n9\n0.18\n0.11\n          \n4.6\n11.2\n          \nWOL\nnew\nbre\nbur\nCRY\n  \n  \n  \n    \n       Fpl Infinitesimal\n              Delta = Actual Goals - xG, per 90 \n\n              ceiling* is average of top 5 gws \n\n              mean* is average poinst for starts gw"
-  },
-  {
-    "objectID": "posts/post-01/index.html#play-yourself",
-    "href": "posts/post-01/index.html#play-yourself",
-    "title": "FPL Season 2024/2025, GameWeek-0",
-    "section": "Play yourself ?",
-    "text": "Play yourself ?"
-  },
-  {
-    "objectID": "posts/post-02/index.html",
-    "href": "posts/post-02/index.html",
-    "title": "Tets",
-    "section": "",
-    "text": "Types of Issuers: Domestic corporations, municipal governments, and federal agencies.\nBond Features: Collateralized vs. unsecured, public vs. private placements.\nMaturity: Importance for yield and volatility.\n\n\n\n\n\nInterest Rate Risk: Sensitivity to rate changes.\nReinvestment Risk: Risk of reinvesting at lower rates.\nCredit Risk: Default and downgrade risks.\nLiquidity and Inflation Risks: Challenges of selling and erosion of value.\n\n\n\n\n\nTypes: Treasury bills, notes, bonds, and TIPS.\nAttributes: Liquidity, tax advantages, risk-free benchmark.\n\n\n\n\n\nValuation: Credit ratings, yield spreads.\nTypes: Callable bonds, sinking funds.\n\n\n\n\n\nFeatures: High-yield, seniority in capital structure.\n\n\n\n\n\nPurpose: Protection against inflation, principal adjustment.\n\n\n\n\n\nTypes: Residential and commercial mortgages.\nMarket Dynamics: Economic factors affecting mortgage performance.\n\n\n\n\n\nRisks and Rewards: Higher yields, complex structures.\n\n\n\n\n\nInstruments: Repos, dollar rolls, securities lending."
-  },
-  {
-    "objectID": "posts/post-02/index.html#hfis-1-overview-of-the-types-and-features-of-fixed-income-securities",
-    "href": "posts/post-02/index.html#hfis-1-overview-of-the-types-and-features-of-fixed-income-securities",
-    "title": "Tets",
-    "section": "",
-    "text": "Types of Issuers: Domestic corporations, municipal governments, and federal agencies.\nBond Features: Collateralized vs. unsecured, public vs. private placements.\nMaturity: Importance for yield and volatility."
-  },
-  {
-    "objectID": "posts/post-02/index.html#hfis-2-risks-associated-with-investing-in-fixed-income-securities",
-    "href": "posts/post-02/index.html#hfis-2-risks-associated-with-investing-in-fixed-income-securities",
-    "title": "Tets",
-    "section": "",
-    "text": "Interest Rate Risk: Sensitivity to rate changes.\nReinvestment Risk: Risk of reinvesting at lower rates.\nCredit Risk: Default and downgrade risks.\nLiquidity and Inflation Risks: Challenges of selling and erosion of value."
-  },
-  {
-    "objectID": "posts/post-02/index.html#hfis-7-u.s.-treasury-securities",
-    "href": "posts/post-02/index.html#hfis-7-u.s.-treasury-securities",
-    "title": "Tets",
-    "section": "",
-    "text": "Types: Treasury bills, notes, bonds, and TIPS.\nAttributes: Liquidity, tax advantages, risk-free benchmark."
-  },
-  {
-    "objectID": "posts/post-02/index.html#hfis-10-corporate-bonds",
-    "href": "posts/post-02/index.html#hfis-10-corporate-bonds",
-    "title": "Tets",
-    "section": "",
-    "text": "Valuation: Credit ratings, yield spreads.\nTypes: Callable bonds, sinking funds."
-  },
-  {
-    "objectID": "posts/post-02/index.html#hfis-11-leveraged-loans",
-    "href": "posts/post-02/index.html#hfis-11-leveraged-loans",
-    "title": "Tets",
-    "section": "",
-    "text": "Features: High-yield, seniority in capital structure."
-  },
-  {
-    "objectID": "posts/post-02/index.html#hfis-15-inflation-linked-bonds",
-    "href": "posts/post-02/index.html#hfis-15-inflation-linked-bonds",
-    "title": "Tets",
-    "section": "",
-    "text": "Purpose: Protection against inflation, principal adjustment."
-  },
-  {
-    "objectID": "posts/post-02/index.html#hfis-21-overview-of-mortgages-and-the-mortgage-market",
-    "href": "posts/post-02/index.html#hfis-21-overview-of-mortgages-and-the-mortgage-market",
-    "title": "Tets",
-    "section": "",
-    "text": "Types: Residential and commercial mortgages.\nMarket Dynamics: Economic factors affecting mortgage performance."
-  },
-  {
-    "objectID": "posts/post-02/index.html#hfis-25-nonagency-rmbs",
-    "href": "posts/post-02/index.html#hfis-25-nonagency-rmbs",
-    "title": "Tets",
-    "section": "",
-    "text": "Risks and Rewards: Higher yields, complex structures."
-  },
-  {
-    "objectID": "posts/post-02/index.html#hfis-60-financing-positions-in-the-bond-market",
-    "href": "posts/post-02/index.html#hfis-60-financing-positions-in-the-bond-market",
-    "title": "Tets",
-    "section": "",
-    "text": "Instruments: Repos, dollar rolls, securities lending."
-  },
-  {
-    "objectID": "posts/post-02/index.html#hcrm-1-fundamentals-of-credit-risk",
-    "href": "posts/post-02/index.html#hcrm-1-fundamentals-of-credit-risk",
-    "title": "Tets",
-    "section": "HCRM-1: Fundamentals of Credit Risk",
-    "text": "HCRM-1: Fundamentals of Credit Risk\n\nSources: Default risk, credit spreads.\nMitigation: Collateral, covenants."
-  },
-  {
-    "objectID": "posts/post-02/index.html#hcrm-4-measurement-of-credit-risk",
-    "href": "posts/post-02/index.html#hcrm-4-measurement-of-credit-risk",
-    "title": "Tets",
-    "section": "HCRM-4: Measurement of Credit Risk",
-    "text": "HCRM-4: Measurement of Credit Risk\n\nModels: Probability of default (PD), loss given default (LGD), exposure at default (EAD)."
-  },
-  {
-    "objectID": "posts/post-02/index.html#hcrm-5-dynamic-credit-risk-exposure",
-    "href": "posts/post-02/index.html#hcrm-5-dynamic-credit-risk-exposure",
-    "title": "Tets",
-    "section": "HCRM-5: Dynamic Credit Risk Exposure",
-    "text": "HCRM-5: Dynamic Credit Risk Exposure\n\nManagement: Monitoring and adjusting for changes in credit conditions."
-  },
-  {
-    "objectID": "posts/post-02/index.html#hcrm-13-credit-portfolio-management",
-    "href": "posts/post-02/index.html#hcrm-13-credit-portfolio-management",
-    "title": "Tets",
-    "section": "HCRM-13: Credit Portfolio Management",
-    "text": "HCRM-13: Credit Portfolio Management\n\nDiversification: Reducing risk through varied credit exposures."
-  },
-  {
-    "objectID": "posts/post-02/index.html#hcrm-20-credit-derivatives",
-    "href": "posts/post-02/index.html#hcrm-20-credit-derivatives",
-    "title": "Tets",
-    "section": "HCRM-20: Credit Derivatives",
-    "text": "HCRM-20: Credit Derivatives\n\nInstruments: Credit default swaps (CDS), synthetic CDOs."
-  },
-  {
-    "objectID": "posts/post-02/index.html#hoas-1-what-is-an-alternative-asset",
-    "href": "posts/post-02/index.html#hoas-1-what-is-an-alternative-asset",
-    "title": "Tets",
-    "section": "HOAS-1: What is an Alternative Asset?",
-    "text": "HOAS-1: What is an Alternative Asset?\n\nTypes: Real estate, private equity, commodities."
-  },
-  {
-    "objectID": "posts/post-02/index.html#hoas-3-introduction-to-hedge-funds",
-    "href": "posts/post-02/index.html#hoas-3-introduction-to-hedge-funds",
-    "title": "Tets",
-    "section": "HOAS-3: Introduction to Hedge Funds",
-    "text": "HOAS-3: Introduction to Hedge Funds\n\nStrategies: Long/short equity, global macro, arbitrage."
-  },
-  {
-    "objectID": "posts/post-02/index.html#hoas-6-risk-management-in-hedge-funds",
-    "href": "posts/post-02/index.html#hoas-6-risk-management-in-hedge-funds",
-    "title": "Tets",
-    "section": "HOAS-6: Risk Management in Hedge Funds",
-    "text": "HOAS-6: Risk Management in Hedge Funds\n\nReturn Distributions: Non-normal, fat tails."
-  },
-  {
-    "objectID": "posts/post-02/index.html#hoas-7-additional-hedge-funds-risks",
-    "href": "posts/post-02/index.html#hoas-7-additional-hedge-funds-risks",
-    "title": "Tets",
-    "section": "HOAS-7: Additional Hedge Funds Risks",
-    "text": "HOAS-7: Additional Hedge Funds Risks\n\nLeverage: Amplifying returns and risks."
-  },
-  {
-    "objectID": "posts/post-02/index.html#hoas-12-introduction-to-commodities",
-    "href": "posts/post-02/index.html#hoas-12-introduction-to-commodities",
-    "title": "Tets",
-    "section": "HOAS-12: Introduction to Commodities",
-    "text": "HOAS-12: Introduction to Commodities\n\nMarket Dynamics: Supply and demand, geopolitical factors."
-  },
-  {
-    "objectID": "posts/post-02/index.html#hoas-16-introduction-to-venture-capital",
-    "href": "posts/post-02/index.html#hoas-16-introduction-to-venture-capital",
-    "title": "Tets",
-    "section": "HOAS-16: Introduction to Venture Capital",
-    "text": "HOAS-16: Introduction to Venture Capital\n\nStages: Seed, early-stage, late-stage investments."
-  },
-  {
-    "objectID": "posts/post-02/index.html#hoas-17-introduction-to-leveraged-buyouts-lbos",
-    "href": "posts/post-02/index.html#hoas-17-introduction-to-leveraged-buyouts-lbos",
-    "title": "Tets",
-    "section": "HOAS-17: Introduction to Leveraged Buyouts (LBOs)",
-    "text": "HOAS-17: Introduction to Leveraged Buyouts (LBOs)\n\nStructure: Use of debt to acquire companies, value creation through improvements."
-  },
-  {
-    "objectID": "posts/post-02/index.html#hoas-20-the-economics-of-private-equity",
-    "href": "posts/post-02/index.html#hoas-20-the-economics-of-private-equity",
-    "title": "Tets",
-    "section": "HOAS-20: The Economics of Private Equity",
-    "text": "HOAS-20: The Economics of Private Equity\n\nValuation: Methods and performance measures."
-  },
-  {
-    "objectID": "posts/post-02/index.html#hoas-24-collateralized-debt-obligations-cdos",
-    "href": "posts/post-02/index.html#hoas-24-collateralized-debt-obligations-cdos",
-    "title": "Tets",
-    "section": "HOAS-24: Collateralized Debt Obligations (CDOs)",
-    "text": "HOAS-24: Collateralized Debt Obligations (CDOs)\n\nStructure: Tranching, risk distribution."
-  },
-  {
-    "objectID": "posts/post-02/index.html#mip-1-the-portfolio-management-process-and-the-ips",
-    "href": "posts/post-02/index.html#mip-1-the-portfolio-management-process-and-the-ips",
-    "title": "Tets",
-    "section": "MIP-1: The Portfolio Management Process and the IPS",
-    "text": "MIP-1: The Portfolio Management Process and the IPS\n\nSteps: Planning, execution, feedback.\nComponents: Objectives, risk tolerance, constraints."
-  },
-  {
-    "objectID": "posts/post-02/index.html#mip-3-managing-institutional-investors-portfolios",
-    "href": "posts/post-02/index.html#mip-3-managing-institutional-investors-portfolios",
-    "title": "Tets",
-    "section": "MIP-3: Managing Institutional Investors’ Portfolios",
-    "text": "MIP-3: Managing Institutional Investors’ Portfolios\n\nTypes: Pension funds, endowments, insurance companies.\nFiduciary Duties: Legal and ethical responsibilities."
-  },
-  {
-    "objectID": "posts/post-02/index.html#qfi-pm-133-19-esg-criteria",
-    "href": "posts/post-02/index.html#qfi-pm-133-19-esg-criteria",
-    "title": "Tets",
-    "section": "QFI-PM-133-19: ESG Criteria",
-    "text": "QFI-PM-133-19: ESG Criteria\n\nImportance: Environmental, social, and governance factors in investment decisions."
-  },
-  {
-    "objectID": "posts/post-02/index.html#qfip-160-f23-principles-for-responsible-investment",
-    "href": "posts/post-02/index.html#qfip-160-f23-principles-for-responsible-investment",
-    "title": "Tets",
-    "section": "QFIP-160-F23: Principles for Responsible Investment",
-    "text": "QFIP-160-F23: Principles for Responsible Investment\n\nGuidelines: Sustainable and ethical investing practices."
-  },
-  {
-    "objectID": "posts/post-02/index.html#mip-5-asset-allocation",
-    "href": "posts/post-02/index.html#mip-5-asset-allocation",
-    "title": "Tets",
-    "section": "MIP-5: Asset Allocation",
-    "text": "MIP-5: Asset Allocation\n\nStrategic vs. Tactical: Long-term targets vs. short-term adjustments.\nEfficient Frontier: Optimal risk-return trade-offs."
-  },
-  {
-    "objectID": "posts/post-02/index.html#mip-6-fixed-income-portfolio-management",
-    "href": "posts/post-02/index.html#mip-6-fixed-income-portfolio-management",
-    "title": "Tets",
-    "section": "MIP-6: Fixed Income Portfolio Management",
-    "text": "MIP-6: Fixed Income Portfolio Management\n\nStrategies: Duration management, credit analysis."
-  },
-  {
-    "objectID": "posts/post-02/index.html#qfip-162-f23-hidden-dangers-of-passive-investing",
-    "href": "posts/post-02/index.html#qfip-162-f23-hidden-dangers-of-passive-investing",
-    "title": "Tets",
-    "section": "QFIP-162-F23: Hidden Dangers of Passive Investing",
-    "text": "QFIP-162-F23: Hidden Dangers of Passive Investing\n\nRisks: Over-reliance on indices, market inefficiencies."
-  },
-  {
-    "objectID": "posts/post-02/index.html#qfi-pm-155-21-efficient-factor-investing",
-    "href": "posts/post-02/index.html#qfi-pm-155-21-efficient-factor-investing",
-    "title": "Tets",
-    "section": "QFI-PM-155-21: Efficient Factor Investing",
-    "text": "QFI-PM-155-21: Efficient Factor Investing\n\nFactors: Size, value, momentum, quality."
-  },
-  {
-    "objectID": "posts/post-02/index.html#fis-3-basics-of-interest-rate-risk-management",
-    "href": "posts/post-02/index.html#fis-3-basics-of-interest-rate-risk-management",
-    "title": "Tets",
-    "section": "FIS-3: Basics of Interest Rate Risk Management",
-    "text": "FIS-3: Basics of Interest Rate Risk Management\n\nTechniques: Duration, convexity, value at risk."
-  },
-  {
-    "objectID": "posts/post-02/index.html#fis-4-refinements-in-interest-rate-risk-management",
-    "href": "posts/post-02/index.html#fis-4-refinements-in-interest-rate-risk-management",
-    "title": "Tets",
-    "section": "FIS-4: Refinements in Interest Rate Risk Management",
-    "text": "FIS-4: Refinements in Interest Rate Risk Management\n\nAdvanced Methods: Key rate durations, hedging strategies."
-  },
-  {
-    "objectID": "posts/post-02/index.html#qfi-pm-158-23-duration-dv01-and-yield-curve-transformations",
-    "href": "posts/post-02/index.html#qfi-pm-158-23-duration-dv01-and-yield-curve-transformations",
-    "title": "Tets",
-    "section": "QFI-PM-158-23: Duration, DV01, and Yield Curve Transformations",
-    "text": "QFI-PM-158-23: Duration, DV01, and Yield Curve Transformations\n\nMetrics: Managing interest rate exposures."
-  },
-  {
-    "objectID": "posts/post-02/index.html#qfi-pm-139-19-alm-techniques-and-practices",
-    "href": "posts/post-02/index.html#qfi-pm-139-19-alm-techniques-and-practices",
-    "title": "Tets",
-    "section": "QFI-PM-139-19: ALM Techniques and Practices",
-    "text": "QFI-PM-139-19: ALM Techniques and Practices\n\nStrategies: Cash flow matching, immunization."
-  },
-  {
-    "objectID": "posts/post-02/index.html#qfi-pm-141-19-liability-driven-investment",
-    "href": "posts/post-02/index.html#qfi-pm-141-19-liability-driven-investment",
-    "title": "Tets",
-    "section": "QFI-PM-141-19: Liability Driven Investment",
-    "text": "QFI-PM-141-19: Liability Driven Investment\n\nFocus: Aligning asset strategies with liability profiles."
-  },
-  {
-    "objectID": "posts/post-02/index.html#qfi-pm-142-19-strategic-asset-allocation-with-uncertainty",
-    "href": "posts/post-02/index.html#qfi-pm-142-19-strategic-asset-allocation-with-uncertainty",
-    "title": "Tets",
-    "section": "QFI-PM-142-19: Strategic Asset Allocation with Uncertainty",
-    "text": "QFI-PM-142-19: Strategic Asset Allocation with Uncertainty\n\nModels: Addressing uncertain future liabilities."
-  },
-  {
-    "objectID": "posts/post-02/index.html#qfi-pm-151-20-role-of-asset-managers-in-alm",
-    "href": "posts/post-02/index.html#qfi-pm-151-20-role-of-asset-managers-in-alm",
-    "title": "Tets",
-    "section": "QFI-PM-151-20: Role of Asset Managers in ALM",
-    "text": "QFI-PM-151-20: Role of Asset Managers in ALM\n\nExecution: Implementing ALM strategies, managing risks."
-  },
-  {
-    "objectID": "posts/post-02/index.html#mip-12-evaluating-portfolio-performance",
-    "href": "posts/post-02/index.html#mip-12-evaluating-portfolio-performance",
-    "title": "Tets",
-    "section": "MIP-12: Evaluating Portfolio Performance",
-    "text": "MIP-12: Evaluating Portfolio Performance\n\nComponents: Measurement, attribution, appraisal."
-  },
-  {
-    "objectID": "posts/post-02/index.html#qfi-pm-145-19-determinants-of-portfolio-performance",
-    "href": "posts/post-02/index.html#qfi-pm-145-19-determinants-of-portfolio-performance",
-    "title": "Tets",
-    "section": "QFI-PM-145-19: Determinants of Portfolio Performance",
-    "text": "QFI-PM-145-19: Determinants of Portfolio Performance\n\nAnalysis: Identifying sources of return, evaluating strategies."
+    "objectID": "posts/post-01/index.html#xg-delta",
+    "href": "posts/post-01/index.html#xg-delta",
+    "title": "FPL Point, Average and Ceiling Ranking",
+    "section": "xG Delta",
+    "text": "xG Delta\n\n\n\n\n\nYou can play around by yourself in DataTable."
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "BlogFPL",
     "section": "",
-    "text": "Tets\n\n\n\n\n\n\n\nsummary\n\n\n\n\n\n\n\n\n\n\n\nAug 4, 2024\n\n\n7 Paws\n\n\n\n\n\n\n  \n\n\n\n\nFPL Season 2024/2025, GameWeek-0\n\n\n\n\n\n\n\nthoughts\n\n\n\n\n\n\n\n\n\n\n\nAug 4, 2024\n\n\n7 Paws\n\n\n\n\n\n\nNo matching items"
+    "text": "DataTable\n\n\n\n\n\n\n\ntools\n\n\n\n\n\n\n\n\n\n\n\nAug 4, 2024\n\n\n7 Paws\n\n\n\n\n\n\n  \n\n\n\n\nFPL Point, Average and Ceiling Ranking\n\n\n\n\n\n\n\nthoughts\n\n\n\n\n\n\n\n\n\n\n\nAug 4, 2024\n\n\n7 Paws\n\n\n\n\n\n\nNo matching items"
   }
 ]

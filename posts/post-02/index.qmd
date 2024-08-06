@@ -1,8 +1,9 @@
 ---
-title: "Tets"
+title: "DataTable"
 author: "7 Paws"
 date: "2024-08-04"
-categories: [summary]
+categories: [tools]
+image: "image.jpg"
 format: 
   html:
     page-layout: full
@@ -12,149 +13,374 @@ format:
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE, error=TRUE, cache=FALSE)
 ```
 
+```{r}
+library(tidyverse)
+library(DT)
+library(here)
+library(gt)
+library(ggthemes)
+library(ggridges)
+library(gt)
+library(gtExtras)
+theme_set(theme_solarized())
 
-# Section 1: Fixed Income Investments
+```
 
-## HFIS-1: Overview of the Types and Features of Fixed Income Securities
-- **Types of Issuers**: Domestic corporations, municipal governments, and federal agencies.
-- **Bond Features**: Collateralized vs. unsecured, public vs. private placements.
-- **Maturity**: Importance for yield and volatility.
+```{r}
+url <- "https://fantasy.premierleague.com/api/bootstrap-static/"
+data_official_list <- httr::content(httr::GET(url))
 
-## HFIS-2: Risks Associated with Investing in Fixed Income Securities
-- **Interest Rate Risk**: Sensitivity to rate changes.
-- **Reinvestment Risk**: Risk of reinvesting at lower rates.
-- **Credit Risk**: Default and downgrade risks.
-- **Liquidity and Inflation Risks**: Challenges of selling and erosion of value.
+fixtures_list <- httr::content(httr::GET("https://fantasy.premierleague.com/api/fixtures/"))
+#mainDf <- data.table::rbindlist(data_official$elements) %>% tibble()
+#playersTypes <- rbindlist(data_official$element_types) %>% tibble()
+fixtures_df <- data.table::rbindlist(fixtures_list) %>% tibble()
+```
 
-## HFIS-7: U.S. Treasury Securities
-- **Types**: Treasury bills, notes, bonds, and TIPS.
-- **Attributes**: Liquidity, tax advantages, risk-free benchmark.
+```{r}
+teams <- read_csv(here("posts","post-01","teams.csv"))
 
-## HFIS-10: Corporate Bonds
-- **Valuation**: Credit ratings, yield spreads.
-- **Types**: Callable bonds, sinking funds.
+players_2023_df_raw <- read_csv(here("posts","post-01","merged_gw.csv")) 
 
-## HFIS-11: Leveraged Loans
-- **Features**: High-yield, seniority in capital structure.
+```
 
-## HFIS-15: Inflation-Linked Bonds
-- **Purpose**: Protection against inflation, principal adjustment.
+```{r}
+players_2023_df <- players_2023_df_raw %>% 
+  relocate(name,team,position,GW, total_points) %>% 
+  group_by(name) %>% 
+  mutate(
+    total_points_season=sum(total_points, na.rm = TRUE)
+  ) %>% 
+  ungroup() %>% 
+  left_join(teams %>% dplyr::select(id, opponent_team_name=short_name), by=c("opponent_team"="id"))
 
-## HFIS-21: Overview of Mortgages and the Mortgage Market
-- **Types**: Residential and commercial mortgages.
-- **Market Dynamics**: Economic factors affecting mortgage performance.
 
-## HFIS-25: Nonagency RMBS
-- **Risks and Rewards**: Higher yields, complex structures.
+```
 
-## HFIS-60: Financing Positions in the Bond Market
-- **Instruments**: Repos, dollar rolls, securities lending.
+```{r}
+players_summary_df <- players_2023_df_raw %>% 
+  filter(minutes>0) %>% 
+  mutate(
+    is_played= if_else(minutes>0, 1,0),
+    
+  ) %>% 
+  filter(position != "GK") %>% 
+  #filter(starts==TRUE) %>% 
+  relocate(name,team,position,GW, total_points) %>% 
+  group_by(name,position) %>% 
+  summarize(
+    total_points_season=sum(total_points, na.rm = TRUE),
+    minutes_total=sum(minutes, na.rm = T),
+    xG=sum(expected_goals, na.rm = T),
+    xA=sum(expected_assists, na.rm = T),
+    xGI=sum(expected_goal_involvements, na.rm = T),
+    Goals=sum(goals_scored, na.rm = T),
+    Assists=sum(assists, na.rm = T),
+    GI=sum(goals_scored, na.rm = T)+sum(assists, na.rm = T),
+    starts=sum(starts)
+  ) %>% 
+  ungroup() %>% 
+  arrange(desc(total_points_season)) %>% 
+  slice_max(order_by = total_points_season, n=200) %>% 
+  mutate(
+    xG_per90=xG/minutes_total*90,
+    xA_per90=xA/minutes_total*90,
+    xGI_per90=xGI/minutes_total*90,
+    Goals_per90=Goals/minutes_total*90,
+    Assists_per90=Assists/minutes_total*90,
+    GI_per90=GI/minutes_total*90,
+    total_points_average=total_points_season/minutes_total*90
+  )
 
-# Section 2: Credit Investment Management
+```
 
-## HCRM-1: Fundamentals of Credit Risk
-- **Sources**: Default risk, credit spreads.
-- **Mitigation**: Collateral, covenants.
+```{r}
+players_2023_df2 <- players_2023_df %>% 
+  semi_join(players_summary_df, by=c("name")) %>% 
+  arrange(name,team,position,GW) %>% 
+  mutate(
+    name=fct_reorder(name, total_points_season)
+  ) %>% 
+  arrange(desc(name))
 
-## HCRM-4: Measurement of Credit Risk
-- **Models**: Probability of default (PD), loss given default (LGD), exposure at default (EAD).
 
-## HCRM-5: Dynamic Credit Risk Exposure
-- **Management**: Monitoring and adjusting for changes in credit conditions.
+```
 
-## HCRM-13: Credit Portfolio Management
-- **Diversification**: Reducing risk through varied credit exposures.
+```{r}
 
-## HCRM-20: Credit Derivatives
-- **Instruments**: Credit default swaps (CDS), synthetic CDOs.
+ceiling_df <- players_2023_df2 %>% 
+  filter(minutes>0, starts==1) %>% 
+  mutate(
+    is_played= if_else(minutes>0, 1,0),
+    
+  ) %>% 
+  filter(position != "GK") %>% 
+  #filter(starts==TRUE) %>% 
+  relocate(name,team,position,GW, total_points) %>% 
+  group_by(name) %>% 
+  slice_max(order_by = total_points, n= 10) %>% 
+  arrange(desc(total_points_season)) %>% 
+  group_by(name) %>% 
+  summarize(
+    ceiling= mean(total_points)
+  ) %>% 
+  arrange(desc(ceiling)) 
 
-# Section 3: Equity and Alternative Investments
+```
 
-## HOAS-1: What is an Alternative Asset?
-- **Types**: Real estate, private equity, commodities.
+```{r}
+high_df <- players_2023_df2 %>% 
+  filter(minutes>0, starts==1) %>% 
+  mutate(
+    is_played= if_else(minutes>0, 1,0),
+    
+  ) %>% 
+  filter(position != "GK") %>% 
+  #filter(starts==TRUE) %>% 
+  relocate(name,team,position,GW, total_points) %>% 
+  group_by(name) %>% 
+  slice_max(order_by = total_points, n= 20) %>% 
+  arrange(desc(total_points_season)) %>% 
+  group_by(name) %>% 
+  summarize(
+    high= mean(total_points)
+  ) %>% 
+  arrange(desc(high)) 
 
-## HOAS-3: Introduction to Hedge Funds
-- **Strategies**: Long/short equity, global macro, arbitrage.
+```
 
-## HOAS-6: Risk Management in Hedge Funds
-- **Return Distributions**: Non-normal, fat tails.
+```{r}
+max_df <- players_2023_df2 %>% 
+  filter(minutes>0, starts==1) %>% 
+  mutate(
+    is_played= if_else(minutes>0, 1,0),
+    
+  ) %>% 
+  filter(position != "GK") %>% 
+  #filter(starts==TRUE) %>% 
+  relocate(name,team,position,GW, total_points) %>% 
+  group_by(name) %>% 
+  slice_max(order_by = total_points, n= 5) %>% 
+  arrange(desc(total_points_season)) %>% 
+  group_by(name) %>% 
+  summarize(
+    max= mean(total_points)
+  ) %>% 
+  arrange(desc(max)) 
+```
 
-## HOAS-7: Additional Hedge Funds Risks
-- **Leverage**: Amplifying returns and risks.
+```{r}
+max3_df <- players_2023_df2 %>% 
+  filter(minutes>0, starts==1) %>% 
+  mutate(
+    is_played= if_else(minutes>0, 1,0),
+    
+  ) %>% 
+  filter(position != "GK") %>% 
+  #filter(starts==TRUE) %>% 
+  relocate(name,team,position,GW, total_points) %>% 
+  group_by(name) %>% 
+  slice_max(order_by = total_points, n= 3) %>% 
+  arrange(desc(total_points_season)) %>% 
+  group_by(name) %>% 
+  summarize(
+    max= mean(total_points)
+  ) %>% 
+  arrange(desc(max)) 
+```
 
-## HOAS-12: Introduction to Commodities
-- **Market Dynamics**: Supply and demand, geopolitical factors.
+```{r}
+max_df_opp1 <- players_2023_df2 %>% 
+  filter(minutes>0, starts==1) %>% 
+  mutate(
+    is_played= if_else(minutes>0, 1,0),
+    
+  ) %>% 
+  filter(position != "GK") %>% 
+  #filter(starts==TRUE) %>% 
+  relocate(name,team,position,GW, total_points) %>% 
+  group_by(name) %>% 
+  arrange(desc(total_points)) %>% 
+  slice_head(n= 1) %>% 
+  arrange(desc(total_points_season))  %>% 
+  transmute(name, max1 =if_else(was_home==TRUE,str_to_upper(opponent_team_name),str_to_lower(opponent_team_name)))
+```
 
-## HOAS-16: Introduction to Venture Capital
-- **Stages**: Seed, early-stage, late-stage investments.
+```{r}
+max_df_opp2 <- players_2023_df2 %>% 
+  filter(minutes>0, starts==1) %>% 
+  mutate(
+    is_played= if_else(minutes>0, 1,0),
+    
+  ) %>% 
+  filter(position != "GK") %>% 
+  #filter(starts==TRUE) %>% 
+  relocate(name,team,position,GW, total_points) %>% 
+  group_by(name) %>% 
+  arrange(desc(total_points)) %>% 
+  slice_head(n= 2) %>% 
+  slice_tail(n=1) %>% 
+  arrange(desc(total_points_season))  %>% 
+  transmute(name, max2 =if_else(was_home==TRUE,str_to_upper(opponent_team_name),str_to_lower(opponent_team_name)))
+```
 
-## HOAS-17: Introduction to Leveraged Buyouts (LBOs)
-- **Structure**: Use of debt to acquire companies, value creation through improvements.
+```{r}
+max_df_opp3 <- players_2023_df2 %>% 
+  filter(minutes>0, starts==1) %>% 
+  mutate(
+    is_played= if_else(minutes>0, 1,0),
+    
+  ) %>% 
+  filter(position != "GK") %>% 
+  #filter(starts==TRUE) %>% 
+  relocate(name,team,position,GW, total_points) %>% 
+  group_by(name) %>% 
+  arrange(desc(total_points)) %>% 
+  slice_head(n= 3) %>% 
+  slice_tail(n=1) %>% 
+  arrange(desc(total_points_season))  %>% 
+  transmute(name, max3 =if_else(was_home==TRUE,str_to_upper(opponent_team_name),str_to_lower(opponent_team_name)))
+```
 
-## HOAS-20: The Economics of Private Equity
-- **Valuation**: Methods and performance measures.
+```{r}
+max_df_opp4 <- players_2023_df2 %>% 
+  filter(minutes>0, starts==1) %>% 
+  mutate(
+    is_played= if_else(minutes>0, 1,0),
+    
+  ) %>% 
+  filter(position != "GK") %>% 
+  #filter(starts==TRUE) %>% 
+  relocate(name,team,position,GW, total_points) %>% 
+  group_by(name) %>% 
+  arrange(desc(total_points)) %>% 
+  slice_head(n= 4) %>% 
+  slice_tail(n=1) %>% 
+  arrange(desc(total_points_season))  %>% 
+  transmute(name, max4 =if_else(was_home==TRUE,str_to_upper(opponent_team_name),str_to_lower(opponent_team_name)))
 
-## HOAS-24: Collateralized Debt Obligations (CDOs)
-- **Structure**: Tranching, risk distribution.
+```
 
-# Section 4: Investment Policy and Regulatory Framework
+```{r}
+max_df_opp5 <- players_2023_df2 %>% 
+  filter(minutes>0, starts==1) %>% 
+  mutate(
+    is_played= if_else(minutes>0, 1,0),
+    
+  ) %>% 
+  filter(position != "GK") %>% 
+  #filter(starts==TRUE) %>% 
+  relocate(name,team,position,GW, total_points) %>% 
+  group_by(name) %>% 
+  arrange(desc(total_points)) %>% 
+  slice_head(n= 5) %>% 
+  slice_tail(n=1) %>% 
+  arrange(desc(total_points_season))  %>% 
+  transmute(name, max5 =if_else(was_home==TRUE,str_to_upper(opponent_team_name),str_to_lower(opponent_team_name)))
+```
 
-## MIP-1: The Portfolio Management Process and the IPS
-- **Steps**: Planning, execution, feedback.
-- **Components**: Objectives, risk tolerance, constraints.
+```{r}
+mean_df <- players_2023_df2 %>% 
+  filter(minutes>0, starts==1) %>% 
+  mutate(
+    is_played= if_else(minutes>0, 1,0),
+    
+  ) %>% 
+  filter(position != "GK") %>% 
+  #filter(starts==TRUE) %>% 
+  relocate(name,team,position,GW, total_points) %>% 
+  group_by(name) %>% 
+  summarize(
+    mean= mean(total_points)
+  ) %>% 
+  arrange(desc(mean)) 
 
-## MIP-3: Managing Institutional Investors’ Portfolios
-- **Types**: Pension funds, endowments, insurance companies.
-- **Fiduciary Duties**: Legal and ethical responsibilities.
+```
 
-## QFI-PM-133-19: ESG Criteria
-- **Importance**: Environmental, social, and governance factors in investment decisions.
+```{r}
+xG_df0 <- players_summary_df %>% 
+  #filter(starts>15) %>% 
+  #slice_max(order_by = total_points_season, n=10) %>% 
+  select(name, xG_per90,Goals_per90, xA_per90, Assists_per90, starts, total_points_season, Goals, Assists, position) %>% 
+  mutate(
+    xG_Delta= (Goals_per90-xG_per90),
+    xA_Delta= (Assists_per90-xA_per90)
+  ) %>% 
+  left_join(mean_df, by = "name") %>% 
+  left_join(high_df, by = "name") %>% 
+  left_join(ceiling_df, by = "name") %>% 
+  left_join(max_df, by = "name") %>% 
+  mutate(
+    across(c(xG_per90,Goals_per90, xA_per90, Assists_per90,xG_Delta,xA_Delta, mean,high, ceiling, max), ~round(.x,2))
+  ) %>% 
+  mutate(
+    across(c(mean,high, ceiling, max), ~round(.x,1))
+  ) %>% 
+  dplyr::mutate(plot_column = max, target_col=mean) %>% 
+  left_join(max_df_opp1, by="name") %>% 
+  left_join(max_df_opp2, by="name") %>% 
+  left_join(max_df_opp3, by="name") %>% 
+  left_join(max_df_opp4, by="name") %>% 
+  left_join(max_df_opp5, by="name") %>% 
+  mutate(across(max1:max5, ~ str_sub(.x,1,3))) 
 
-## QFIP-160-F23: Principles for Responsible Investment
-- **Guidelines**: Sustainable and ethical investing practices.
+xG_df <- xG_df0 %>% 
+  select(-position)
 
-# Section 5: Investment Portfolio Management and Asset Allocation
+```
 
-## MIP-5: Asset Allocation
-- **Strategic vs. Tactical**: Long-term targets vs. short-term adjustments.
-- **Efficient Frontier**: Optimal risk-return trade-offs.
+```{r}
+players_2023_df_density <- players_2023_df %>% 
+  filter(starts==TRUE) %>% 
+  group_by(name) %>% 
+  summarize(total_points_list=list(total_points)) %>% 
+  semi_join(xG_df , by="name")
 
-## MIP-6: Fixed Income Portfolio Management
-- **Strategies**: Duration management, credit analysis.
+# players_2023_df_density_gt <- players_2023_df_density %>% 
+#   gt() %>% 
+#   gt_plt_dist(total_points_list, type="boxplot")
 
-## QFIP-162-F23: Hidden Dangers of Passive Investing
-- **Risks**: Over-reliance on indices, market inefficiencies.
+#players_2023_df_density_gt
+```
 
-## QFI-PM-155-21: Efficient Factor Investing
-- **Factors**: Size, value, momentum, quality.
 
-# Section 6: Asset Liability Management (ALM)
+## DataTable
 
-## FIS-3: Basics of Interest Rate Risk Management
-- **Techniques**: Duration, convexity, value at risk.
+```{r eval=TRUE}
+xG_df2 <- xG_df0 %>% 
+  transmute(
+    name, position,starts,xG_per90,xA_per90,xG_Delta,xA_Delta,
+    mean_perStart=mean, mean_max20=high, mean_max10=ceiling, mean_max5= max,
+    total_points_season, Goals, Assists,
+  )
 
-## FIS-4: Refinements in Interest Rate Risk Management
-- **Advanced Methods**: Key rate durations, hedging strategies.
 
-## QFI-PM-158-23: Duration, DV01, and Yield Curve Transformations
-- **Metrics**: Managing interest rate exposures.
+datatable(xG_df2,filter = 'top',extensions = "FixedColumns",rownames = FALSE,
+          options = list(
+            paging = TRUE,
+            scrollX=TRUE, 
+            searching = TRUE,
+            ordering = TRUE,
+            dom = 'Bfrtip',
+            #buttons = c('copy', 'csv', 'excel', 'pdf'),
+            buttons = c('pdf'),
+            pageLength=10, 
+            lengthMenu=c(3,5,10) ,
+            fixedColumns = list(leftColumns = 1)
+          )
+)
+```
 
-## QFI-PM-139-19: ALM Techniques and Practices
-- **Strategies**: Cash flow matching, immunization.
-
-## QFI-PM-141-19: Liability Driven Investment
-- **Focus**: Aligning asset strategies with liability profiles.
-
-## QFI-PM-142-19: Strategic Asset Allocation with Uncertainty
-- **Models**: Addressing uncertain future liabilities.
-
-## QFI-PM-151-20: Role of Asset Managers in ALM
-- **Execution**: Implementing ALM strategies, managing risks.
-
-# Section 7: Performance Measurement and Attribution
-
-## MIP-12: Evaluating Portfolio Performance
-- **Components**: Measurement, attribution, appraisal.
-
-## QFI-PM-145-19: Determinants of Portfolio Performance
-- **Analysis**: Identifying sources of return, evaluating strategies.
+```{r eval=FALSE}
+datatable(xG_df2,filter = 'top', extensions = "Buttons", 
+          options = list(
+            paging = TRUE,
+            scrollX=TRUE, 
+            searching = TRUE,
+            ordering = TRUE,
+            dom = 'Bfrtip',
+            buttons = c('copy', 'csv', 'excel', 'pdf'),
+            pageLength=10, 
+            lengthMenu=c(3,5,10) 
+          )
+)
+```
