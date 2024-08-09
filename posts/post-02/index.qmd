@@ -341,6 +341,40 @@ players_2023_df_density <- players_2023_df %>%
 #players_2023_df_density_gt
 ```
 
+# Find the Gems!!! 
+
+
+
+First, I want to assess the past performance of players from the 2023/2024 season to select candidates for my team. What qualifications should I consider?
+
+**Candidate Qualifications:**
+
+1. **Nailed-On Starter:** Ensure the player consistently starts to maximize scoring opportunities.
+
+2. **Strong Performance History:** Look for players with a history of strong performances in previous seasons or recent matches.
+
+3. **Favorable Fixtures:** Prioritize players with upcoming matches against weaker opponents.
+
+4. **Penalty Taker** Target players who take free kicks, corners, or penalties.
+
+5. **Good Value:** Evaluate points per million and identify budget-friendly options.
+
+6. **Fixture-Proof:** Choose world-class players who can perform well even against tough opponents.
+
+7. **Low Injury Risk:** Select players with a history of staying fit and avoiding injuries.
+
+8. **Template vs. Differential:** Balance between popular picks (template players) and unique selections (differentials).
+
+9. **High Ceiling:** Focus on players with the potential for explosive returns.
+
+
+
+Then, I have summarize data season 2023/2024 as following table. I ranking by average fpl point per a starting game. The table is including ...
+
+
+
+
+
 ## Ranking by average point of season 2023/2024
 
 ```{r}
