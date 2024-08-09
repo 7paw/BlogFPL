@@ -365,7 +365,7 @@ First, I want to assess the past performance of players from the 2023/2024 seaso
 
 8. **Template vs. Differential:** Balance between popular picks (template players) and unique selections (differentials).
 
-9. **High Ceiling:** Focus on players with the potential for explosive returns.
+9. **<span style="color: red;">**High Ceiling:**</span>** Focus on players with the potential for explosive returns.
 
 
 
