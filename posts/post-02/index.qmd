@@ -1,5 +1,5 @@
 ---
-title: "GW0 - FPL Point, Average and Ceiling Ranking"
+title: "GW0 - Find the Gems "
 date: "2024-08-04"
 categories: [thoughts]
 image: "image.jpg"
@@ -36,11 +36,12 @@ fixtures_df <- data.table::rbindlist(fixtures_list) %>% tibble()
 ```
 
 ```{r}
-teams <- read_csv(here("posts","post-01","teams.csv"))
+teams <- read_csv(here("posts","post-02","teams.csv"))
 
 players_2023_df_raw <- read_csv(here("posts","post-01","merged_gw.csv")) 
 
 ```
+
 
 ```{r}
 players_2023_df <- players_2023_df_raw %>% 
@@ -341,8 +342,7 @@ players_2023_df_density <- players_2023_df %>%
 #players_2023_df_density_gt
 ```
 
-# Find the Gems!!! 
-
+# Candidates 
 
 
 First, I want to assess the past performance of players from the 2023/2024 season to select candidates for my team. What qualifications should I consider?
@@ -369,7 +369,12 @@ First, I want to assess the past performance of players from the 2023/2024 seaso
 
 
 
-Then, I have summarize data season 2023/2024 as following table. I ranking by average fpl point per a starting game. The table is including ...
+I’ve put together a table summarizing the data for the 2023/2024 season. The table is ranked by average FPL points per starting game, which is a good starting point. It also includes the average xG (expected goals) per 90 minutes and their xG Delta, which is the difference between actual goals and xG (average per 90 minutes). The xG Delta might indicate things like the player’s shooting quality, variance, or even just luck—I’ll let you decide!
+
+I’ve also added some data to show the player’s CEILING, which I personally find really interesting. I calculated this by averaging each player’s best five gameweek FPL points and noting the opponent teams that helped them reach that ceiling. I think it’s fun to dive into! You might be able to spot even more insights with your football knowledge—feel free to share any tips with me, as I consider myself below average in this area. 
+
+- Olise 
+
 
 
 
