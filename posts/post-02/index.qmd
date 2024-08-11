@@ -415,7 +415,7 @@ players_2023_df_density <- players_2023_df %>%
 
 To begin, I intend to evaluate the past performance of players from the 2023/2024 season to identify interesting candidates for my team. (I will analyze the 2024/2025 fixture in the next post.) What qualifications should I consider? 
 
-**Candidate Qualifications:**
+**Keep in mind that:**
 
 1. **Nailed-On Starter:** Ensure the player consistently starts to maximize scoring opportunities.
 
@@ -444,6 +444,9 @@ I’ve also added some data to show the player’s *CEILING*, which I personally
 I’ve also included the average FPL points separated by games played at home, away, and against top teams like MCI, ARS, LIV, CHE, TOT, and MUN. (I know MUN isn’t the toughest match, but I’ve got to support my team!). I *believe* this will help in choosing the captain each week.
 
 *Please note that the xG and FPL points do not exclude penalty-taking. Keep this in mind when comparing and analyzing each player.
+
+# Attacking 
+
 
 ## Top10 by average point of season 2023/2024
 
@@ -627,20 +630,141 @@ Let's begin with Top 10 of the maximum FPL point average per starting;
 
 - Isak’s xG is strong at 0.81, and he’s performed close to expectations. His FPL points are consistent, with a solid average at home. The only concern is his performance in away games and against the Big 6. He is candidate captain in gw1 !!
 
-*Wrap-up*
+### **Wrap-up**
 
   
-1. Consistent Performers: Regularly high xG, solid FPL points per start, expected to maintain consistency = fixture proof. 
-  - Haaland, Salah, Saka
+| Category                          | Description                                                        | Players                        |
+|-----------------------------------|--------------------------------------------------------------------|--------------------------------|
+| Consistent Performers             | Regularly high xG, solid FPL points per start, expected to maintain consistency, fixture proof. | Haaland(15), Salah(12.5),Palmer(10.5), Saka(10)           |
+| High Potential for Explosive Returns | High ceiling, can deliver big returns in favorable fixtures.        | Son(10) ,Foden(9.5)            |
+| Fixture-Dependent Performers      | High ceiling in favorable fixtures, capped for Away game or against Big                                | Watkins, Isak, Jota            |
 
-2. High Potential for Explosive Returns: High ceiling, can deliver big returns in favorable fixtures.  
-  - Palmer, Foden, Son 
+
+
+
+## Ceiling and Average FPL point, per starting
+
+```{r}
+xG_df0 %>% 
+  ggplot(aes(mean, max))+
+  geom_point(aes(size=xG_per90, color=position), alpha=0.7)+
+  labs(
+    title = "FPL point per starting, 2023/2024",
+    x="Average FPL point",
+    y="Ceiling",
+    caption = "Fpl Infinitesimal"
+  )+
+  geom_text(aes(label=name), 
+            data = xG_df0 %>%
+              mutate(
+                name= case_when(
+                  name=="Diogo Teixeira da Silva" ~ "Diogo Jota",
+                  TRUE ~ name
+                )
+              ) %>% 
+              mutate(name=sub(".* ", "", name))%>% 
+              slice_max(n=15, order_by = max) 
+            ,
+            hjust = 0, nudge_x = 0.05, size=2.5
+  ) +
+  geom_text(aes(label=name), 
+            data = xG_df0 %>%
+              mutate(
+                name= case_when(
+                  name=="Diogo Teixeira da Silva" ~ "Diogo Jota",
+                  TRUE ~ name
+                )
+              ) %>% 
+              mutate(name=sub(".* ", "", name))%>% 
+              slice_max(n=25, order_by = mean) 
+            ,
+            hjust = 0, nudge_x = 0.05, size=2.5
+  ) 
   
+```
+
+## xG per 90
+
+```{r}
+xG_df0 %>% 
+  ggplot(aes(starts, xG_per90))+
+  geom_point(aes(size=mean, color=position), alpha=0.7)+
+  labs(
+    title ="xG per 90, FPL season 2023/2024",
+    x="# starts",
+    y="",
+    caption = "Fpl Infinitesimal"
+  )+
+  geom_text(aes(label=name), 
+            data = xG_df0 %>%
+              mutate(
+                name= case_when(
+                  name=="Diogo Teixeira da Silva" ~ "Diogo Jota",
+                  TRUE ~ name
+                )
+              ) %>% 
+              mutate(name=sub(".* ", "", name))%>% 
+              slice_max(n=25, order_by = xG_per90) 
+            ,
+            hjust = 0, nudge_x = 0.05, size=2.5
+  ) +
+  geom_text(aes(label=name), 
+            data = xG_df0 %>%
+              mutate(
+                name= case_when(
+                  name=="Diogo Teixeira da Silva" ~ "Diogo Jota",
+                  TRUE ~ name
+                )
+              ) %>% 
+              mutate(name=sub(".* ", "", name))%>% 
+              slice_max(n=25, order_by = xG_Delta) 
+            ,
+            hjust = 0, nudge_x = 0.05, size=2.5
+  ) 
   
-3. Fixture-Dependent Performers: High ceiling in favorable fixtures. 
-  - Watkins, Isak, Jota 
+```
 
+## xG Delta
 
+```{r}
+xG_df0 %>% 
+  ggplot(aes(xG_per90, xG_Delta))+
+  geom_point(aes(size=starts, color=position), alpha=0.7)+
+  labs(
+    title ="xG Delta per 90, FPL season 2023/2024",
+    x="xG_per90",
+    y="xG_Delta",
+    caption = "Fpl Infinitesimal"
+  )+
+  geom_text(aes(label=name), 
+            data = xG_df0 %>%
+              mutate(
+                name= case_when(
+                  name=="Diogo Teixeira da Silva" ~ "Diogo Jota",
+                  TRUE ~ name
+                )
+              ) %>% 
+              mutate(name=sub(".* ", "", name))%>% 
+              slice_max(n=25, order_by = xG_per90) 
+            ,
+            hjust = 0, nudge_x = 0.05, size=2.5
+  ) +
+  geom_text(aes(label=name), 
+            data = xG_df0 %>%
+              mutate(
+                name= case_when(
+                  name=="Diogo Teixeira da Silva" ~ "Diogo Jota",
+                  TRUE ~ name
+                )
+              ) %>% 
+              mutate(name=sub(".* ", "", name))%>% 
+              slice_max(n=25, order_by = xG_Delta) 
+            ,
+            hjust = 0, nudge_x = 0.05, size=2.5
+  ) +
+  geom_abline(intercept = 0, slope = 0, colour = "orange", linetype = "dashed")
+  
+```
 
 ## Ranking 11-30
 
@@ -804,9 +928,7 @@ xG_gt
 
 - Gordon, not large
 
-
-
-## Def?
+# Defense
 
 ```{r}
 
@@ -965,7 +1087,7 @@ xG_gt_def
 #gt::gtsave(data = xG_gt,filename = here("results","xG_gt.png"))
 ```
 
-## GoalKeeper?
+# GoalKeeper
 
 ```{r}
 #xG_df0 %>% glimpse()
@@ -1126,128 +1248,5 @@ xG_gt_def
 #gt::gtsave(data = xG_gt,filename = here("results","xG_gt.png"))
 ```
 
-## Ceiling and Average FPL point, per starting
-
-```{r}
-xG_df0 %>% 
-  ggplot(aes(mean, max))+
-  geom_point(aes(size=xG_per90, color=position), alpha=0.7)+
-  labs(
-    title = "FPL point per starting, 2023/2024",
-    x="Average FPL point",
-    y="Ceiling",
-    caption = "Fpl Infinitesimal"
-  )+
-  geom_text(aes(label=name), 
-            data = xG_df0 %>%
-              mutate(
-                name= case_when(
-                  name=="Diogo Teixeira da Silva" ~ "Diogo Jota",
-                  TRUE ~ name
-                )
-              ) %>% 
-              mutate(name=sub(".* ", "", name))%>% 
-              slice_max(n=15, order_by = max) 
-            ,
-            hjust = 0, nudge_x = 0.05, size=2.5
-  ) +
-  geom_text(aes(label=name), 
-            data = xG_df0 %>%
-              mutate(
-                name= case_when(
-                  name=="Diogo Teixeira da Silva" ~ "Diogo Jota",
-                  TRUE ~ name
-                )
-              ) %>% 
-              mutate(name=sub(".* ", "", name))%>% 
-              slice_max(n=25, order_by = mean) 
-            ,
-            hjust = 0, nudge_x = 0.05, size=2.5
-  ) 
-  
-```
-
-## xG per 90
-
-```{r}
-xG_df0 %>% 
-  ggplot(aes(starts, xG_per90))+
-  geom_point(aes(size=mean, color=position), alpha=0.7)+
-  labs(
-    title ="xG per 90, FPL season 2023/2024",
-    x="# starts",
-    y="",
-    caption = "Fpl Infinitesimal"
-  )+
-  geom_text(aes(label=name), 
-            data = xG_df0 %>%
-              mutate(
-                name= case_when(
-                  name=="Diogo Teixeira da Silva" ~ "Diogo Jota",
-                  TRUE ~ name
-                )
-              ) %>% 
-              mutate(name=sub(".* ", "", name))%>% 
-              slice_max(n=25, order_by = xG_per90) 
-            ,
-            hjust = 0, nudge_x = 0.05, size=2.5
-  ) +
-  geom_text(aes(label=name), 
-            data = xG_df0 %>%
-              mutate(
-                name= case_when(
-                  name=="Diogo Teixeira da Silva" ~ "Diogo Jota",
-                  TRUE ~ name
-                )
-              ) %>% 
-              mutate(name=sub(".* ", "", name))%>% 
-              slice_max(n=25, order_by = xG_Delta) 
-            ,
-            hjust = 0, nudge_x = 0.05, size=2.5
-  ) 
-  
-```
-
-## xG Delta
-
-```{r}
-xG_df0 %>% 
-  ggplot(aes(xG_per90, xG_Delta))+
-  geom_point(aes(size=starts, color=position), alpha=0.7)+
-  labs(
-    title ="xG Delta per 90, FPL season 2023/2024",
-    x="xG_per90",
-    y="xG_Delta",
-    caption = "Fpl Infinitesimal"
-  )+
-  geom_text(aes(label=name), 
-            data = xG_df0 %>%
-              mutate(
-                name= case_when(
-                  name=="Diogo Teixeira da Silva" ~ "Diogo Jota",
-                  TRUE ~ name
-                )
-              ) %>% 
-              mutate(name=sub(".* ", "", name))%>% 
-              slice_max(n=25, order_by = xG_per90) 
-            ,
-            hjust = 0, nudge_x = 0.05, size=2.5
-  ) +
-  geom_text(aes(label=name), 
-            data = xG_df0 %>%
-              mutate(
-                name= case_when(
-                  name=="Diogo Teixeira da Silva" ~ "Diogo Jota",
-                  TRUE ~ name
-                )
-              ) %>% 
-              mutate(name=sub(".* ", "", name))%>% 
-              slice_max(n=25, order_by = xG_Delta) 
-            ,
-            hjust = 0, nudge_x = 0.05, size=2.5
-  ) +
-  geom_abline(intercept = 0, slope = 0, colour = "orange", linetype = "dashed")
-  
-```
 
 You can play around by yourself in [DataTable](https://7paw.github.io/BlogFPL/posts/post-01/).
