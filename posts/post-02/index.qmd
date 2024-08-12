@@ -1,6 +1,6 @@
 ---
-title: "GW0 - Find the Gems "
-date: "2024-08-04"
+title: "GW1 - Ep.1 Find the Gems "
+date: "2024-08-12"
 categories: [thoughts]
 image: "image.jpg"
 format: 
@@ -607,11 +607,11 @@ xG_gt
 ```
 
 
-Let's begin with Top 10 of the maximum FPL point average per starting;
+Let's begin with Top 10 of the maximum FPL point average per starting, They have an average FPL points per start of at least 6!
 
 - Olise, His data is superb! So, Bayern Munich has already decided to buy him. 
 
-- Palmer, Palmer was phenomenal last season, achieving the highest point average and ceiling. Chelsea = "Palmer's FC," especially with his remarkable contributions at home, including against the Big 6. If he maintains similar opportunities in the 2023/2024 season, Palmer could continue to be a significant threat, particularly in home matches. The only concern is Chelsea's form under their new manager, which could impact Palmer’s role or position. This year, his price is set at 10.5, making him a great value compared to Salah (12.5) and Haaland (15.0). It's crucial to check his fitness for Gameweek 1. 
+- Palmer, He was phenomenal last season, achieving the highest point average and ceiling. Chelsea = "Palmer's FC," especially with his remarkable contributions at home, including against the Big 6. If he maintains similar opportunities in the 2023/2024 season, Palmer could continue to be a significant threat, particularly in home matches. The only concern is Chelsea's form under their **new manager**, which could impact Palmer’s role or position. This year, his price is set at 10.5, making him a great value compared to Salah (12.5) and Haaland (15.0). It's crucial to check his fitness for Gameweek 1. 
 
 - Haaland's xG is exceptionally high = MONSTER, indicating a constant threat, though he slightly underperformed his xG. His FPL points per start are still strong, with a notable ceiling of 16.0. Unlike other players in the league, away games aren't a problem for him. You must decide if he's worth his price of 15.0, especially when compared to other combinations for budget management.
 
@@ -620,15 +620,15 @@ Let's begin with Top 10 of the maximum FPL point average per starting;
 
 - Foden is special. He has an average xG but a large xG delta across 33 starts, showing his efficiency with chances. His FPL points per start reflect a very high ceiling, especially in favorable matches. Foden’s impact may fluctuate based on the opposition, but when he's in form, his potential is significant, making him a potentially explosive option. We might consider avoiding him in big matches.
 
-- Jota is special, boasting the highest xG per 90 minutes, but his limited playing time is a concern. His average points are based on just 60-70 minutes per match. If he played the full 90 minutes, he could be just as great a pick as Salah, especially at Home !!.
+- Jota is special, he has highest xG Delta per 90 minutes, but his limited playing time is a concern. His average points are based on just 60-70 minutes per match. If he played the full 90 minutes, he could be just as great a pick as Salah, especially at Home!
 
-- Saka has performed closely in line with his xG, indicating a consistent level of performance. His FPL points are steady, also solid at away from home or against the Big 6. The stats suggest only a small upside, possibly limited by Arteta’s tactics.
+- Saka has performed closely in line with his xG, indicating a consistent level of performance. His FPL points are steady, also solid at away from home or against the Big 6. The stats suggest only a small upside, possibly limited by Arteta’s tactics or spreaded to teammates. 
 
-- Watkins’ xG and delta are modest, suggesting he's performing as expected. His high ceiling indicates he can deliver big points in favorable matches, not Big 6.
+- Watkins. His high ceiling indicates he can deliver big points in favorable matches, not Big 6.
 
-- Son is Special also, has slightly overperformed his xG, and his high ceiling suggests he’s capable of significant points, particularly against upper mid-table teams. Son remains a key player with the potential to deliver in a variety of match situations.
+- Son is Special also, he has slightly overperformed his xG, and his high ceiling suggests he’s capable of significant points, particularly against upper mid-table teams. Son remains a key player with the potential to deliver in a variety of match situations.
 
-- Isak’s xG is strong at 0.81, and he’s performed close to expectations. His FPL points are consistent, with a solid average at home. The only concern is his performance in away games and against the Big 6. He is candidate captain in gw1 !!
+- Isak’s xG is strong at *0.81* and he’s performed close to expectations. His FPL points are consistent, with a solid average at home. The only concern is his performance in away games and against the Big 6. He is candidate captain in gw1 !!
 
 ### **Wrap-up**
 
@@ -642,10 +642,17 @@ Let's begin with Top 10 of the maximum FPL point average per starting;
 
 
 
+
 ## Ceiling and Average FPL point, per starting
+
+Which player is appealing to managers who love Upside-Chasing? 
+
+Bruno, Havertz and Mateta also interesting! 
+
 
 ```{r}
 xG_df0 %>% 
+  slice_max(order_by = max, n = 50) %>% 
   ggplot(aes(mean, max))+
   geom_point(aes(size=xG_per90, color=position), alpha=0.7)+
   labs(
@@ -767,6 +774,34 @@ xG_df0 %>%
 ```
 
 ## Ranking 11-30
+
+- Havertz has a very high ceiling and performs well in away games and against the Big 6. He's a very interesting option !
+
+- Aside from the top 10 mentioned above, here are the players with an impressive xG per 90 minutes of more than 0.50: Wilson, Darwin, Wood, Jackson, Richarlison, Solanke, João Pedro, Dominic Calvert-Lewin, Gakpo, and Muniz. (You can sort by [DataTable](https://7paw.github.io/BlogFPL/posts/post-01/))
+  - Wood & Muniz & DCL have favorable early fixtures.
+  - **Solanke** has moved to Tottenham, a very attacking team!
+  - João Pedro is priced at just 5.5!
+
+- Wood performs better in away matches but struggles against top teams, making him a potential differential pick for certain fixtures.
+
+- Kevin De Bruyne has a lower xG, reflecting his role as a playmaker rather than a goal-scorer. His FPL points per start are consistent, with a high performance in away matches. His ceiling is lower than expected for a player of his caliber, which might be due to injury or rotation risks. His value remains high in matches against weaker teams where he can exploit spaces.
+
+- Eze has been a consistent performer with a moderate xG and slight overperformance in goals. His FPL points per start are decent, and he performs particularly well at home. His ceiling is respectable, making him a solid option in matches where Crystal Palace is favored.
+
+- Bowen's xG is reasonable, and he slightly overperforms, reflecting his reliability as an attacking asset. His FPL points per start are consistent across home and away matches, with a decent ceiling. He's a dependable choice for managers looking for a player with steady returns.
+
+- Gordon is interesting because of his high xG compared to his relatively low FPL points per start. His high ceiling against top teams suggests he could be a surprise performer in challenging matches. Most of his FPL points come from matches against TOT, CHE, LIV, MUN, and SHU, all at home! 
+
+- Sterling has a moderate xG and slightly overperforms his expected goals. His FPL points per start are lower than expected for a player of his reputation, and his ceiling is not very high. Sterling's inconsistent form could be a risk, but he may still offer value in specific matchups. 
+
+### Wrap-up: 
+
+Differential Picks: Players like Wood, Muniz and Gordon could be valuable differentials due to their strong performances in specific conditions.
+
+Consistent Performers: Bowen and Eze provide stable returns and could be reliable options throughout the season.
+
+Underperforming Assets: Kevin De Bruyne and Raheem Sterling might not be living up to their usual standards but could improve depending on their roles and fixtures.
+
 
 ```{r}
 #xG_df %>% glimpse()
@@ -924,11 +959,22 @@ xG_gt
 #gt::gtsave(data = xG_gt,filename = here("xG_gt.png"))
 ```
 
-- Havertz has a very high ceiling and performs well in away games and against the Big 6. He's a very interesting option !
 
-- Gordon, not large
 
 # Defense
+
+The tabla is sorted by xG+xA average per 90 minutes, 
+  - Arsenal has a strong potential for a clean sheet.
+  - White is great in all of home, away and Big also.
+  - Atatcking interesting are: TAA, Robertson, Trippier, Porro, Gvardiol, Gabriel(Away game).
+
+Consistent Performers with High xA: Trent Alexander-Arnold and Trippier are key assets due to their high assist potential, though their explosive returns might be limited to specific fixtures.
+
+Goal Threats: Gabriel Magalhães and Joško Gvardiol show potential for goals from defense, making them attractive picks for managers seeking defensive returns with the bonus of goal potential.
+
+Fixture-Dependent Players: Tomiyasu and Andrew Robertson may be more valuable in certain matchups, particularly at home or against weaker opponents.
+
+(You can play yourself by [DataTable](https://7paw.github.io/BlogFPL/posts/post-01/))
 
 ```{r}
 
@@ -979,7 +1025,7 @@ xG_gt_def <- xG_df0 %>%
     colors = scales::col_numeric(
       palette = c("red","cornsilk","green"),
       #domain=c(0,1.5,4))
-      domain = c(0,6,11))
+      domain = c(0,5,8))
   ) %>% 
   data_color(
     columns = 15,
@@ -1089,11 +1135,13 @@ xG_gt_def
 
 # GoalKeeper
 
+There isn't much difference in FPL points between goalkeepers, as seen from their points per start, especially when you hold a goalkeeper long-term.
+
 ```{r}
 #xG_df0 %>% glimpse()
 
 xG_gt_def <- xG_df0 %>%
-  filter(position=="GK", mean>2, max>6) %>% 
+  filter(position=="GK", max>6) %>% 
   select(-position) %>% 
   arrange(desc(mean)) %>% 
   slice(1:20) %>% 
@@ -1139,7 +1187,7 @@ xG_gt_def <- xG_df0 %>%
     colors = scales::col_numeric(
       palette = c("red","cornsilk","green"),
       #domain=c(0,1.5,4))
-      domain = c(0,6,11))
+      domain = c(0,3,8))
   ) %>% 
   data_color(
     columns = 15,
